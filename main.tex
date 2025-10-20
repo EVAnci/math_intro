@@ -1,0 +1,33 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{array}
+\usepackage{geometry}
+
+% Set lang (support for xelatex and lualatex)
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+
+% Enhanced font: Computer Modern Unicode
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+\usepackage[colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    hypertexnames=false]{hyperref}
+
+\title{Introducción a los números\\y las operaciones}
+\author{Elio Valentino Anci}
+
+\begin{document}
+  \maketitle
+  \tableofcontents
+
+  \include{chapters/1_suma_y_los_numeros}
+
+\end{document}

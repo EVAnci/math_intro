@@ -1,0 +1,503 @@
+  \chapter{Los números}
+  Siempre que estudiamos matemáticas, nos enseñan a usar los números, pero nunca nos enseñan qué son estos ``números''. Podríamos usar una definición formal para ser rigurosos, sin embargo, no es la idea. Vamos despacio\dots
+
+  Los números, como siempre nos cuentan aparecen más como una necesidad que como una consecuencia. Siempre se suele contar la historia de que para poder cuantificar cantidades de ``algo'' se crean estas entidades llamadas números. Estos podemos representarlos de diversas maneras, y expresarlos de muchas formas. Sin embargo, la primera intuición es usar los dedos. 
+
+  Si yo pregunto ¿Cuantos dedos tienes? posiblemente tu respuesta sea diez. Pero\dots ¿qué es y qué representa la palabra diez? Responder esta pregunta puede ser extremadamente sencillo y trivial\footnote{Trivial: tan simple que se asume como cierto} o un completo lío. 
+
+  Los números son entidades que nos permiten contar, comparar, medir, modelar, entre muchas cosas más. Sin embargo a día de hoy es casi un dogma nuestro sistema de numeración. 
+
+  \section{El sistema de numeración}
+
+  Supongamos que queremos contar piedras en una taza. Si los símbolos numéricos ($1,2,3,\dots$) suponemos que no existen, entonces podríamos asignar un dedo a cada piedra. Si tenemos suerte y las piedras no son muchas, podremos llevar a cabo esta tarea sin problemas. Esto que acabas de hacer es un nuevo sistema de numeración. 
+
+  Un sistema de numeración nos dice ``como'' podemos contar las cosas. Actualmente hay muchos sistemas, algunos de ellos son
+  \begin{itemize}
+    \item Sistema binario: consiste de dos dígitos disponibles. Estos son $0$ y $1$. Estos son símbolos inventados para poder referirnos a una cantidad nula de algo, y a una unidad de algo.
+    \item Sistema octal: tenemos ocho dígitos para jugar: $0,1,2,3,4,5,6,7$. Aquí contamos con más de los dos dígitos del binario, y tenemos la posibilidad de armar números más grandes con menos dígitos. Esto ya lo veremos más en detalle a medida que avanzamos.
+    \item Sistema decimal: tenemos diez dígitos, los famosos $0,1,2,3,4,5,6,7,8,9$. Este es el sistema de numeración más extendido y usado para las matemáticas en general. De hecho, al contar los dígitos de cada sistema de numeración, hemos usado los nombres de los símbolos del sistema decimal.
+    \item Sistema hexadecimal: Tenemos más dígitos que el decimal, en total 16: $0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F$. Este sistema de numeración es muy utilizado en computación.
+    \item Sistema sexagesimal: aquí hay nada más y nada menos que 60 símbolos para divertirse. Usualmente este sistema se usa con un tono gris en la hora. Si bien usamos los símbolos decimales, los segundos y minutos respetan el sistema sexagesimal.
+  \end{itemize}
+
+  Bueno bueno, entonces vamos a calmarnos un poco. Todo esto no es necesario saberlo por ahora, es más un dato de color para entender de donde salen los diez símbolos y sus nombres que vamos a usar.
+
+  \subsection{El sistema decimal}
+
+  Este es el sistema que vamos a usar. El sistema \textbf{decimal}. Este sistema consta de diez dígitos cada uno con un nombre:
+  \begin{itemize}
+    \item $0$: ``cero'' $\rightarrow$ representa cantidad nula. Es decir, si contamos piedras, no hay piedras.
+    \item $1$: ``uno'' $\rightarrow$ representa una unidad. Este número es importante, porque a partir de el se obtiene el resto de cantidades.
+    \item $2$: ``dos'' $\rightarrow$ representa dos unidades. Si, se que la definición no es muy creativa, pero podemos pensarlo de la siguiente manera: si definimos un dedo (por ejemplo el índice) como unidad, luego podemos decir que tenemos $2$ dedos índice. Uno en cada mano.
+    \item $3$: ``tres'' $\rightarrow$ representa tres unidades. Creo que ya se entiende como continúa. 
+  \end{itemize}
+  Así continuamos definiendo, la cantidad, su nombre (uno, dos, \dots) y su símbolo (1, 2, \dots).
+
+  Este sistema se llama decimal porque tiene en total diez dígitos (como ya vimos). Estos dígitos pueden combinarse para representar cantidades mayores a $9$. Aquí, por ejemplo, el número $17$ es una representación con dos números de una cantidad mayor a $9$. Cuando llegamos a $9$, en el sistema decimal, se nos agotaron los símbolos disponibles. Entonces, los humanos tuvieron esta grandiosa idea. Utilizar más números agrupados para representar cantidades tan grande como necesitemos. Veamos un ejemplo.
+
+  Si tenemos $17$ piedras, entonces contamos las primeras $9$ sin problemas, sin embargo, la siguiente que intentemos contar, notaremos que no tenemos símbolos disponibles. Entonces, hacemos este truco: a las primeras $9$ piedras les colocamos un nuevo símbolo adelante, de forma que quedan:
+  \begin{enumerate}
+    \item piedra: $01$
+    \item piedra: $02$
+    \item piedra: $03$
+    \item piedra: $04$
+    \item piedra: $05$
+    \item piedra: $06$
+    \item piedra: $07$
+    \item piedra: $08$
+    \item piedra: $09$
+    \item piedra: $10$
+    \item piedra: $11$
+  \end{enumerate}
+  Y aquí ya podemos continuar contando como siempre. Sin embargo, la nueva unidad que aparece delante de los dígitos originales se llama \textit{decena}. Si continuamos contando, entonces el dígito de la izquierda, eventualmente será un 2, llamado ``veintena''. Luego, un 3 llamado ``treintena''. Así hasta el 90.
+
+  Si, se que esta explicación puede sentirse muy trivial al leerla. Es como si lees un párrafo sobre como dormir. Es algo que ya sabemos y tenemos integrado en nuestro cerebro, el accionar que hay que tomar para realizar la acción. Sin embargo, es importante saber bien con qué estamos trabajando y que existen otras formas de hacer exactamente lo mismo: contar.
+
+  Los números a partir del los 90's tienen nombres muy bien definidos, pasando por las centenas (cien, docientos, \dots), luego millares (mil, diez mil, cien mil, \dots) y así cada numero tendrá un nombre asociado. De modo que si yo digo: ciento cincuenta y ocho mil cuatrocientos treinta y tres, sabemos que me refiero específicamente al número 158433. Los nombres de los números pasando los millones, billones y trillones tienen nombres muy peculiares. Por ejemplo, el \href{https://es.wikipedia.org/wiki/G\%C3\%BAgol\#G.C3.BAgolplex}{gugol} (ver enlace). Estos números tan grandes no son muy usuales, pero son divertidos de conocer.
+
+
+  \section{La suma (o adición)}
+
+  Ahora que ya sabemos contar cosas, y los distintos sistemas de numeración que podemos encontrar, vamos a definir la suma para el sistema de numeración decimal\footnote{El sistema decimal también se lo suele llamar sistema de numeración base 10.}. 
+
+  La suma, para números naturales, se define de la siguiente manera:
+  \begin{align*}
+    & + : \mathbb{N} \times \mathbb{N} \to \mathbb{N}\\
+    &(a,b)\rightarrow a+b
+  \end{align*}
+
+  Esto, ya parece magia oscura y un conjunto de símbolos misteriosos que no hemos visto. ¿Qué significan todas estas cosas? Vamos por partes \dots
+
+  El símbolo $+$ (más) se llama ``adición'', y es un \textbf{operador}. Esto significa que se utiliza para hacer \textbf{operaciones} de adición entre números. En este caso, la definición dice que toma dos \textbf{números naturales} cualesquiera, y los suma. Como todo en matemáticas, al principio parece chino, pero una vez que lo entiendes se lee solo. Veamos que es esto de los números naturales.
+
+  \subsection{Los números naturales}
+
+  El símbolo especial $\mathbb{N}$ representa a un conjunto de números. En particular son todos aquellos números que surgen al contar cosas materiales. Por ejemplo: piedras en una taza, pasos que das en una hora o estrellas que ves en el cielo. Claramente puedes comenzar desde cero, diciendo que no has dado ningún paso, o comenzar a contar desde el primer paso que das. Esto, se llama convención, y para los números naturales puedes definirla como más te convenga. Es decir incluyendo o excluyendo al cero.
+
+  Para verlo en un esquema, o representado gráficamente, el conjunto de los números naturales es como se muestra en la figura \ref{fig:natural}
+  \begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}[scale=1.5]
+        \draw (1.5,1.5) ellipse (0.6cm and 1.4cm);
+        \node at (1.5,3.2) {$\mathbb{N}$};
+        \node at (1.5,2.5) {$1$};
+        \node at (1.5,2.1) {$2$};
+        \node at (1.5,1.7) {$3$};
+        \node at (1.5,1.3) {$4$};
+        \node at (1.5,0.9) {$5$};
+        \node at (1.5,0.5) {$\vdots$};
+    \end{tikzpicture}
+    \caption{Diagrama de Venn para los números naturales}
+    \label{fig:natural}
+  \end{figure}
+  Obviamente, como nos gusta a los matemáticos, decimos que el conjunto de los números naturales es infinito. Sin embargo, de momento no vamos a entrar en el significado de esto. Solo con entender que siempre puede existir un número natural mayor que otro es suficiente.
+
+  Entonces, volviendo a la definición de adición, teníamos que $+:\mathbb{N}\times\mathbb{N}$. Esto quiere decir que la suma toma dos números naturales. Luego tenemos que $\mathbb{N}\times\mathbb{N}\to\mathbb{N}$, que nos dice que al sumar dos números naturales obtenemos otro número natural.
+
+  Entonces, repasemos esto: $\mathbb{N}$ es el conjunto de todos los números para contar (y son positivos). La definición de adición $(+)$ dice que tomamos dos números naturales $(\mathbb{N}\times\mathbb{N})$, y la suma nos arroja otro número natural $(\to\mathbb{N})$. 
+
+  \subsection{Operación y operandos}
+
+  Perfecto, ya hemos entendido la primera parte de la definición. Ahora falta la segunda. Cuando vemos $(a,b)$, significa que al tomar dos números $a$ y $b$ llamados operandos, y aplicarles la operación adición $(+)$, obtenemos su suma $(a+b)$. 
+
+  En palabras sencillas, esta segunda parte nos dice la ``formula'' que debemos aplicar para sumar dos números. Lo único importante que debemos aprender es cómo se llama cada parte. Veamos, dada la siguiente suma
+  \begin{align*}
+    a+b=c
+  \end{align*}
+  tenemos que $a$ y $b$ se llaman operandos o sumandos. El símbolo $+$ es la operación que vamos a realizar, que es una adición. Y por último $c$ se denomina suma. La suma es el resultado final, lo que obtenemos al adicionar los dos sumandos.
+
+  \section{Práctica de sumas con naturales}
+
+  Bueno, la definición es preciosa ¿verdad? -- Sin embargo, de poco nos sirve si no sabemos aplicarla. Para ello vamos a despejar un poco la mente de las definiciones rigurosas y vamos a sumar algunos números.
+
+  Digamos, se pide realizar la adición entre dos números naturales dados. En este caso serán $302$ y $22$. Ambos son números naturales\footnote{siempre se darán números que ya hemos visto. Y si esto no se cumple, se aclarará para no confundir.} y podemos aplicar la definición que hemos visto. Entonces tomamos ambos números y realizamos la adición
+  \[
+    \begin{array}{r@{}}
+      302 \\
+      +22 \\
+      \hline
+      324 \\
+    \end{array}
+  \]
+
+  Aquí, veamos detalladamente qué hemos hecho. Tomamos dos números $302$ y $22$. Esto equivale a $\mathbb{N}\times\mathbb{N}$. Con nuestros dos números aplicamos el operando $+$ sobre los números, esto equivale a $(302,22)$ en nuestra definición y luego calculamos la suma $324$, que equivale a $302+22$. Es decir, escribir $302+22$ es un sinónimo a $324$. Representan exactamente lo mismo, solo que por un lado tenemos el número directo, y por otro lado lo tenemos descompuesto como una mezcla de operadores y operandos.
+
+  Al número 302 podríamos escribirlo como la adición entre otros dos números, por ejemplo $210+92$. Y con esto podemos escribir la suma del ejercicio inicial como $210+92+22$. Y ¿qué sentido tiene esto? Pues que ahora puedes expresar un número de un montón de maneras distintas. Ahora puedes entender a la ``suma'' cotidiana de una forma que nunca antes habías notado. Siempre que te dan la expresión a sumar o la cuenta a realizar, realmente te están dando el resultado. Solo este está expresado en término de los sumandos.
+
+  Como el nombre de esta sección dice, toca realizar algunas sumas. Solo es a modo de práctica, ya que es una operación elemental y ampliamente usada en matemáticas. Los resultados puedes verificarlos libremente con la calculadora.
+
+\subsection*{Nivel Básico}
+
+\begin{enumerate}
+    \item Suma simple de una cifra:
+    \[
+    \begin{array}{r}
+        3 \\
+        + 4 \\
+        \hline
+        \phantom{7}
+    \end{array}
+    \]
+    
+    \item Suma con cero:
+    \[
+    \begin{array}{r}
+        7 \\
+        + 0 \\
+        \hline
+        \phantom{7}
+    \end{array}
+    \]
+    
+    \item Suma de dos números de una cifra:
+    \[
+    \begin{array}{r}
+        8 \\
+        + 5 \\
+        \hline
+        \phantom{13}
+    \end{array}
+    \]
+    
+    \item Suma de dos números de dos cifras sin llevadas:
+    \[
+    \begin{array}{r}
+        23 \\
+        + 45 \\
+        \hline
+        \phantom{68}
+    \end{array}
+    \]
+    
+    \item Suma con números iguales:
+    \[
+    \begin{array}{r}
+        17 \\
+        + 17 \\
+        \hline
+        \phantom{34}
+    \end{array}
+    \]
+\end{enumerate}
+
+\subsection*{Nivel Intermedio}
+
+\begin{enumerate}
+    \setcounter{enumi}{5}
+    \item Suma con una llevada:
+    \[
+    \begin{array}{r}
+        38 \\
+        + 27 \\
+        \hline
+        \phantom{65}
+    \end{array}
+    \]
+    
+    \item Suma de tres números de dos cifras:
+    \[
+    \begin{array}{r}
+        24 \\
+        15 \\
+        + 33 \\
+        \hline
+        \phantom{72}
+    \end{array}
+    \]
+    
+    \item Suma con dos llevadas:
+    \[
+    \begin{array}{r}
+        186 \\
+        + 297 \\
+        \hline
+        \phantom{483}
+    \end{array}
+    \]
+    
+    \item Suma de números de tres cifras:
+    \[
+    \begin{array}{r}
+        425 \\
+        + 368 \\
+        \hline
+        \phantom{793}
+    \end{array}
+    \]
+    
+    \item Suma con ceros intermedios:
+    \[
+    \begin{array}{r}
+        507 \\
+        + 408 \\
+        \hline
+        \phantom{915}
+    \end{array}
+    \]
+\end{enumerate}
+
+\subsection*{Nivel Avanzado}
+
+\begin{enumerate}
+    \setcounter{enumi}{10}
+    \item Suma de números de cuatro cifras:
+    \[
+    \begin{array}{r}
+        2,347 \\
+        + 1,859 \\
+        \hline
+        \phantom{4,206}
+    \end{array}
+    \]
+    
+    \item Suma con múltiples llevadas:
+    \[
+    \begin{array}{r}
+        3,999 \\
+        + 2,888 \\
+        \hline
+        \phantom{6,887}
+    \end{array}
+    \]
+    
+    \item Suma de cinco números:
+    \[
+    \begin{array}{r}
+        124 \\
+        237 \\
+        348 \\
+        459 \\
+        + 560 \\
+        \hline
+        \phantom{1,728}
+    \end{array}
+    \]
+    
+    \item Suma de números grandes:
+    \[
+    \begin{array}{r}
+        47,328 \\
+        + 96,574 \\
+        \hline
+        \phantom{143,902}
+    \end{array}
+    \]
+\end{enumerate}
+
+\section{La resta}
+
+Sumar, conocer la operación y teoría detrás de algo que de antemano parece sencillo, puede ser muy raro al principio. Esto ayudará mucho a construir una base sólida. La suma, como ya vimos, es una operación elemental. La resta es un caso particular de la suma. Si sabes sumar, restar es aplicar la misma definición. Sin embargo, en esta afirmación hay algo de trampa. 
+
+\subsection{El signo menos y los números enteros}
+
+Como ya sabemos, en la adición o suma, el operador que aplicamos es $+$. Por otro lado, se toma el signo $-$ para las restas. Pero ¿Qué es ese símbolo? 
+
+Las matemáticas no definen la resta. Más bien definen nuevos números. Estos nuevos números se llaman opuestos, y se escriben con un guión adelante. Por ejemplo si tenemos un número cualquiera $a\in\mathbb{N}$ entonces su opuesto es $-a$.
+
+El símbolo $\in$ significa que pertenece a $\mathbb{N}$. Es decir $a$ es un número que pertenece a $\mathbb{N}$. Esto significa que $a$ es cualquier número de conjunto $\mathbb{N}$.
+
+Cada número de $\mathbb{N}$ tiene su respectivo opuesto. Por ejemplo, el número $2$ tiene su opuesto $-2$. Sin embargo, es evidente que $-2\notin\mathbb{N}$. Es decir, $-2$ no es un número del conjunto $\mathbb{N}$ (puedes volver a ver la figura \ref{fig:natural} para visualizarlo).
+
+Como es usual, los matemáticos, al ver esta situación, generosamente crearon un conjunto nuevo para albergar a todos aquellos números que no estaban incluidos en $\mathbb{N}$. A este conjunto le llamaron $\mathbb{Z}$, también denominado conjunto de números \textbf{enteros}.
+  \begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}[scale=1.5]
+        \draw (1.5,1.7) ellipse (0.7cm and 1.6cm);
+        \node at (1.5,3.5) {$\mathbb{Z}$};
+        \node at (1.5,2.9) {$\vdots$};
+        \node at (1.5,2.5) {$-2$};
+        \node at (1.5,2.1) {$-1$};
+        \node at (1.5,1.7) {$0$};
+        \node at (1.5,1.3) {$1$};
+        \node at (1.5,0.9) {$2$};
+        \node at (1.5,0.5) {$\vdots$};
+    \end{tikzpicture}
+    \caption{Diagrama de Venn para los números enteros}
+    \label{fig:enteros}
+  \end{figure}
+
+Como se puede ver en la figura \ref{fig:enteros}, lo primero que notamos es que estamos ante el conjunto $\mathbb{N}$ extendido, agregando todos los opuestos de los números. Estos se suelen llamar números negativos, y los números de $\mathbb{N}$ (o naturales) se denominan enteros positivos.
+
+Con este conjunto, expandimos la definición de suma, cambiando nuestros números:
+\begin{align*}
+  &+:\mathbb{Z}\times\mathbb{Z}\to\mathbb{Z} \\ 
+  &(a,b):a+b
+\end{align*}
+Y se interpreta de la misma forma que con los números naturales. Solo que, ahora $a$ y $b$ son números enteros, es decir $a,b\in\mathbb{Z}$.
+
+\subsection{Las propiedades de la adición en los enteros}
+
+Los enteros permiten utilizar la operación adición de una forma más completa. Hay algunas propiedades que es bueno tenerlas presente
+\begin{itemize}
+  \item La suma de un número $a$ y su opuesto es cero: $a+(-a)=0$ Esto puede escribirse como $a-a=0$
+  \item La suma de dos números enteros ($\mathbb{Z}$) es otro número entero (como dice la definición).
+  \item El orden de dos sumandos no altera la suma. Por ejemplo $7+(-2)=(-2)+7=5$.
+  \item Existe un número, llamado elemento neutro de la suma que cumple $a+b=a$. Este número es el cero. Entonces por ejemplo si $a=4$ resulta $4+0=4$.
+\end{itemize}
+De aquí, se obtienen algunas consecuencias: 
+\begin{itemize}
+  \item Opuesto del opuesto: $-(-a)=a$
+  \item Suma con opuestos: $a+(-b)=a-b$
+\end{itemize}
+Y de aquí nace el concepto usual de resta. La resta es aplicar la operación adición a dos números, donde uno es positivo y el otro negativo. Entonces, no necesitamos dos definiciones, una es suficiente y permite deducir intuitivamente el concepto de resta a partir de la suma.
+
+\section[Práctica de ejercicios con enteros]{Ejercicios de Suma y Resta con $\mathbb{Z}$}
+
+Antes de comenzar a resolver los ejercicios vamos a ver algunas recomendaciones para tener en cuenta. Es importante identificar los sumandos (u operandos) de la operación. Veamos un ejemplo
+\begin{align*}
+  2+(-10) = -10 + 2 = 2 -10 = -8
+\end{align*}
+En este caso, los operandos son $2$ y $-10$. Teniendo esto en cuenta, podemos ordenarlos como nos guste, que siempre el resultado será el mismo, ya que cada número lleva su signo. Entonces, siempre que estemos por resolver una operación, si vemos 
+$$
+2-10
+$$
+Debemos saber que estamos ante $2+(-10)$ y el operando $(+)$ se omite por conveniencia.
+
+\subsection*{Nivel Básico}
+
+\begin{enumerate}
+    \item Suma de dos positivos:
+    \[
+    \begin{array}{r}
+        15 \\
+        + 8 \\
+        \hline
+        \phantom{23}
+    \end{array}
+    \]
+    
+    \item Suma de positivo y negativo:
+    \[
+    \begin{array}{r}
+        12 \\
+        + (-7) \\
+        \hline
+        \phantom{5}
+    \end{array}
+    \]
+    
+    \item Suma de dos negativos:
+    \[
+    \begin{array}{r}
+        -9 \\
+        + (-6) \\
+        \hline
+        \phantom{-15}
+    \end{array}
+    \]
+    
+    \item Resta de positivos:
+    \[
+    \begin{array}{r}
+        25 \\
+        - 13 \\
+        \hline
+        \phantom{12}
+    \end{array}
+    \]
+    
+    \item Resta con resultado negativo:
+    \[
+    \begin{array}{r}
+        8 \\
+        - 15 \\
+        \hline
+        \phantom{-7}
+    \end{array}
+    \]
+\end{enumerate}
+
+\subsection*{Nivel Intermedio}
+
+\begin{enumerate}
+    \setcounter{enumi}{5}
+    \item Resta de un negativo (doble negativo):
+    \[
+    \begin{array}{r}
+        14 \\
+        - (-5) \\
+        \hline
+        \phantom{19}
+    \end{array}
+    \]
+    
+    \item Resta de negativos:
+    \[
+    \begin{array}{r}
+        -8 \\
+        - (-3) \\
+        \hline
+        \phantom{-5}
+    \end{array}
+    \]
+    
+    \item Suma de tres números con signos mixtos:
+    \[
+    \begin{array}{r}
+        10 \\
+        -4 \\
+        + (-2) \\
+        \hline
+        \phantom{4}
+    \end{array}
+    \]
+    
+    \item Operación combinada:
+    \[
+    \begin{array}{r}
+        -15 + 8 - (-3) =
+        \phantom{-4}
+    \end{array}
+    \]
+    
+    \item Suma con números de dos dígitos:
+    \[
+    \begin{array}{r}
+        -37 \\
+        + 25 \\
+        \hline
+        \phantom{-12}
+    \end{array}
+    \]
+\end{enumerate}
+
+\subsection*{Nivel Avanzado}
+
+\begin{enumerate}
+    \setcounter{enumi}{10}
+    \item Operación con múltiples términos:
+    \[
+    \begin{array}{r}
+        45 + (-28) - 13 + (-7) =
+        \phantom{-3}
+    \end{array}
+    \]
+    
+    \item Suma y resta con números grandes:
+    \[
+    \begin{array}{r}
+        -156 \\
+        + 289 \\
+        - (-74) \\
+        \hline
+        \phantom{207}
+    \end{array}
+    \]
+    
+    \item Expresión con paréntesis anidados:
+    \[
+    \begin{array}{r}
+        [25 - (-15)] + [(-30) - 10] =
+        \phantom{0}
+    \end{array}
+    \]
+    
+    \item Problema complejo con múltiples operaciones:
+    \[
+    \begin{array}{r}
+        -125 + 68 - (-42) + (-89) - 23 = 
+        \phantom{-127}
+    \end{array}
+    \]
+\end{enumerate}
+
