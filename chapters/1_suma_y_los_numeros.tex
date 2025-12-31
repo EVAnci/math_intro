@@ -14,10 +14,10 @@ Supongamos que queremos contar piedras en una taza. Si los símbolos numéricos 
 Un sistema de numeración nos dice ``como'' podemos contar las cosas. Actualmente, hay muchos sistemas, algunos de ellos son
 \begin{itemize}
   \item Sistema binario: consiste de dos dígitos disponibles. Estos son \(0\) y \(1\). Estos son símbolos inventados para poder referirnos a una cantidad nula de algo, y a una unidad de algo.
-  \item Sistema octal: tenemos ocho dígitos para jugar: 0, 1, 2, 3, 4, 5, 6, 7. Aquí contamos con más de los dos dígitos del binario, y tenemos la posibilidad de armar números más grandes con menos dígitos. Esto ya lo veremos más en detalle a medida que avanzamos.
+  \item Sistema octal: tenemos ocho dígitos para jugar: 0, 1, 2, 3, 4, 5, 6, 7. Aquí contamos con más de dos dígitos, y tenemos la posibilidad de armar números más grandes con menos dígitos. Esto ya lo veremos más en detalle a medida que avanzamos.
   \item Sistema decimal: tenemos diez dígitos, los famosos 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Este es el sistema de numeración más extendido y usado para las matemáticas en general. De hecho, al contar los dígitos de cada sistema de numeración, hemos utilizado los nombres de los símbolos del sistema decimal.
-  \item Sistema hexadecimal: Tenemos más dígitos que el decimal, en total 16: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F. Este sistema de numeración es muy utilizado en computación.
-  \item Sistema sexagesimal: aquí hay nada más y nada menos que 60 símbolos para divertirse. Usualmente, este sistema se utiliza con un tono gris en la hora. Si bien empleamos los símbolos decimales, los segundos y minutos respetan el sistema sexagesimal.
+  \item Sistema hexadecimal: Tenemos más dígitos que el decimal, en total 16: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F. Este sistema de numeración es muy empleado en computación.
+  \item Sistema sexagesimal: aquí hay nada más y nada menos que 60 símbolos para divertirse. Usualmente, este sistema se usa con un tono gris en la hora. Si bien empleamos los símbolos decimales, los segundos y minutos respetan el sistema sexagesimal.
 \end{itemize}
 
 Bueno, entonces vamos a calmarnos un poco. Todo esto no es necesario saberlo por ahora, es más un dato de color para entender de donde salen los diez símbolos y sus nombres que vamos a usar.
@@ -28,13 +28,14 @@ Este es el sistema que vamos a utilizar, el sistema decimal. Este sistema consta
 \begin{itemize}
   \item \(0\): ``cero'' \(\rightarrow\) representa cantidad nula. Es decir, si contamos piedras, no hay piedras.
   \item \(1\): ``uno'' \(\rightarrow\) representa una unidad. Este número es importante, porque a partir de él se obtiene el resto de cantidades.
-  \item \(2\): ``dos'' \(\rightarrow\) representa dos unidades. Si, sé que la definición no es muy creativa, pero podemos pensarlo de la siguiente manera: si definimos un dedo (por ejemplo el índice) como unidad, luego podemos decir que tenemos \(2\) dedos índice. Uno en cada mano.
+  \item \(2\): ``dos'' \(\rightarrow\) representa dos unidades. Sí, sé que la definición no es muy creativa, pero podemos pensarlo de la siguiente manera: si definimos un dedo (por ejemplo el índice) como unidad, luego podemos decir que tenemos \(2\) dedos índice. Uno en cada mano.
   \item \(3\): ``tres'' \(\rightarrow\) representa tres unidades. Creo que ya se entiende como continúa. 
 \end{itemize}
 Así continuamos definiendo, la cantidad, su nombre (uno, dos,\dots) y su símbolo (1, 2,\dots).
 
-Este sistema se llama decimal porque tiene en total diez dígitos (como ya vimos). Estos dígitos pueden combinarse para representar cantidades mayores a \(9\). Aquí, por ejemplo, el número \(17\) es una representación con dos números de una cantidad mayor a \(9\). Cuando llegamos a \(9\), en el sistema decimal, se nos agotaron los símbolos disponibles. Entonces, los humanos tuvieron esta grandiosa idea. Utilizar más números agrupados para representar cantidades tan grande como necesitemos. Veamos un ejemplo.
+Este sistema se llama decimal porque tiene en total diez dígitos. Estos dígitos pueden combinarse para representar cantidades mayores a \(9\). Aquí, por ejemplo, el número \(17\) es una representación con dos números de una cantidad mayor a \(9\). Cuando llegamos a \(9\), en el sistema decimal, se nos agotaron los símbolos disponibles, de esta manera puede intuir que esto es una gran limitación si pretendemos contar cualquier cosa. Para salvar esta problemática, use combinatoria.\footnote{Combinatoria se refiere a mezclar números donde su orden de posición es importante.} Utilizar más números agrupados para representar cantidades tan grandes como se necesite es la solución.
 
+\begin{example}
 Si tenemos \(17\) piedras, entonces contamos las primeras \(9\) sin problemas, sin embargo, la siguiente que intentemos contar, notaremos que no tenemos símbolos disponibles. Entonces, hacemos este truco: a las primeras \(9\) piedras les colocamos un nuevo símbolo adelante, de forma que quedan:
 \begin{enumerate}
   \item Piedra \(01\)
@@ -51,24 +52,30 @@ Si tenemos \(17\) piedras, entonces contamos las primeras \(9\) sin problemas, s
 \end{enumerate}
 Y aquí ya podemos continuar contando como siempre. Sin embargo, la nueva unidad que aparece delante de los dígitos originales se llama \textit{decena}. Si continuamos contando, entonces el dígito de la izquierda, eventualmente será un 2, llamado ``veintena''. Luego, un 3 llamado ``treintena''. Así hasta el 90.
 
-Si, se que esta explicación puede sentirse muy trivial al leerla. Es como si lees un párrafo sobre como dormir. Es algo que ya sabemos y tenemos integrado en nuestro cerebro, el accionar que hay que tomar para realizar la acción. Sin embargo, es importante saber bien con qué estamos trabajando y que existen otras formas de hacer exactamente lo mismo: contar.
+Vea que una \textit{veintena} son dos decenas. El número a la izquierda cuenta cuantas decenas, centenas, millares, etcétera hay.
 
-Los números a partir del los 90's tienen nombres muy bien definidos, pasando por las centenas (cien, docientos, \dots), luego millares (mil, diez mil, cien mil, \dots) y así cada numero tendrá un nombre asociado. De modo que si yo digo: ciento cincuenta y ocho mil cuatrocientos treinta y tres, sabemos que me refiero específicamente al número 158433. Los nombres de los números pasando los millones, billones y trillones tienen nombres muy peculiares. Por ejemplo, el \href{https://es.wikipedia.org/wiki/G\%C3\%BAgol\#G.C3.BAgolplex}{gugol} (ver enlace). Estos números tan grandes no son muy usuales, pero son divertidos de conocer.
+Esta explicación puede sentirse muy trivial al leerla. Es como leer un párrafo sobre como dormir. Es algo que ya sabemos y tenemos arraigado en nuestro cerebro. Sin embargo, es importante saber bien con qué estamos trabajando y que existen otras formas de hacer exactamente lo mismo: contar.
+\end{example}
 
+Los números a partir del los 90s tienen nombres muy bien definidos, pasando por las centenas (cien, doscientos, \dots), luego millares (mil, diez mil, cien mil, \dots) y así cada número tendrá un nombre asociado. De modo que si yo digo: ciento cincuenta y ocho mil cuatrocientos treinta y tres, sabemos que me refiero específicamente al número 158433. Los nombres de los números pasando los millones, billones y trillones tienen nombres muy peculiares. Por ejemplo, el \href{https://es.wikipedia.org/wiki/G\%C3\%BAgol\#G.C3.BAgolplex}{gugol} (ver enlace\footnote{\href{https://es.wikipedia.org/wiki/G\%C3\%BAgol\#G.C3.BAgolplex}{\texttt{https://es.wikipedia.org/wiki/G\%C3\%BAgol\#G.C3.BAgolplex}}}). Estos números tan grandes no son muy usuales, pero son divertidos de conocer.
 
 \section{La suma (o adición)}
 
 Ahora que ya sabemos contar cosas, y los distintos sistemas de numeración que podemos encontrar, vamos a definir la suma para el sistema de numeración decimal\footnote{El sistema decimal también se lo suele llamar sistema de numeración base 10.}. 
 
-La suma, para números naturales, se define de la siguiente manera:
+\begin{definition}[Suma]
+Dados dos números naturales \(a\) y \(b\), entonces su suma \(c\) se define como
 \begin{align*}
   & + : \mathbb{N} \times \mathbb{N} \to \mathbb{N}\\
   &(a,b)\rightarrow a+b
 \end{align*}
+\end{definition}
 
-Esto, ya parece magia oscura y un conjunto de símbolos misteriosos que no hemos visto. ¿Qué significan todas estas cosas? Vamos por partes \dots
+\begin{note}
+  Este conjunto de símbolos misteriosos que no hemos visto nacen del álgebra de conjuntos de George Cantor\footnote{Georg Cantor (1845-1918) fue un matemático nacido en Rusia, nacionalizado alemán, de ascendencia austríaca y judía. Junto con Dedekind fue inventor de la teoría de conjuntos, que es la base de las matemáticas modernas.}.
+\end{note}
 
-El símbolo \(+\) (más) se llama ``adición'', y es un \textbf{operador}. Esto significa que se utiliza para hacer \textbf{operaciones} de adición entre números. En este caso, la definición dice que toma dos \textbf{números naturales} cualesquiera, y los suma. Como todo en matemáticas, al principio parece chino, pero una vez que lo entiendes se lee solo. Veamos que es esto de los números naturales.
+El símbolo \(+\) (más) se llama ``adición'', y es un \textbf{operador}. Esto significa que se utiliza para hacer \textbf{operaciones} de adición entre números. En este caso, la definición dice que toma dos \textbf{números naturales} cualesquiera, y los suma. En matemáticas (principalmente tomando el enfoque moderno) suele resultar un dolor de cabeza recordar toda esta simbología curiosa cuando se está empezando. Mas, esta simbología es altamente precisa y no tiene ninguna ambigüedad, cosa que el lenguaje corriente si presenta.
 
 \subsection{Los números naturales}
 

@@ -1,10 +1,4 @@
 \documentclass[a5paper]{book}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{tikz}
-\usepackage{wrapfig}
-\usepackage{array}
-\usepackage{geometry}
 
 % Set lang (support for xelatex and lualatex)
 \usepackage{fontspec}
@@ -16,16 +10,32 @@
 \setsansfont{CMU Sans Serif}
 \setmonofont{CMU Typewriter Text}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\usepackage{xcolor}
 \usepackage[colorlinks=true,
     linkcolor=black,
     urlcolor=blue,
     hypertexnames=false]{hyperref}
 
-\title{Introducción a los números\\y las operaciones}
-\author{Elio Valentino Anci}
+\include{misc/envs}
 
 \begin{document}
-  \maketitle
+  \begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    {\Huge \ttfamily Matemáticas \par}
+    \vspace*{\fill}
+    {\large \itshape Elio Valentino Anci \par}
+    {\small\today\par}
+  \end{titlepage} 
   \tableofcontents
 
   \include{chapters/1_suma_y_los_numeros}
