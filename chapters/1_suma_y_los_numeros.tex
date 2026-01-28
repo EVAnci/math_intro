@@ -20,7 +20,7 @@ Un sistema de numeración nos dice ``como'' podemos contar las cosas. Actualment
   \item Sistema sexagesimal: aquí hay nada más y nada menos que 60 símbolos para divertirse. Usualmente, este sistema se usa con un tono gris en la hora. Si bien empleamos los símbolos decimales, los segundos y minutos respetan el sistema sexagesimal.
 \end{itemize}
 
-Bueno, entonces vamos a calmarnos un poco. Todo esto no es necesario saberlo por ahora, es más un dato de color para entender de donde salen los diez símbolos y sus nombres que vamos a usar.
+Existen más sistemas de numeración. Los mencionados son solo algunos de ellos. Esto es importante tenerlo siempre presente, los números no existen, los inventa usted para contar cosas. De hecho, el poder contar, en esencia, es \emph{mapear}\footnote{mapear significa asignar. Entonces a cada objeto se le asigna un símbolo (o nombre) fácil de recordar.} objetos a símbolos.
 
 \subsection{El sistema decimal}
 
@@ -33,7 +33,7 @@ Este es el sistema que vamos a utilizar, el sistema decimal. Este sistema consta
 \end{itemize}
 Así continuamos definiendo, la cantidad, su nombre (uno, dos,\dots) y su símbolo (1, 2,\dots).
 
-Este sistema se llama decimal porque tiene en total diez dígitos. Estos dígitos pueden combinarse para representar cantidades mayores a \(9\). Aquí, por ejemplo, el número \(17\) es una representación con dos números de una cantidad mayor a \(9\). Cuando llegamos a \(9\), en el sistema decimal, se nos agotaron los símbolos disponibles, de esta manera puede intuir que esto es una gran limitación si pretendemos contar cualquier cosa. Para salvar esta problemática, use combinatoria.\footnote{Combinatoria se refiere a mezclar números donde su orden de posición es importante.} Utilizar más números agrupados para representar cantidades tan grandes como se necesite es la solución.
+Este sistema se llama decimal porque tiene en total diez dígitos. Estos dígitos pueden combinarse para representar cantidades mayores a \(9\). Aquí, por ejemplo, el número \(17\) es una representación con dos números de una cantidad mayor a \(9\). Cuando llega a \(9\), en el sistema decimal, se le han agotado los símbolos disponibles, de esta manera puede intuir que esto es una gran limitación si pretende contar cualquier cosa. Para salvar esta problemática, use combinatoria.\footnote{Combinatoria se refiere a mezclar números donde su orden de posición es importante, es decir, 12 no es lo mismo que 21.} Utilizar más números agrupados para representar cantidades tan grandes como se necesite es la solución.
 
 \begin{example}
 Si tenemos \(17\) piedras, entonces contamos las primeras \(9\) sin problemas, sin embargo, la siguiente que intentemos contar, notaremos que no tenemos símbolos disponibles. Entonces, hacemos este truco: a las primeras \(9\) piedras les colocamos un nuevo símbolo adelante, de forma que quedan:
@@ -105,19 +105,19 @@ Entonces, repasemos esto: \(\mathbb{N}\) es el conjunto de todos los números pa
 
 \subsection{Operación y operandos}
 
-Perfecto, ya hemos entendido la primera parte de la definición. Ahora falta la segunda. Cuando vemos \((a,b)\), significa que al tomar dos números \(a\) y \(b\) llamados operandos, y aplicarles la operación adición \((+)\), obtenemos su suma \((a+b)\). 
+Perfecto, ya ha entendido la primera parte de la definición. Ahora falta la segunda. Cuando ve \((a,b)\), significa que al tomar dos números \(a\) y \(b\) llamados operandos, y aplicarles la operación adición \((+)\), obtiene su suma \((a+b)\). 
 
-En palabras sencillas, esta segunda parte nos dice la ``formula'' que debemos aplicar para sumar dos números. Lo único importante que debemos aprender es cómo se llama cada parte. Veamos, dada la siguiente suma
+En palabras sencillas, esta segunda parte le dice la ``fórmula'' que debe aplicar para sumar dos números. Vea, dada la siguiente suma
 \begin{align*}
   a+b=c
 \end{align*}
-tenemos que \(a\) y \(b\) se llaman operandos o sumandos. El símbolo \(+\) es la operación que vamos a realizar, que es una adición. Y por último \(c\) se denomina suma. La suma es el resultado final, lo que obtenemos al adicionar los dos sumandos.
+tenemos que \(a\) y \(b\) se llaman operandos o sumandos. El símbolo \(+\) es la operación que va a realizar, que es una adición. Y por último \(c\) se denomina suma. La suma es el resultado final, lo que obtenemos al adicionar los dos sumandos.
 
 \section{Práctica de sumas con naturales}
 
-Bueno, la definición es preciosa ¿verdad? -- Sin embargo, de poco nos sirve si no sabemos aplicarla. Para ello vamos a despejar un poco la mente de las definiciones rigurosas y vamos a sumar algunos números.
+Bueno, la definición es preciosa ¿verdad? -- Sin embargo, de poco le sirve si no sabe aplicarla. Para ello vamos a despejar un poco la mente de las definiciones rigurosas y vamos a sumar algunos números.
 
-Digamos, se pide realizar la adición entre dos números naturales dados. En este caso serán \(302\) y \(22\). Ambos son números naturales\footnote{siempre se darán números que ya hemos visto. Y si esto no se cumple, se aclarará para no confundir.} y podemos aplicar la definición que hemos visto. Entonces tomamos ambos números y realizamos la adición
+Digamos, se le pide realizar la adición entre dos números naturales dados. En este caso serán \(302\) y \(22\). Ambos son números naturales\footnote{siempre se darán números que ya hemos visto. Y si esto no se cumple, se aclarará para no confundir.} y podemos aplicar la definición que hemos visto. Entonces tome ambos números y realice la adición:
 \[
   \begin{array}{r@{}}
     302 \\
@@ -127,11 +127,11 @@ Digamos, se pide realizar la adición entre dos números naturales dados. En est
   \end{array}
 \]
 
-Aquí, veamos detalladamente qué hemos hecho. Tomamos dos números \(302\) y \(22\). Esto equivale a \(\mathbb{N}\times\mathbb{N}\). Con nuestros dos números aplicamos el operando \(+\) sobre los números, esto equivale a \((302,22)\) en nuestra definición y luego calculamos la suma \(324\), que equivale a \(302+22\). Es decir, escribir \(302+22\) es un sinónimo a \(324\). Representan exactamente lo mismo, solo que por un lado tenemos el número directo, y por otro lado lo tenemos descompuesto como una mezcla de operadores y operandos.
+Aquí, vea detalladamente qué ha hecho. Toma dos números \(302\) y \(22\). Esto equivale a \(\mathbb{N}\times\mathbb{N}\). Con los dos números aplica el operando \(+\) sobre los números, esto equivale a \((302,22)\) en la definición. Esto ya es sumar, sin embargo se pedirá obtener una expresión sin operandos (buscar la representación decimal de la suma de cantidades), consecuentemente, luego compute la suma \(324\), que equivale a \(302+22\). Es decir, escribir \(302+22\) es un sinónimo a \(324\). Representan exactamente lo mismo, solo que por un lado tiene el número directo, y por otro lado lo tiene descompuesto como una mezcla de operadores y operandos.
 
-Al número 302 podríamos escribirlo como la adición entre otros dos números, por ejemplo \(210+92\). Y con esto podemos escribir la suma del ejercicio inicial como \(210+92+22\). Y ¿qué sentido tiene esto? Pues que ahora puedes expresar un número de un montón de maneras distintas. Ahora puedes entender a la ``suma'' cotidiana de una forma que nunca antes habías notado. Siempre que te dan la expresión a sumar o la cuenta a realizar, realmente te están dando el resultado. Solo este está expresado en término de los sumandos.
+Al número 302 podríamos escribirlo como la adición entre otros dos números, por ejemplo \(210+92\). Y con esto podemos escribir la suma del ejercicio inicial como \(210+92+22\). Y ¿qué sentido tiene esto? Pues que ahora puede expresar un número de un montón de maneras distintas. Ahora puedes entender a la ``suma'' cotidiana de una forma que, tal vez, nunca antes habías notado. Siempre que te dan la expresión a sumar o la cuenta a realizar, realmente te están dando el resultado. Solo este está expresado en término de los sumandos.
 
-Como el nombre de esta sección dice, toca realizar algunas sumas. Solo es a modo de práctica, ya que es una operación elemental y ampliamente usada en matemáticas. Los resultados puedes verificarlos libremente con la calculadora.
+Como el nombre de esta sección dice, toca realizar algunas sumas. Solo es a modo de práctica, ya que es una operación elemental y ampliamente usada en matemáticas. Los resultados puede verificarlos libremente con la calculadora.
 
 \subsection*{Nivel Básico}
 
