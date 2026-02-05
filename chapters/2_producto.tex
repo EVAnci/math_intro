@@ -7,10 +7,10 @@ En este capítulo estudiará una nueva operación llamada producto. El producto 
     2+2+2+2
   \]
   Dicha cantidad, como usted ya sabe, debe sumarse tomando de a pares. Entonces
-  \begin{gaher*}
+  \begin{gather*}
     2+2=4 \quad \text{por tanto} \quad 2+2+2+2=4+4 \\ 
   \text{así} \quad 4+4=8
-  \end{gaher*}
+  \end{gather*}
   De esta manera, el resultado de sumar cuatro veces dos es ocho.
 \end{example}
 
@@ -20,7 +20,7 @@ El ejemplo \ref{ej_intro_producto} es una idea particular de la definición más
   Se llama producto entre dos números \(a\) y \(b\) a la operación que representa la suma de \(a\) \(b\) veces.
   \begin{align*}
     \cdot ~ :& \mathbb{Q} \times \mathbb{Q}\mapsto \mathbb{Q}\\ 
-    (a,b)\rightarrow a\cdot b
+    (a,b)&\rightarrow a\cdot b
   \end{align*}
 \end{definition}
 
@@ -30,7 +30,7 @@ El significado de esta definición (definición \ref{def_producto}) es similar a
 
 La definición \ref{def_producto} puede leerse de la siguiente manera:
 \begin{quote}
-``El producto toma dos números, llamados \(a\) y \(b\) llamados factores, que tras aplicar la operación se obtiene el resultado llamado producto, que es \(b\) veces la suma de la cantidad \(a\).''
+``El producto toma dos números, llamados \(a\) y \(b\) denominados factores, que tras aplicar la operación se obtiene el resultado llamado producto, que es \(b\) veces la suma de la cantidad \(a\).''
 \end{quote}
 
 En esta descripción en palabras, tal vez pudo notar la ausencia de la explicación de un símbolo nuevo \(\mathbb{Q}\).
@@ -51,12 +51,164 @@ La división matemática es una operación que, intuitivamente permite dividir c
 
 \subsection{División}
 
-La división se define de una forma similar a las definiciones ya vistas.
+La división, es realmente un caso particular del producto. En particular es el producto de dos números racionales.
+
+
+Formalmente, la división es la operación inversa al producto. Sin embargo, tal como hicimos con la resta, podemos verla de una forma más mecánica e intuitiva.
 
 \begin{definition}[División]
-  Dados dos números racionales \(a\) y \(b\) llamados divisor y dividendo respectivamente, la división de \(a\) en \(b\) partes es 
+  Dados dos números \(a\) y \(b\) (donde \(b\) debe ser distinto de cero), la división se define como:
   \begin{align*}
-    \div :\mathbb{Q} \times \mathbb{Q} &\mapsto \mathbb{Q} \\ 
-    (a,b)\rightarrow a/b
+    / ~ :& \mathbb{Q} \times \mathbb{Q}^* \mapsto \mathbb{Q}\\ 
+    (a,b)&\rightarrow a / b
   \end{align*}
+  El resultado de esta operación nos dice cuántas veces ``entra'' la cantidad \(b\) en la cantidad \(a\).
 \end{definition}
+
+\subsection{El algoritmo de las restas sucesivas}
+
+Tal vez te preguntes: ``¿Cómo calculo esto si no tengo calculadora?''. Aquí es donde todo lo que aprendiste se conecta. 
+Si multiplicar era \textit{sumar} muchas veces, dividir es \textit{restar} muchas veces.
+
+Imagina que tienes el número 12 y quieres dividirlo por 3 (\(12/3\)). El método de las restas sucesivas consiste en quitarle 3 al 12 tantas veces como puedas hasta llegar a cero (o lo más cerca posible).
+
+\begin{example}
+  Dividamos \(12\) entre \(3\):
+  \begin{enumerate}
+      \item \(12 - 3 = 9\) (llevamos 1 resta)
+      \item \(9 - 3 = 6\) (llevamos 2 restas)
+      \item \(6 - 3 = 3\) (llevamos 3 restas)
+      \item \(3 - 3 = 0\) (llevamos 4 restas)
+  \end{enumerate}
+  Como pudimos restar el número 3 un total de \textbf{cuatro veces} hasta quedarnos sin nada, entonces \(12 / 3 = 4\).
+\end{example}
+
+Este método es muy poderoso porque transforma una operación nueva y temible en algo que ya dominas: la resta.
+
+\section{Práctica de divisiones}
+
+Intenta resolver las siguientes divisiones pensando en el método de restas sucesivas (o ``cuántas veces entra el número de abajo en el de arriba'').
+
+\subsection*{Nivel Básico}
+
+\begin{enumerate}
+  \item División exacta simple:
+  \[
+  \begin{array}{r}
+      8 \\
+      / 2 \\
+      \hline
+      \phantom{4}
+  \end{array}
+  \]
+  
+  \item El número por sí mismo:
+  \[
+  \begin{array}{r}
+      5 \\
+      / 5 \\
+      \hline
+      \phantom{1}
+  \end{array}
+  \]
+  
+  \item División por la unidad:
+  \[
+  \begin{array}{r}
+      7 \\
+      / 1 \\
+      \hline
+      \phantom{7}
+  \end{array}
+  \]
+\end{enumerate}
+
+\subsection*{Nivel Intermedio}
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item División exacta con dos cifras:
+  \[
+  \begin{array}{r}
+      15 \\
+      / 3 \\
+      \hline
+      \phantom{5}
+  \end{array}
+  \]
+  
+  \item División con resultado mayor:
+  \[
+  \begin{array}{r}
+      20 \\
+      / 4 \\
+      \hline
+      \phantom{5}
+  \end{array}
+  \]
+\end{enumerate}
+
+\section{El zoológico de los números: Clasificación}
+
+Hasta ahora hemos visto tres ``bolsas'' o conjuntos de números. Es normal sentir que son cosas separadas, pero en matemáticas, a veces una bolsa está \textit{dentro} de otra.
+
+Hagamos un repaso mental:
+\begin{itemize}
+    \item \(\mathbb{N}\) (Naturales): Sirven para contar (1, 2, 3...).
+    \item \(\mathbb{Z}\) (Enteros): Son los naturales y sus opuestos negativos (..., -2, -1, 0, 1, 2...).
+    \item \(\mathbb{Q}\) (Racionales): Son todos los que se pueden escribir como fracción (1/2, 3/4, 5, -2...).
+\end{itemize}
+
+¡Espera! ¿Has notado algo raro en la lista de racionales? Puse el número \(5\).
+¿Es el \(5\) un número racional? La definición dice que debe poder escribirse como división de dos enteros.
+\[ 5 = \frac{10}{2} = \frac{5}{1} \]
+¡Sí! El 5 es natural, pero también es entero, y también es racional.
+
+Podemos visualizar esto con un diagrama de conjuntos (Diagrama de Venn) anidados, como muñecas rusas\footnote{Las muñecas rusas, también conocidas como matrioshka son muñecas conocidas por su originalidad, que consiste en el que las muñecas se encuentran huecas y en su interior albergan una nueva muñeca, y esta a su vez a otra, hasta llegar a la más pequeña posible.}:
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[scale=1.2]
+      % Elipse Q
+      \draw[fill=blue!5] (0,0) ellipse (3.5cm and 2.5cm);
+      \node at (2.1, 1.6) {\Large \(\mathbb{Q}\)};
+      \node at (-2.5, 0.5) {\(\frac{1}{2}\)};
+      \node at (0, -1.8) {\(-1.5\)};
+      
+      % Elipse Z
+      \draw[fill=green!10] (0.5,0.2) ellipse (2cm and 1.5cm);
+      \node at (1.8, 1.0) {\Large \(\mathbb{Z}\)};
+      \node at (-0.5, 0.5) {\(-3\)};
+      \node at (0.5, -0.8) {\(0\)};
+      
+      % Elipse N
+      \draw[fill=red!10] (1,0.2) ellipse (0.8cm and 0.8cm);
+      \node at (1, 0.2) {\(\mathbb{N}\)};
+      \node at (1, 0.5) {\(5\)};
+  \end{tikzpicture}
+  \caption{Jerarquía de los conjuntos numéricos: Los naturales están dentro de los enteros, y los enteros dentro de los racionales.}
+  \label{fig:jerarquia_numeros}
+\end{figure}
+
+\subsection{Ejercicio de Intuición: ¿Quién es quién?}
+
+Para perder el miedo a los nombres, marca con una cruz (\( \times \)) a qué conjuntos pertenece cada número. ¡Ojo! Un mismo número puede tener muchas cruces. Recuerda la figura \ref{fig:jerarquia_numeros}.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Número} & \textbf{Natural} (\(\mathbb{N}\)) & \textbf{Entero} (\(\mathbb{Z}\)) & \textbf{Racional} (\(\mathbb{Q}\)) \\ \hline
+\(4\) & \(\times\) & \(\times\) & \(\times\) \\ \hline
+\(-2\) & & \(\times\) & \(\times\) \\ \hline
+\(0.5\) & & & \(\times\) \\ \hline
+\(10\) & & & \\ \hline
+\(-7\) & & & \\ \hline
+\(\frac{3}{4}\) & & & \\ \hline
+\(0\) & & & \\ \hline
+\(1\) & & & \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{note}
+    Si logras ver que el \(4\) es a la vez natural, entero y racional, habrás entendido uno de los pilares de la estructura numérica. No son mundos aislados, son capas de profundidad.
+\end{note}
