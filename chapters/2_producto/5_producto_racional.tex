@@ -265,6 +265,193 @@ Las relaciones de signo obtenidas para los enteros continúan siendo válidas. P
 
 Así, la interpretación inicial del producto como suma repetida ya no es necesaria para describir todos los casos. El producto se ha extendido primero a los enteros y luego a los racionales conservando las propiedades que venimos utilizando.
 
+\subsubsection{Fracciones irreducibles}
+
+La posibilidad de representar un mismo número mediante fracciones diferentes
+plantea una pregunta natural: entre todas esas representaciones, ¿hay alguna que
+ya no pueda hacerse más sencilla?
+
+Considere la fracción
+\[
+\frac{12}{18}.
+\]
+
+Tanto \(12\) como \(18\) contienen al factor \(2\):
+\[
+12=2\cdot6,
+\qquad
+18=2\cdot9.
+\]
+
+Por lo tanto,
+\[
+\frac{12}{18}
+=
+\frac{2\cdot6}{2\cdot9}
+=
+\frac69.
+\]
+
+La última igualdad recorre en sentido contrario la relación entre fracciones
+equivalentes. Antes multiplicábamos el numerador y el denominador por un mismo
+número distinto de cero. Ahora reconocemos un factor común y dividimos ambos
+por él. El número representado no cambia.
+
+Sin embargo, \(\frac69\) todavía puede simplificarse, porque \(6\) y \(9\)
+contienen al factor \(3\):
+\[
+\frac69
+=
+\frac{3\cdot2}{3\cdot3}
+=
+\frac23.
+\]
+
+En \(2\) y \(3\) ya no encontramos un factor natural mayor que \(1\) que sea
+común a ambos. Por eso, el proceso se detiene.
+
+\begin{definition}[Fracción irreducible]
+Una fracción es \emph{irreducible} cuando su numerador y su denominador no
+tienen ningún factor natural común mayor que \(1\).
+\end{definition}
+
+La palabra \emph{irreducible} no significa que el número sea más pequeño. Las
+fracciones
+\[
+\frac{12}{18},
+\qquad
+\frac69
+\qquad\text{y}\qquad
+\frac23
+\]
+representan exactamente el mismo número. Lo que se reduce es la escritura: en
+\(\frac23\) ya no quedan factores comunes que puedan eliminarse.
+
+Este procedimiento recibe el nombre de \emph{simplificación de una fracción}.
+Si un número natural \(c>1\) es factor del numerador y del denominador, podemos
+escribir
+\[
+a=c\cdot m,
+\qquad
+b=c\cdot n.
+\]
+
+Entonces,
+\[
+\frac ab
+=
+\frac{c\cdot m}{c\cdot n}
+=
+\frac mn.
+\]
+
+De manera abreviada, esto equivale a dividir el numerador y el denominador por
+el mismo factor:
+\[
+\boxed{
+\frac ab
+=
+\frac{a\div c}{b\div c}
+}
+\]
+siempre que \(c\) sea un factor de \(a\) y también de \(b\).
+
+La condición de usar el mismo factor es esencial. Por ejemplo,
+\[
+\frac8{12}=\frac23,
+\]
+porque dividimos ambos números por \(4\). En cambio,
+\[
+\frac8{12}\ne\frac42,
+\]
+porque para obtener \(\frac42\) se dividió el numerador por \(2\) y el
+denominador por \(6\). Esas dos modificaciones no conservan la relación entre
+el numerador y el denominador.
+
+\begin{example}[Simplificar en varios pasos]
+Consideremos
+\[
+\frac{24}{36}.
+\]
+
+Podemos comenzar dividiendo el numerador y el denominador por \(2\):
+\[
+\frac{24}{36}=\frac{12}{18}.
+\]
+
+Después podemos volver a dividirlos por \(2\):
+\[
+\frac{12}{18}=\frac69.
+\]
+
+Finalmente, dividimos ambos por \(3\):
+\[
+\frac69=\frac23.
+\]
+
+Así,
+\[
+\frac{24}{36}=\frac23.
+\]
+
+También podríamos haber reconocido desde el comienzo que
+\[
+24=12\cdot2,
+\qquad
+36=12\cdot3,
+\]
+y simplificar en un solo paso:
+\[
+\frac{24}{36}
+=
+\frac{12\cdot2}{12\cdot3}
+=
+\frac23.
+\]
+
+Los dos caminos llegan a la misma representación irreducible. No es necesario
+encontrar el factor común más grande desde el inicio; se puede simplificar poco
+a poco.
+\end{example}
+
+Los signos no modifican esta idea. Por ejemplo,
+\[
+\frac{-15}{25}
+=
+\frac{5\cdot(-3)}{5\cdot5}
+=
+\frac{-3}{5}.
+\]
+
+La fracción \(\frac{-3}{5}\) es irreducible porque \(3\) y \(5\) no tienen
+ningún factor natural común mayor que \(1\). El signo indica que el número es
+negativo; no constituye un factor que deba simplificarse.
+
+También conviene observar qué ocurre con el cero. Como
+\[
+0\cdot b=0
+\]
+para todo \(b\ne0\), cualquier fracción con numerador cero representa el número
+\(0\):
+\[
+\frac05=\frac01=0.
+\]
+
+En este caso, \(\frac05\) puede simplificarse a \(\frac01\). La condición
+\(b\ne0\) continúa siendo indispensable: una expresión con denominador cero no
+representa un número racional.
+
+\begin{note}
+Una fracción irreducible no es un nuevo tipo de número racional. Es una
+representación en la que ya no aparecen factores comunes innecesarios. La idea
+es semejante a escribir una cantidad de una forma más directa: cambia la
+expresión, pero no cambia el número expresado.
+\end{note}
+
+En síntesis, simplificar una fracción consiste en reconocer factores comunes en
+el numerador y el denominador y eliminarlos de ambos a la vez. Cuando no queda
+ningún factor natural común mayor que \(1\), la fracción es irreducible.
+
 \subsection{Inverso multiplicativo}
 
 El número \(1\) es el elemento neutro del producto. Por eso resulta natural preguntar, dado un racional no nulo, qué número debemos multiplicar por él para obtener \(1\).
@@ -413,6 +600,240 @@ Esta definición también explica expresiones como
 1\div2=\frac12
 \]
 La división ya no depende de que el cociente sea un número entero.
+
+\subsection{Fracciones de fracciones}
+
+Hasta ahora hemos escrito divisiones mediante el símbolo \(\div\), por ejemplo,
+\[
+\frac34\div\frac25.
+\]
+
+Pero la barra de una fracción también representa una división. En efecto,
+\[
+\frac ab=a\div b,
+\qquad b\ne0.
+\]
+
+Por lo tanto, el dividendo y el divisor no tienen por qué ser enteros. También
+pueden ser números racionales representados mediante fracciones. La división
+anterior puede escribirse como
+\[
+\frac{\frac34}{\frac25}.
+\]
+
+Esta expresión suele llamarse \emph{fracción compuesta} o, de manera más
+informal, \emph{fracción de fracciones}. La barra principal, que separa
+\(\frac34\) de \(\frac25\), indica la operación exterior:
+\[
+\frac{\frac34}{\frac25}
+=
+\frac34\div\frac25.
+\]
+
+Aquí la expresión \emph{fracción de fracciones} no significa tomar una parte
+de una cantidad, como cuando se calcula la mitad de \(\frac34\). Esa idea se
+representaría mediante el producto
+\[
+\frac12\cdot\frac34.
+\]
+En una fracción compuesta, en cambio, una barra principal separa un dividendo
+de un divisor.
+
+Dentro del dividendo y del divisor aparecen, a su vez, otras barras de fracción.
+Reconocer estos dos niveles evita confundir qué números se están dividiendo.
+
+Ya sabemos que dividir por un número no nulo consiste en multiplicar por su
+inverso. Entonces,
+\begin{align*}
+\frac{\frac34}{\frac25}
+&=
+\frac34\div\frac25\\
+&=
+\frac34\cdot\left(\frac25\right)^{-1}\\
+&=
+\frac34\cdot\frac52\\
+&=
+\frac{15}{8}.
+\end{align*}
+
+La fracción compuesta no introduce una operación nueva. Es otra forma de
+escribir una división entre números racionales.
+
+\subsubsection{Por qué aparecen los productos cruzados}
+
+Consideremos, en general,
+\[
+\frac{\frac ab}{\frac cd},
+\]
+donde \(b\ne0\), \(d\ne0\) y \(c\ne0\). Las dos primeras condiciones permiten
+que \(\frac ab\) y \(\frac cd\) sean fracciones; la condición \(c\ne0\)
+garantiza que el divisor \(\frac cd\) no sea cero.
+
+Como la barra principal representa una división,
+\[
+\frac{\frac ab}{\frac cd}
+=
+\frac ab\div\frac cd.
+\]
+
+Dividimos multiplicando por el inverso del divisor:
+\[
+\frac ab\div\frac cd
+=
+\frac ab\cdot\frac dc.
+\]
+
+Finalmente, usamos el producto de fracciones:
+\[
+\boxed{
+\frac{\frac ab}{\frac cd}
+=
+\frac{a\cdot d}{b\cdot c}
+}
+\qquad
+b\ne0,\ d\ne0,\ c\ne0.
+\]
+
+A veces esta igualdad se recuerda diciendo que se multiplican los términos
+``en cruz''. Sin embargo, los productos cruzados no aparecen por una decisión
+arbitraria. Aparecen porque la división se transforma en un producto por el
+inverso:
+\[
+\frac cd
+\longrightarrow
+\frac dc.
+\]
+
+Al multiplicar \(\frac ab\) por \(\frac dc\), el numerador es \(a\cdot d\) y
+el denominador es \(b\cdot c\).
+
+\begin{example}[Una fracción dividida por otra]
+Evaluemos
+\[
+\frac{\frac23}{\frac45}.
+\]
+
+La barra principal indica
+\[
+\frac23\div\frac45.
+\]
+
+Multiplicamos por el inverso de \(\frac45\):
+\begin{align*}
+\frac{\frac23}{\frac45}
+&=
+\frac23\cdot\frac54\\
+&=
+\frac{2\cdot5}{3\cdot4}\\
+&=
+\frac{10}{12}\\
+&=
+\frac56.
+\end{align*}
+
+Podemos comprobar el resultado multiplicándolo por el divisor:
+\[
+\frac56\cdot\frac45
+=
+\frac{20}{30}
+=
+\frac23.
+\]
+
+La comprobación recupera el dividendo, del mismo modo que en una división de
+números enteros.
+\end{example}
+
+\subsubsection{Cuando solo una parte es una fracción}
+
+Un número entero también es racional y puede escribirse con denominador \(1\).
+Por eso, las mismas ideas se aplican cuando solo el dividendo o solo el divisor
+aparece escrito como fracción.
+
+Por ejemplo,
+\begin{align*}
+\frac{2}{\frac35}
+&=
+2\div\frac35\\
+&=
+\frac21\cdot\frac53\\
+&=
+\frac{10}{3}.
+\end{align*}
+
+En cambio,
+\begin{align*}
+\frac{\frac23}{4}
+&=
+\frac23\div4\\
+&=
+\frac23\cdot\frac14\\
+&=
+\frac{2}{12}\\
+&=
+\frac16.
+\end{align*}
+
+Estos dos ejemplos muestran que la posición importa. Dividir \(2\) por
+\(\frac35\) no es lo mismo que dividir \(\frac35\) por \(2\), porque la
+división no es conmutativa.
+
+\subsubsection{Eliminar las fracciones internas}
+
+Existe otra manera de comprender una fracción compuesta. Podemos multiplicar
+su numerador y su denominador por una misma cantidad no nula, pues así obtenemos
+una fracción equivalente.
+
+Consideremos nuevamente
+\[
+\frac{\frac23}{\frac45}.
+\]
+
+Los denominadores internos son \(3\) y \(5\). Multipliquemos el numerador y el
+denominador de la fracción principal por \(15\):
+\[
+\frac{\frac23}{\frac45}
+=
+\frac{15\cdot\frac23}{15\cdot\frac45}.
+\]
+
+Entonces,
+\[
+15\cdot\frac23=10
+\qquad\text{y}\qquad
+15\cdot\frac45=12.
+\]
+
+Por lo tanto,
+\[
+\frac{\frac23}{\frac45}
+=
+\frac{10}{12}
+=
+\frac56.
+\]
+
+Este segundo camino produce el mismo resultado. Multiplicar por \(15\) no
+cambia el cociente, porque se multiplica tanto el dividendo como el divisor por
+la misma cantidad. Su utilidad consiste en eliminar simultáneamente los
+denominadores que aparecen dentro de la fracción compuesta.
+
+\begin{note}
+No debe confundirse la barra principal con las barras interiores. Antes de
+calcular, conviene reescribir la expresión con \(\div\). Por ejemplo,
+\[
+\frac{\frac12}{\frac34}
+=
+\frac12\div\frac34,
+\]
+no \(1\div2\div3\div4\). Los paréntesis implícitos en la fracción determinan
+qué cantidades forman el dividendo y el divisor.
+\end{note}
+
+En síntesis, una fracción puede tener números racionales como numerador y
+denominador. Si el denominador es distinto de cero, la barra principal expresa
+una división racional, y esa división puede evaluarse multiplicando el
+numerador por el inverso del denominador.
 
 \subsection{Restas sucesivas como estrategia de cálculo}
 

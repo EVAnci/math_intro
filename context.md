@@ -20,7 +20,7 @@ El archivo principal incluye tres capítulos:
 
 - El capítulo 1, `Los números`, está desarrollado. Presenta sistemas de numeración, naturales, adición, enteros, sustracción, ecuaciones, sumas de varios términos y ejercicios.
 - El capítulo 2, `Producto`, está desarrollado hasta la división decimal y la clasificación de `N`, `Z` y `Q`. Incluye ejercicios iniciales y ejercicios integradores.
-- El capítulo 3, `Potencia`, solo tiene el archivo `chapters/3_potencia/main.tex`, actualmente vacío. Es el siguiente capítulo por desarrollar.
+- El capítulo 3, `Potencia y radicación`, está desarrollado. Presenta potencias con exponentes naturales, enteros negativos y racionales; radicación, números reales, aproximación de raíces y ejercicios.
 
 Los archivos `main.pdf`, `main.aux`, `main.log`, `main.out` y `main.toc` son artefactos de compilación. El PDF y los auxiliares están ignorados por Git según `.gitignore`; no deben tratarse como fuente del libro.
 
@@ -58,6 +58,19 @@ El archivo `main.tex` define `\chapter{Producto}` y carga:
 5. `5_producto_racional.tex`: fracciones, racionales, fracciones equivalentes, producto racional, inverso, división, escritura decimal y algoritmo de la división.
 6. `6_conjuntos.tex`: inclusiones `\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q`.
 7. `7_ejercicios.tex`: ejercicios integradores sobre enteros, racionales, productos, inversos, división, decimales, conjuntos y preguntas conceptuales.
+8. `resumen.tex`: resumen en cajas `tcolorbox`.
+
+### Capítulo 3: `chapters/3_potencia/`
+
+El archivo `main.tex` define `\chapter{Potencia y radicación}` y carga los siguientes archivos en este orden:
+
+1. `1_potencia_natural.tex`: potencia como producto repetido, base, exponente, exponentes uno y cero, bases negativas y fraccionarias, y precedencia de signos.
+2. `2_propiedades.tex`: producto y cociente de potencias de igual base, potencia de una potencia, potencia de un producto y contraejemplos para propiedades falsas.
+3. `3_exponentes_negativos.tex`: interpretación de exponentes enteros negativos mediante inversos multiplicativos.
+4. `4_radicacion.tex`: raíces, ampliación de `Q` a `R`, irracionales, raíces de índice par e impar, raíz principal y aproximación de raíces.
+5. `5_exponentes_racionales.tex`: definición mediante raíces, formas equivalentes del exponente, exponentes negativos y condiciones para bases cero y negativas.
+6. `6_propiedades_generales.tex`: propiedades con exponentes racionales positivos, restricciones de dominio y relación entre radicales y potencias.
+7. `7_ejercicios.tex`: ejercicios de traducción, evaluación, propiedades, raíces, exponentes racionales, preguntas conceptuales y construcción de expresiones.
 8. `resumen.tex`: resumen en cajas `tcolorbox`.
 
 ---
@@ -368,6 +381,76 @@ Una escritura puede ocultar el conjunto más pequeño al que pertenece el númer
 
 ---
 
+## Contenido consolidado del capítulo 3
+
+### Potencias
+
+La potenciación se introduce como producto de factores iguales. Para un exponente natural positivo,
+
+```latex
+a^n=\underbrace{a\cdot a\cdot\ldots\cdot a}_{n\text{ factores}}.
+```
+
+Se distinguen base, exponente y valor de la potencia. Se estudian el exponente uno, la extensión a `a^0=1` para `a\ne0`, el caso no definido `0^0`, las bases negativas y fraccionarias, y la importancia de los paréntesis en expresiones como `(-2)^4` y `-2^4`.
+
+### Propiedades de las potencias
+
+Se justifican mediante el desarrollo y la reorganización de factores las propiedades
+
+```latex
+a^m\cdot a^n=a^{m+n},
+\qquad
+\frac{a^m}{a^n}=a^{m-n},
+\qquad
+(a^m)^n=a^{mn},
+```
+
+```latex
+(a\cdot b)^n=a^n\cdot b^n,
+\qquad
+\left(\frac ab\right)^n=\frac{a^n}{b^n}.
+```
+
+También se usa el contraejemplo para mostrar que no se pueden sumar exponentes con bases distintas ni distribuir, en general, una potencia sobre una suma. La jerarquía de operaciones se amplía a potencias antes que productos y sumas.
+
+### Exponentes negativos
+
+Los exponentes enteros negativos se introducen para conservar la regla del cociente:
+
+```latex
+a^{-n}=\frac1{a^n}\qquad(a\ne0,\ n>0).
+```
+
+El signo negativo del exponente indica un inverso multiplicativo, no un número negativo. Las potencias de base cero con exponente negativo no están definidas.
+
+### Radicación y números reales
+
+La radicación invierte la pregunta de la potenciación. Se distinguen índice y radicando, raíces de índice par e impar y raíz principal. Una raíz de índice par de un radicando negativo no es real; una raíz de índice impar puede ser negativa. Resolver `x^2=a` no es lo mismo que evaluar `\sqrt a`: el radical representa la raíz principal, mientras que la ecuación puede tener dos soluciones.
+
+La diagonal de un cuadrado de lado uno motiva la ampliación de `Q` a `R`, pues `\sqrt2` es real pero irracional:
+
+```latex
+\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R.
+```
+
+Las raíces no exactas se aproximan acotando el valor entre potencias consecutivas y refinando el intervalo con décimos, centésimos y milésimos. Se mantiene la diferencia entre el radical exacto y su aproximación decimal.
+
+### Exponentes racionales
+
+Para bases positivas, un exponente racional se define mediante raíces:
+
+```latex
+a^{1/q}=\sqrt[q]{a},
+\qquad
+a^{p/q}=\left(\sqrt[q]{a}\right)^p.
+```
+
+Los exponentes negativos incorporan el inverso multiplicativo. La escritura equivalente `\sqrt[q]{a^p}` se presenta con las condiciones correspondientes. Para bases negativas, el exponente debe reducirse a su forma irreducible: en los reales, el denominador reducido impar permite la interpretación y el denominador par no.
+
+Las propiedades generales se enuncian de forma segura para `a,b>0` y `r,s\in\mathbb Q`, haciendo explícito que las condiciones de dominio son parte de cada propiedad.
+
+---
+
 ## Convenciones LaTeX y estilo técnico
 
 - Mantener el idioma español con `polyglossia` y la notación matemática de `amsmath`, `amssymb` y `amsthm`.
@@ -384,22 +467,13 @@ Una escritura puede ocultar el conjunto más pequeño al que pertenece el númer
 
 ## Puntos pendientes y precauciones
 
-- Desarrollar `chapters/3_potencia/main.tex` siguiendo la metodología ya establecida. La nota al pie de `5_producto_racional.tex` anuncia que las potencias se profundizarán allí.
-- Revisar afirmaciones sobre cierre y propiedades cuando se generalicen a nuevos conjuntos. Una propiedad puede mantenerse, pero su dominio debe indicarse explícitamente.
 - Mantener la distinción entre una decisión matemática y una convención de notación. Esto es especialmente importante para precedencia, escritura decimal, fracciones equivalentes y algoritmos.
 
 ---
 
 ## Próximo punto de trabajo
 
-El siguiente trabajo natural es desarrollar el capítulo de potencias. Antes de escribirlo, conviene decidir su recorrido exacto, pero debería conectar con lo ya establecido:
+El capítulo 3 ya tiene un recorrido completo desde el producto repetido hasta las raíces y los exponentes racionales. El siguiente trabajo natural es continuar el capítulo 2 con fracciones irreducibles y fracciones de fracciones, y después revisar la coherencia global de las ampliaciones
+`\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R`.
 
-1. potencia como producto repetido en naturales;
-2. base, exponente y valor de una potencia;
-3. relación entre producto y potencia;
-4. propiedades justificadas, no solo reglas de exponentes;
-5. extensión cuidadosa a enteros y, si corresponde, exponentes cero o negativos;
-6. ejercicios agrupados por propósito;
-7. resumen final en cajas.
-
-Al continuar la redacción, no tratar el producto repetido como definición general de toda potencia sin delimitar el dominio. Conservar la estrategia central del libro: motivar la ampliación, distinguir número y representación, reconocer la estructura de las expresiones y separar concepto de algoritmo.
+Al continuar la redacción, conservar la estrategia central del libro: motivar cada ampliación, distinguir número y representación, reconocer la estructura de las expresiones, explicitar las condiciones de las propiedades y separar concepto de algoritmo.
