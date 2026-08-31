@@ -1,0 +1,99 @@
+\section{El producto de números enteros}
+
+La interpretación del producto como suma repetida nos permitió construir el producto de números naturales. Sin embargo, ya no basta para explicar expresiones como
+\[
+(-3)\cdot4,
+\qquad
+3\cdot(-4)
+\qquad\text{o}\qquad
+(-3)\cdot(-4).
+\]
+No tiene sentido interpretar literalmente la primera de ellas como ``sumar \(4\) menos tres veces''. Necesitamos extender el producto a los números enteros.
+
+Al hacerlo, no abandonaremos las propiedades que ya conocemos: el producto seguirá siendo asociativo y conmutativo, tendrá al \(1\) como elemento neutro, se distribuirá respecto de la suma y continuará cumpliendo que el producto por cero es cero. Estas propiedades permitirán determinar qué debe significar multiplicar por un número negativo.
+
+Así, el producto puede considerarse ahora como una operación
+\[
+\cdot\colon\mathbb{Z}\times\mathbb{Z}\to\mathbb{Z}.
+\]
+En particular, el producto de dos enteros vuelve a ser un entero.
+
+\subsection{El opuesto como producto por \texorpdfstring{\(-1\)}{-1}}
+
+Recordemos que \(-1\) es el opuesto de \(1\). Por lo tanto,
+\[
+(-1)+1=0
+\]
+Multipliquemos ambos sumandos por un entero \(a\). Por la propiedad distributiva,
+\begin{gather*}
+a\cdot\bigl((-1)+1\bigr)
+=a\cdot(-1)+a\cdot1
+\end{gather*}
+Operando usando las propiedades, obtenemos
+\begin{align*}
+  a\cdot\bigl((-1)+1\bigr) &= a\cdot(-1)+a\cdot 1 \\ 
+  a \cdot (0) &= a\cdot(-1) + a\cdot1 \\ 
+  0 &= a\cdot(-1) + a \\ 
+  -a + 0 &= a\cdot(-1) +a - a \\ 
+  -a &= a\cdot(-1)
+\end{align*}
+Es decir, \(a\cdot(-1)\) es el opuesto de \(a\). Por la definición de opuesto,
+\[
+\boxed{a\cdot(-1)=-a}
+\]
+Esta igualdad conecta el producto con la idea estudiada en el capítulo anterior: un entero negativo puede escribirse como el producto de su opuesto positivo por \(-1\).
+
+\subsection{Producto por un opuesto}
+
+Si \(b\) es un entero, acabamos de ver que
+\[
+-b=b\cdot(-1)
+\]
+Entonces, usando la propiedad asociativa,
+\begin{align*}
+a\cdot(-b)
+&=a\cdot\bigl(b\cdot(-1)\bigr)\\
+&=(a\cdot b)\cdot(-1)\\
+&=-(a\cdot b)
+\end{align*}
+Por la propiedad conmutativa se obtiene también
+\[
+(-a)\cdot b=-(a\cdot b)
+\]
+Por lo tanto, multiplicar exactamente uno de los factores por su opuesto produce el opuesto del producto.
+
+\subsection{Producto de dos opuestos}
+
+Ahora podemos determinar el producto de dos números negativos sin memorizar una regla nueva. Como \(-a=a\cdot(-1)\), tenemos
+\begin{align*}
+(-a)\cdot(-b)
+&=\bigl(a\cdot(-1)\bigr)\cdot(-b)\\
+&=(-1)\cdot\bigl(a\cdot(-b)\bigr)
+\end{align*}
+En la segunda igualdad usamos las propiedades asociativa y conmutativa. Por la sección anterior,
+\[
+a\cdot(-b)=-(a\cdot b)
+\]
+Por consiguiente,
+\begin{align*}
+(-a)\cdot(-b)
+&=(-1)\cdot\bigl(-(a\cdot b)\bigr)\\
+&=-\bigl(-(a\cdot b)\bigr)\\
+&=a\cdot b
+\end{align*}
+Así, el producto de dos opuestos es el producto de los números originales:
+\[
+\boxed{(-a)\cdot(-b)=a\cdot b}
+\]
+
+Las cuatro posibilidades para los signos se resumen ahora en consecuencias de los opuestos:
+\begin{gather*}
+(+a)\cdot(+b)=a\cdot b\\
+(-a)\cdot(+b)=-(a\cdot b)\\
+(+a)\cdot(-b)=-(a\cdot b)\\
+(-a)\cdot(-b)=a\cdot b
+\end{gather*}
+Por ejemplo,
+\[
+(-3)\cdot(-4)=3\cdot4=12
+\]

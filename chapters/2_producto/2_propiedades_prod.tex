@@ -1,0 +1,308 @@
+\section{Propiedades del producto}
+
+Hemos introducido el producto de números naturales mediante sumas repetidas. Esto nos permite hacer algo importante: muchas de sus propiedades pueden comprenderse utilizando únicamente ideas que ya conocemos sobre la adición.
+
+No se trata de memorizar una nueva colección de reglas independientes. En muchos casos podremos desarmar un producto en sumas, utilizar las propiedades de la adición y volver a escribir el resultado como un producto.
+
+\subsection{Clausura}
+
+Como el producto entre números naturales puede construirse mediante sumas de números naturales, su resultado vuelve a ser un número natural.
+
+Por ejemplo,
+\[
+4\cdot3
+=
+3+3+3+3
+=
+12
+\]
+y
+\[
+12\in\mathbb{N}
+\]
+De manera general, si
+\[
+a,b\in\mathbb{N}
+\]
+entonces
+\[
+a\cdot b\in\mathbb{N}
+\]
+Por eso decimos que los números naturales son \emph{cerrados} respecto del producto.
+
+\subsection{Propiedad conmutativa}
+
+Considere
+\[
+3\cdot4
+\]
+Según nuestra interpretación del producto,
+\[
+3\cdot4
+=
+4+4+4
+=
+12.
+\]
+En cambio,
+\[
+4\cdot3
+=
+3+3+3+3
+=
+12.
+\]
+En ambos casos obtenemos el mismo número:
+\[
+3\cdot4=4\cdot3
+\]
+Este hecho puede comprenderse de una manera sencilla si imaginamos una disposición rectangular de objetos. El producto
+\[
+3\cdot4
+\]
+puede representar tres filas de cuatro objetos:
+\[
+\begin{array}{cccc}
+\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet
+\end{array}
+\]
+Pero esa misma disposición también puede observarse como cuatro columnas de tres objetos. Contar por filas o contar por columnas no modifica la cantidad de objetos.
+De manera general,
+\[
+a\cdot b=b\cdot a
+\]
+Esta propiedad recibe el nombre de \emph{propiedad conmutativa del producto}.
+Gracias a ella, aunque inicialmente interpretemos
+\[
+a\cdot b
+\]
+como \(a\) repeticiones de \(b\), también podemos interpretarlo como \(b\) repeticiones de \(a\).
+
+\subsection{Elemento neutro}
+
+Considere ahora el producto
+\[
+1\cdot a
+\]
+Según la interpretación de suma repetida, esto significa tomar una sola vez el número \(a\). Por lo tanto,
+\[
+1\cdot a=a
+\]
+Como el producto es conmutativo,
+\[
+a\cdot1=1\cdot a=a
+\]
+Así,
+\[
+a\cdot1=1\cdot a=a
+\]
+El número \(1\) recibe el nombre de \emph{elemento neutro del producto}: multiplicar un número por \(1\) no modifica la cantidad representada.
+
+\subsection{Producto por cero}
+
+Veamos ahora qué ocurre con el número \(0\).
+
+La expresión
+\[
+a\cdot0
+\]
+representa la suma de \(a\) ceros:
+\[
+\underbrace{0+0+\cdots+0}_{a\text{ veces}}
+\]
+Como sumar ceros no modifica la cantidad,
+\[
+a\cdot0=0
+\]
+Por la propiedad conmutativa,
+\[
+0\cdot a=a\cdot0=0
+\]
+Por lo tanto,
+\[
+a\cdot0=0\cdot a=0
+\]
+El cero no es un elemento neutro del producto. Por el contrario, cualquier producto que tenga al \(0\) como factor representa el número \(0\).
+
+\subsection{Propiedad asociativa}
+
+El producto, al igual que la suma, es una operación binaria. Por esta razón, una expresión como
+\[
+2\cdot3\cdot4
+\]
+representa aplicaciones sucesivas del producto.
+Podríamos agrupar primero
+\[
+2\cdot3
+\]
+y escribir
+\[
+(2\cdot3)\cdot4
+\]
+Como
+\[
+2\cdot3=6
+\]
+obtenemos
+\[
+6\cdot4=24
+\]
+Pero también podríamos comenzar por
+\[
+3\cdot4
+\]
+y escribir
+\[
+2\cdot(3\cdot4)
+\]
+Como
+\[
+3\cdot4=12
+\]
+obtenemos
+\[
+2\cdot12=24
+\]
+Ambas formas de agrupar representan el mismo número:
+\[
+(2\cdot3)\cdot4
+=
+2\cdot(3\cdot4)
+\]
+Podemos comprender por qué ocurre esto utilizando nuevamente la suma repetida.
+La expresión
+\[
+a\cdot(b\cdot c)
+\]
+significa tomar \(a\) veces la cantidad \(b\cdot c\):
+\[
+\underbrace{(b\cdot c)+(b\cdot c)+\cdots+(b\cdot c)}_{a\text{ veces}}
+\]
+Pero cada \(b\cdot c\) representa, a su vez,
+\[
+\underbrace{c+c+\cdots+c}_{b\text{ veces}}
+\]
+Por lo tanto, en total estamos sumando \(c\) una cantidad de \(a\cdot b\) veces. Esto puede escribirse como
+\[
+(a\cdot b)\cdot c
+\]
+Así obtenemos, de manera general,
+\[
+(a\cdot b)\cdot c
+=
+a\cdot(b\cdot c)
+\]
+Esta es la \emph{propiedad asociativa del producto}.
+Gracias a ella podemos escribir simplemente
+\[
+a\cdot b\cdot c
+\]
+sin indicar mediante paréntesis qué producto debe realizarse primero, siempre que en la expresión intervengan únicamente productos.
+
+\subsection{Propiedad distributiva}
+
+Existe además una propiedad especialmente importante porque relaciona las dos operaciones que conocemos hasta ahora: la suma y el producto.
+
+Considere
+\[
+3\cdot(2+4)
+\]
+Como el primer factor indica cuántas veces repetimos el segundo,
+\[
+3\cdot(2+4)
+=
+(2+4)+(2+4)+(2+4)
+\]
+Utilizando las propiedades asociativa y conmutativa de la adición podemos reorganizar los sumandos:
+\[
+(2+2+2)+(4+4+4)
+\]
+Ahora reconocemos nuevamente dos productos:
+\[
+2+2+2=3\cdot2
+\]
+y
+\[
+4+4+4=3\cdot4
+\]
+Por lo tanto,
+\[
+3\cdot(2+4)
+=
+3\cdot2+3\cdot4
+\]
+De manera general,
+\[
+a\cdot(b+c)
+=
+a\cdot b+a\cdot c
+\]
+Esta propiedad recibe el nombre de \emph{propiedad distributiva del producto respecto de la suma}.
+
+También podemos encontrar la suma en el primer factor. Por ejemplo,
+\[
+(2+3)\cdot4
+\]
+Según la interpretación del producto, estamos sumando \(4\) un total de \(2+3\) veces:
+\[
+\underbrace{4+4}_{2\text{ veces}}
++
+\underbrace{4+4+4}_{3\text{ veces}}
+\]
+Podemos reconocer entonces
+\[
+2\cdot4+3\cdot4
+\]
+Por lo tanto,
+\[
+(a+b)\cdot c
+=
+a\cdot c+b\cdot c
+\]
+Ambas formas expresan la misma idea:
+\begin{gather*}
+a\cdot(b+c)=a\cdot b+a\cdot c \\
+(a+b)\cdot c=a\cdot c+b\cdot c
+\end{gather*}
+La propiedad distributiva será especialmente importante porque permite transformar expresiones que contienen productos y sumas sin modificar el número que representan.
+
+\subsection{¿Qué hemos obtenido a partir de la suma?}
+
+Resulta útil observar lo que acabamos de hacer.
+
+Partimos de una interpretación muy sencilla:
+\[
+a\cdot b
+=
+\underbrace{b+b+\cdots+b}_{a\text{ veces}}
+\]
+A partir de ella pudimos comprender varias propiedades del producto:
+\begin{gather*}
+  a\cdot b=b\cdot a,\\
+  (a\cdot b)\cdot c=a\cdot(b\cdot c),\\
+  a\cdot1=a,\\
+  a\cdot0=0,
+\end{gather*}
+y
+\[
+a\cdot(b+c)=a\cdot b+a\cdot c.
+\]
+Esto muestra que la relación entre suma y producto es más profunda que una simple abreviatura de escritura. Sobre los números naturales, el producto puede construirse a partir de sumas repetidas y gran parte de su comportamiento puede comprenderse utilizando las propiedades que ya conocemos de la adición.
+
+Sin embargo, suma y producto continúan siendo operaciones diferentes. En una expresión es importante reconocer cuál de ellas está actuando en cada nivel.
+
+Por ejemplo, en
+\[
+2+3\cdot4+5
+\]
+los sumandos de la expresión principal son
+\[
+2,\qquad3\cdot4,\qquad5,
+\]
+mientras que \(3\) y \(4\) son los factores del producto
+\[
+3\cdot4
+\]
+Esta distinción será fundamental para interpretar correctamente expresiones que combinen varias operaciones.

@@ -1,601 +1,407 @@
-# Contexto resumido para reanudar la revisión del libro
+# Contexto del proyecto Matemáticas
 
-## Objetivo general
+## Propósito de este archivo
 
-Se está revisando y reestructurando un libro introductorio de matemáticas con un enfoque conceptual, riguroso y accesible.
+Este documento sirve como contexto de trabajo para revisar, ampliar y redactar el libro. Describe el estado real del proyecto, la estructura de los archivos y las decisiones metodológicas que deben conservarse. Antes de modificar un capítulo, úselo para mantener la continuidad conceptual y el estilo del texto.
 
-Criterios generales:
-- distinguir entre **operación**, **expresión**, **evaluación** y **algoritmo de cálculo**;
-- evitar reglas mecánicas sin explicación;
-- mostrar que distintas expresiones pueden representar el mismo número;
-- mantener precisión matemática sin caer en un desarrollo fundacional excesivo;
-- usar preferentemente el tratamiento de **usted**;
-- evitar clasificar ejercicios como “básicos”, “intermedios” o “avanzados”; agruparlos por tipo de tarea.
+El proyecto es un libro introductorio de matemáticas escrito en español. Busca desarrollar una comprensión conceptual de las operaciones y de los conjuntos numéricos sin convertir la exposición en un tratado fundacional. El rigor debe estar al servicio de la comprensión: cada definición, propiedad o procedimiento importante debe tener una motivación y no presentarse como una regla misteriosa.
 
 ---
 
-# Capítulo anterior: suma, resta, enteros y ecuaciones
+## Estado actual del proyecto
 
-## Sistemas de numeración
+El archivo principal incluye tres capítulos:
 
-Se introdujo el sistema decimal como posicional.
+```latex
+\include{chapters/1_suma/main}
+\include{chapters/2_producto/main}
+\include{chapters/3_potencia/main}
+```
 
-Ejemplo:
+- El capítulo 1, `Los números`, está desarrollado. Presenta sistemas de numeración, naturales, adición, enteros, sustracción, ecuaciones, sumas de varios términos y ejercicios.
+- El capítulo 2, `Producto`, está desarrollado hasta la división decimal y la clasificación de `N`, `Z` y `Q`. Incluye ejercicios iniciales y ejercicios integradores.
+- El capítulo 3, `Potencia`, solo tiene el archivo `chapters/3_potencia/main.tex`, actualmente vacío. Es el siguiente capítulo por desarrollar.
 
-\[
-4387=4000+300+80+7.
-\]
-
-La posición de cada cifra determina su valor.
-
----
-
-## Números naturales
-
-Se adoptó explícitamente:
-
-\[
-\mathbb N=\{0,1,2,3,\ldots\}.
-\]
+Los archivos `main.pdf`, `main.aux`, `main.log`, `main.out` y `main.toc` son artefactos de compilación. El PDF y los auxiliares están ignorados por Git según `.gitignore`; no deben tratarse como fuente del libro.
 
 ---
 
-## Suma
+## Mapa de archivos
 
-La suma se presenta como una operación binaria:
+### Configuración general
 
-\[
-+\colon\mathbb N\times\mathbb N\to\mathbb N
-\]
+- `main.tex`: clase `book` en tamaño `a5paper`, idioma español, fuentes CMU, paquetes matemáticos y gráficos, inclusión de entornos y cajas, portada, índice y capítulos.
+- `misc/envs.tex`: definición de entornos numerados y del entorno `note`.
+- `misc/boxes.tex`: estilos visuales `resumen` y `remember` para `tcolorbox`.
+- `.gitignore`: excluye auxiliares de LaTeX, artefactos del editor y `main.pdf`.
 
-y posteriormente:
+### Capítulo 1: `chapters/1_suma/`
 
-\[
-+\colon\mathbb Z\times\mathbb Z\to\mathbb Z.
-\]
+El archivo `main.tex` define `\chapter{Los números}` y carga los siguientes archivos en este orden:
 
-La notación describe el tipo de operación, pero no se presenta como una definición fundacional completa de la suma.
+1. `1_sistemas_numeracion.tex`: idea de sistema de numeración y sistema decimal.
+2. `2_suma.tex`: naturales, adición, operación y operandos, representaciones, práctica de sumas y algoritmo decimal de la adición.
+3. `3_sustraccion.tex`: opuestos, enteros, usos del signo menos y sustracción como suma del opuesto.
+4. `4_ecuaciones.tex`: igualdad, ecuación, conservación de la igualdad y resolución de ecuaciones aditivas.
+5. `5_sumas_multiples.tex`: suma binaria aplicada varias veces, asociatividad, sumandos, términos y expresiones con sustracciones.
+6. `6_ejercicios.tex`: ejercicios con enteros y ecuaciones.
+7. `resumen.tex`: resumen en cajas `tcolorbox`.
 
-Idea central:
+### Capítulo 2: `chapters/2_producto/`
 
-\[
-302+22
-\]
+El archivo `main.tex` define `\chapter{Producto}` y carga:
 
-ya representa un número. Evaluar la expresión consiste en obtener otra representación equivalente:
-
-\[
-302+22=324.
-\]
-
-No se quiere enseñar que recién \(324\) “es la suma”. La formulación preferida es:
-
-> \(302+22\) ya denota la suma; \(324\) es otra representación del mismo número.
-
-También se introdujo que un mismo número puede escribirse de varias maneras:
-
-\[
-302=210+92.
-\]
+1. `1_producto_natural.tex`: producto de naturales, suma repetida, factores, estructura de expresiones y precedencia.
+2. `2_propiedades_prod.tex`: clausura, conmutatividad, elemento neutro, producto por cero, asociatividad y distributividad.
+3. `3_ejercicios.tex`: práctica inicial con productos de naturales y reconocimiento de estructura.
+4. `4_producto_entero.tex`: extensión a enteros y determinación conceptual de los signos mediante opuestos y distributividad.
+5. `5_producto_racional.tex`: fracciones, racionales, fracciones equivalentes, producto racional, inverso, división, escritura decimal y algoritmo de la división.
+6. `6_conjuntos.tex`: inclusiones `\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q`.
+7. `7_ejercicios.tex`: ejercicios integradores sobre enteros, racionales, productos, inversos, división, decimales, conjuntos y preguntas conceptuales.
+8. `resumen.tex`: resumen en cajas `tcolorbox`.
 
 ---
 
-## Ejercicios de suma
+## Metodología de escritura
 
-Los ejercicios se reorganizaron por propósito:
+La secuencia habitual de una idea es:
+
+1. presentar una situación o una pregunta que motive la noción;
+2. introducir la notación y explicar qué significa cada parte;
+3. distinguir la operación de la expresión que la representa y de su valor;
+4. mostrar uno o más ejemplos completamente desarrollados;
+5. justificar las propiedades a partir de ideas ya introducidas, cuando sea posible;
+6. practicar mediante ejercicios agrupados por propósito;
+7. ampliar el conjunto numérico cuando el conjunto anterior ya no alcanza;
+8. separar el concepto del algoritmo de cálculo;
+9. cerrar con un resumen de las ideas y relaciones principales.
+
+Los capítulos no deben avanzar como una lista de reglas aisladas. La ampliación de `N` a `Z` y de `Z` a `Q` debe aparecer como respuesta a operaciones o ecuaciones que no pueden resolverse en el conjunto anterior. Las expresiones equivalentes deben utilizarse para mostrar que una cantidad puede tener varias representaciones.
+
+El texto se dirige preferentemente al lector mediante **usted**. Hay formulaciones antiguas en primera persona o con `tú` que pueden revisarse gradualmente, pero no deben introducirse nuevas inconsistencias. El tono debe ser directo, accesible y preciso, sin infantilizar al lector.
+
+Los ejercicios se agrupan por la tarea que se quiere practicar, no por niveles llamados “básico”, “intermedio” o “avanzado”. Los tipos ya utilizados son:
+
+- reescribir expresiones;
 - evaluar expresiones;
 - descomponer números;
 - completar igualdades;
-- construir expresiones.
+- reconocer la estructura de una expresión;
+- resolver y comprobar ecuaciones;
+- justificar propiedades;
+- construir expresiones con condiciones dadas;
+- cambiar entre representaciones fraccionarias, divisiones y decimales;
+- clasificar números según los conjuntos a los que pertenecen.
 
-Se eliminó la clasificación por niveles de dificultad.
-
-Ejemplo importante:
-
-\[
-17+8=\square+10
-\]
-
-sirve para reforzar que \(=\) significa que ambos miembros representan la misma cantidad.
+Cuando un ejercicio admita varias respuestas, debe decirse explícitamente. Cuando la consigna evalúe una expresión, conviene aclarar si se pide solo la transformación o también el numeral final.
 
 ---
 
-## Algoritmo de la suma
+## Principios conceptuales transversales
 
-Se presentó después de los ejercicios mentales.
+### Número y representación
 
-Idea central:
-
-> El algoritmo decimal no define la suma; es un procedimiento sistemático para evaluar ciertas sumas.
-
-Las “llevadas” se explicaron mediante valor posicional:
-
-\[
-7+6=13=10+3.
-\]
-
-El \(3\) queda en unidades y la decena pasa a la posición siguiente.
-
----
-
-# Enteros, opuestos y resta
-
-## Opuesto
-
-Se introdujo:
-
-\[
-a+(-a)=0.
-\]
-
-En:
-
-\[
--5
-\]
-
-el signo menos indica el **opuesto de 5**, no una resta entre dos números.
-
----
-
-## Enteros
-
-\[
-\mathbb Z=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}.
-\]
-
-Y:
-
-\[
-\mathbb N\subseteq\mathbb Z.
-\]
-
----
-
-## Dos usos del signo menos
-
-No se debe afirmar que “el signo menos siempre pertenece al número y no a la operación”.
-
-Hay dos usos:
-
-En
-
-\[
--5
-\]
-
-indica el opuesto.
-
-En
-
-\[
-8-5
-\]
-
-indica una sustracción.
-
-La relación entre ambos usos es:
-
-\[
-a-b=a+(-b).
-\]
-
----
-
-## Sustracción
-
-Se presenta como suma del opuesto:
-
-\[
-a-b=a+(-b).
-\]
-
-Ejemplo:
-
-\[
-8-5=8+(-5).
-\]
-
-No conviene decir “las matemáticas no definen la resta”. La formulación preferida es:
-
-> No necesitamos tomar la sustracción como una operación independiente de la adición: podemos definirla mediante la suma y el opuesto.
-
----
-
-## Signo y sumandos
-
-Una vez reescritas las sustracciones:
-
-\[
-7-4+2=7+(-4)+2,
-\]
-
-los sumandos son:
-
-\[
-7,\quad -4,\quad 2.
-\]
-
-Formulación preferida:
-
-> Una vez convertidas las sustracciones en sumas de opuestos, cada número con su signo constituye un sumando.
-
----
-
-# Sumas de más de dos términos
-
-Como la suma es binaria, se explicó por qué tiene sentido escribir:
-
-\[
-2+5+7+9.
-\]
-
-La clave es la asociatividad:
-
-\[
-(a+b)+c=a+(b+c).
-\]
-
-La suma sigue aplicándose de a dos, pero la asociatividad permite omitir paréntesis cuando solo hay adiciones.
-
-Distinción terminológica:
-- **sumando**: componente de una suma;
-- **término**: parte principal de una expresión en sentido más general.
-
----
-
-# Igualdades y ecuaciones
-
-## Igualdad
-
-El signo:
-
-\[
-=
-\]
-
-indica que ambos miembros representan la misma cantidad.
-
-Por eso:
-
-\[
-3+4=7
-\]
-
-y:
-
-\[
-7=3+4
-\]
-
-son igualmente válidas.
-
----
-
-## Ecuación
-
-Una ecuación es una igualdad con uno o más valores desconocidos.
-
-Ejemplo:
-
-\[
-x+3=8.
-\]
-
-Resolverla consiste en encontrar los valores que hacen verdadera la igualdad.
-
-Para conservar la igualdad se realiza la misma transformación en ambos miembros:
-
-\[
-x+3=8
-\]
-
-\[
-x+3+(-3)=8+(-3)
-\]
-
-\[
-x=5.
-\]
-
-Se evitó presentar como fundamento la regla “pasa al otro lado y cambia de signo”. Esa frase puede aparecer luego como abreviatura, pero no como explicación esencial.
-
----
-
-# Cierre del capítulo anterior
-
-Se redactó un resumen en cajas del tipo:
+Un número y una forma de escribirlo no son lo mismo. Expresiones distintas pueden representar la misma cantidad:
 
 ```latex
-\begin{tcolorbox}[resumen,title=...]
-...
-\end{tcolorbox}
+302+22=324
 ```
 
-con:
-- sistemas de numeración;
-- naturales y enteros;
-- adición;
-- propiedades de la adición;
-- sustracción;
-- igualdades y ecuaciones.
+La expresión `302+22` ya representa un número; evaluarla consiste en encontrar otra representación equivalente, normalmente más directa. No debe decirse que el resultado “crea” la suma o que solo el numeral final es el número.
+
+Este principio reaparece en:
+
+```latex
+4\cdot2=2+2+2+2=8
+\qquad
+1\div2=\frac12=0{,}5.
+```
+
+### Operación, expresión, evaluación y algoritmo
+
+- Una **operación** es la regla que actúa sobre ciertos operandos.
+- Una **expresión** es una escritura que representa un número o una operación entre números.
+- **Evaluar** una expresión es determinar o producir una representación de su valor.
+- Un **algoritmo** es un procedimiento sistemático para evaluar ciertos tipos de expresiones.
+
+El algoritmo decimal de la suma no define la adición. Del mismo modo, el algoritmo de la división no define la división. Ambos organizan propiedades, descomposiciones y operaciones ya estudiadas.
+
+### Estructura de las expresiones
+
+Hay que identificar el nivel en el que actúa cada operación. En
+
+```latex
+7+3\cdot5
+```
+
+la suma exterior tiene como sumandos `7` y `3\cdot5`; dentro del segundo sumando, `3` y `5` son factores. No debe confundirse el producto completo con sus factores.
+
+No es correcto afirmar que no se pueden “sumar sumas y productos”. Sí se puede sumar una cantidad representada por un producto, por ejemplo `2+(3\cdot4)`. Lo importante es reconocer la estructura de la expresión.
+
+### Igualdad y ecuación
+
+El signo `=` afirma que sus dos miembros representan el mismo número; no es únicamente una orden para calcular de izquierda a derecha. Una ecuación es una igualdad con uno o más valores desconocidos. Resolverla consiste en encontrar los valores que la hacen verdadera.
+
+Las transformaciones que conservan una igualdad deben aplicarse a ambos miembros. La frase “pasar al otro lado y cambiar de signo” puede mencionarse como abreviatura posterior, pero nunca como explicación fundamental.
 
 ---
 
-# Nuevo capítulo: Producto
+## Contenido consolidado del capítulo 1
 
-Archivo de trabajo: `2_producto.tex`
+### Sistemas de numeración y naturales
 
-## Idea general
+Se introduce la idea de que un sistema de numeración permite representar cantidades mediante símbolos y reglas. El sistema decimal es posicional: el valor de una cifra depende de su posición. Por ejemplo,
 
-Se quiere presentar el producto como una operación nueva, pero conectada conceptualmente con la suma.
+```latex
+4387=4000+300+80+7.
+```
 
-Sobre naturales:
+Se adopta explícitamente
 
-\[
-a\cdot b
-=
-\underbrace{b+b+\cdots+b}_{a\text{ veces}}.
-\]
+```latex
+\mathbb N=\{0,1,2,3,\ldots\}.
+```
 
-Ejemplo:
+La introducción es intuitiva y no pretende definir formalmente los naturales desde los fundamentos.
 
-\[
-4\cdot2=2+2+2+2=8.
-\]
+### Adición
 
-Las expresiones:
+Sobre naturales se escribe
 
-\[
-4\cdot2,\qquad 2+2+2+2,\qquad 8
-\]
+```latex
++\colon\mathbb N\times\mathbb N\to\mathbb N,
+```
 
-representan el mismo número de distintas maneras.
+y luego, al trabajar con enteros,
+
+```latex
++\colon\mathbb Z\times\mathbb Z\to\mathbb Z.
+```
+
+Los operandos de una suma son **sumandos**. La adición es binaria: recibe dos números cada vez. Las sumas de más de dos términos son aplicaciones sucesivas de la misma operación; la asociatividad permite omitir paréntesis cuando solo aparecen adiciones.
+
+Se estudian conmutatividad, asociatividad, elemento neutro `0` y existencia del opuesto.
+
+### Enteros y sustracción
+
+El opuesto de `a` es `-a` y satisface
+
+```latex
+a+(-a)=0.
+```
+
+Se adopta
+
+```latex
+\mathbb Z=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\},
+\qquad
+\mathbb N\subseteq\mathbb Z.
+```
+
+El signo menos tiene dos usos relacionados pero distintos:
+
+- en `-5`, indica el opuesto de `5`;
+- en `8-5`, indica una sustracción.
+
+La sustracción se define mediante la adición:
+
+```latex
+a-b=a+(-b).
+```
+
+Al reescribir una expresión como suma de opuestos, cada número con su signo constituye un sumando. La sustracción no debe tratarse como conmutativa ni asociativa; la libertad para ordenar o agrupar aparece después de convertirla en una suma.
+
+### Igualdades y ecuaciones
+
+Se trabaja principalmente con ecuaciones aditivas, por ejemplo `x+3=8` y `x-4=9`. La solución se obtiene sumando el opuesto del término correspondiente en ambos miembros y se comprueba mediante sustitución.
+
+### Algoritmo de la adición
+
+Se presenta después del cálculo mental y de las descomposiciones. La alineación de cifras responde al valor posicional. Las “llevadas” se explican mediante descomposiciones como
+
+```latex
+13=10+3,
+```
+
+es decir, diez unidades forman una decena. El procedimiento vertical es una herramienta para evaluar sumas, no la definición de la adición.
 
 ---
 
-## Producto como operación binaria
+## Contenido consolidado del capítulo 2
 
-Sobre naturales:
+### Producto de naturales
 
-\[
+El producto es una operación binaria:
+
+```latex
 \cdot\colon\mathbb N\times\mathbb N\to\mathbb N.
-\]
+```
 
-Los operandos reciben el nombre de **factores**.
+En naturales se introduce mediante la suma repetida:
 
-El valor de la expresión completa se llama **producto**.
+```latex
+a\cdot b=
+\underbrace{b+b+\cdots+b}_{a\text{ veces}}.
+```
 
----
+Los operandos son **factores** y el valor de la expresión completa se llama **producto**. La suma repetida es una interpretación inicial sobre `N`, no una definición literal suficiente para productos racionales.
 
-## Importante: no usar suma repetida como definición general sobre racionales
+### Estructura y precedencia
 
-La versión original usaba:
+En una expresión que combina suma y producto, la precedencia del producto sobre la suma es una **convención de escritura**. Así,
 
-\[
-\cdot:\mathbb Q\times\mathbb Q\to\mathbb Q.
-\]
-
-Eso se consideró problemático porque la interpretación como suma repetida no explica de forma general productos como:
-
-\[
-\frac32\cdot\frac47.
-\]
-
-Recorrido recomendado:
-1. producto sobre \(\mathbb N\);
-2. extensión a \(\mathbb Z\);
-3. división;
-4. mostrar que \(\mathbb Z\) no es cerrado bajo división;
-5. introducir \(\mathbb Q\);
-6. extender allí las operaciones.
-
----
-
-# Estructura de expresiones con suma y producto
-
-En:
-
-\[
+```latex
 7+3\cdot5
-\]
+```
 
-la suma exterior tiene dos sumandos:
+significa `7+(3\cdot5)`, no `(7+3)\cdot5`. No debe justificarse diciendo que el producto es “más importante” ni como consecuencia de que inicialmente se interprete mediante sumas repetidas.
 
-\[
-7
-\]
+### Propiedades del producto
 
-y:
+Sobre naturales se desarrollan:
 
-\[
-3\cdot5.
-\]
+```latex
+a\cdot b=b\cdot a
+```
 
-Dentro de \(3\cdot5\), los números \(3\) y \(5\) son factores.
+```latex
+(a\cdot b)\cdot c=a\cdot(b\cdot c)
+```
 
-Idea central:
+```latex
+a\cdot1=a,\qquad a\cdot0=0
+```
 
-> No confundir los niveles estructurales de una expresión.
+```latex
+a\cdot(b+c)=a\cdot b+a\cdot c,
+```
 
-No conviene decir “no podemos sumar sumas y productos”. Sí podemos sumar una cantidad representada mediante un producto:
+```latex
+(a+b)\cdot c=a\cdot c+b\cdot c.
+```
 
-\[
-2+(3\cdot4).
-\]
+La clausura, la conmutatividad, el neutro, el producto por cero, la asociatividad y la distributividad se motivan mediante sumas repetidas, arreglos rectangulares, agrupaciones y valor posicional. La formulación preferida es que muchas propiedades **pueden comprenderse** a partir de la suma; evitar decir formalmente que el producto “hereda” propiedades sin explicar el argumento.
 
-Lo importante es reconocer qué operación actúa en cada nivel.
+### Producto de enteros
 
----
+La suma repetida ya no basta para expresiones como `(-3)\cdot4` o `(-3)\cdot(-4)`. Se extiende el producto a
 
-# Jerarquía de operaciones
+```latex
+\cdot\colon\mathbb Z\times\mathbb Z\to\mathbb Z
+```
 
-Se quiere explicar que:
+conservando las propiedades relevantes. Mediante distributividad se obtiene
 
-\[
-7+3\cdot5
-\]
+```latex
+a\cdot(-1)=-a.
+```
 
-se interpreta como:
+De allí se deduce que multiplicar exactamente un factor por su opuesto produce el opuesto del producto, y que dos factores opuestos producen un producto positivo:
 
-\[
-7+(3\cdot5)
-\]
+```latex
+(-a)\cdot b=-(a\cdot b),
+\qquad
+(-a)\cdot(-b)=a\cdot b.
+```
 
-y no como:
+La regla de los signos debe presentarse como consecuencia de los opuestos, la distributividad y las propiedades del producto, no como una tabla aislada.
 
-\[
-(7+3)\cdot5.
-\]
+### Racionales, fracciones y producto
 
-Pero la explicación debe ser cuidadosa:
+Los enteros no resuelven ecuaciones como `2\cdot x=1`, por lo que se introduce una ampliación. Para `a,b\in\mathbb Z` con `b\ne0`, la escritura `a/b` representa el número que satisface `b\cdot(a/b)=a`. Los números que admiten tal representación son los racionales:
 
-> La precedencia del producto sobre la suma es una **convención de escritura** que permite omitir paréntesis y reconocer la estructura de una expresión.
+```latex
+\mathbb Q=\left\{\frac ab:a,b\in\mathbb Z,\ b\ne0\right\}.
+```
 
-No debe justificarse diciendo que el producto es “más importante” ni simplemente porque “proviene de la suma”.
+Una misma cantidad puede tener representaciones fraccionarias equivalentes:
 
----
+```latex
+\frac ab=\frac{ac}{bc},\qquad c\ne0.
+```
 
-# Propiedades del producto
+El producto racional se justifica conceptualmente y queda expresado por
 
-Se decidió estudiar primero las propiedades sobre \(\mathbb N\), utilizando la interpretación como suma repetida.
+```latex
+\frac ab\cdot\frac cd=\frac{a\cdot c}{b\cdot d}.
+```
 
-Formulación conceptual preferida:
+La suma repetida no se utiliza como explicación general de este producto.
 
-> Muchas propiedades del producto pueden comprenderse a partir de la suma y de sus propiedades.
+### Inverso y división
 
-Evitar afirmar formalmente que el producto “hereda” las propiedades de la suma.
+Todo racional no nulo tiene inverso multiplicativo. Si `a\ne0`,
 
-## Clausura
+```latex
+\left(\frac ab\right)^{-1}=\frac ba.
+```
 
-\[
-a,b\in\mathbb N
-\quad\Longrightarrow\quad
-a\cdot b\in\mathbb N.
-\]
+El cero no tiene inverso porque ningún producto `0\cdot x` puede ser `1`. Para `x,y\in\mathbb Q` con `y\ne0`, la división se define como
 
-## Conmutatividad
+```latex
+x\div y=x\cdot y^{-1}.
+```
 
-\[
-a\cdot b=b\cdot a.
-\]
+Por tanto, dividir no se define mediante restas sucesivas. Las restas sucesivas son solo una estrategia útil para algunos cocientes naturales.
 
-Se propuso explicarla con arreglos rectangulares: filas y columnas cuentan la misma cantidad.
+### Decimales y algoritmo de la división
 
-## Elemento neutro
+La escritura decimal es otra representación de ciertos racionales; no crea un conjunto numérico nuevo. Se conectan décimos, centésimos y milésimos con potencias de diez:
 
-\[
-1\cdot a=a\cdot1=a.
-\]
+```latex
+0{,}5=\frac12,
+\qquad
+0{,}25=\frac14.
+```
 
-## Producto por cero
+El algoritmo de la división se explica como una forma compacta de combinar productos, restas, descomposición y valor posicional. Puede continuar con décimos, centésimos y milésimos cuando el cociente no es entero. No debe presentarse como una definición nueva de la división.
 
-\[
-a\cdot0=0\cdot a=0.
-\]
+### Conjuntos numéricos
 
-## Asociatividad
+Se establece la cadena de inclusiones:
 
-\[
-(a\cdot b)\cdot c
-=
-a\cdot(b\cdot c).
-\]
+```latex
+\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q.
+```
 
-Esto permite escribir:
-
-\[
-a\cdot b\cdot c
-\]
-
-sin indicar agrupación cuando solo aparecen productos.
-
-## Distributividad
-
-Se dejó para el final porque conecta suma y producto:
-
-\[
-a\cdot(b+c)
-=
-a\cdot b+a\cdot c.
-\]
-
-Y:
-
-\[
-(a+b)\cdot c
-=
-a\cdot c+b\cdot c.
-\]
-
-Ejemplo conceptual:
-
-\[
-3\cdot(2+4)
-=
-(2+4)+(2+4)+(2+4)
-\]
-
-que puede reorganizarse como:
-
-\[
-(2+2+2)+(4+4+4)
-\]
-
-y por tanto:
-
-\[
-3\cdot(2+4)=3\cdot2+3\cdot4.
-\]
-
-La intención es mostrar que las propiedades no son reglas arbitrarias para memorizar.
+Una escritura puede ocultar el conjunto más pequeño al que pertenece el número: por ejemplo, `5`, `5/1` y `5{,}0` representan el mismo racional, que además es entero y natural.
 
 ---
 
-# Criterios pedagógicos acordados
+## Convenciones LaTeX y estilo técnico
 
-1. **No introducir reglas sin explicar de dónde salen.**
-
-2. **Separar concepto y algoritmo.**
-   - La operación es una cosa.
-   - El procedimiento de cálculo es otra.
-
-3. **Distinguir número y representación.**
-
-4. **Distinguir niveles estructurales de una expresión.**
-
-5. **Mantener rigor sin convertir el libro en un tratado fundacional.**
-
-6. **Agrupar ejercicios por propósito, no por dificultad.**
-
-7. **Evitar explicaciones escolares misteriosas** como:
-   - “lleve uno” sin explicar valor posicional;
-   - “pasa al otro lado y cambia de signo” sin conservar explícitamente la igualdad;
-   - “se multiplica primero porque sí”.
+- Mantener el idioma español con `polyglossia` y la notación matemática de `amsmath`, `amssymb` y `amsthm`.
+- Compilar con XeLaTeX o LuaLaTeX, porque `main.tex` usa `fontspec`.
+- Usar `\input` para las secciones internas de cada capítulo y `\include` para los capítulos desde `main.tex`.
+- Usar `example`, `definitionbox`, `corollary`, `proposition`, `remark` y `property` cuando haga falta una caja numerada con título; todos están definidos en `misc/envs.tex`.
+- Usar `note` para aclaraciones breves no numeradas.
+- Usar `tcolorbox` con el estilo `resumen` en las secciones finales de resumen.
+- Respetar la numeración automática de secciones, ejemplos y cajas. No hardcodear números de capítulo o de ejemplo.
+- Emplear coma decimal en el texto español: `0{,}5`.
+- Mantener los nombres de archivo y las rutas actuales; no volver a los archivos históricos eliminados `chapters/1_suma_y_los_numeros.tex` y `chapters/2_producto.tex`.
 
 ---
 
-# Punto exacto donde quedó la conversación
+## Puntos pendientes y precauciones
 
-La última sección trabajada fue **Propiedades del producto**, incluyendo:
+- Desarrollar `chapters/3_potencia/main.tex` siguiendo la metodología ya establecida. La nota al pie de `5_producto_racional.tex` anuncia que las potencias se profundizarán allí.
+- Revisar la introducción de `1_sistemas_numeracion.tex`: contiene formulaciones coloquiales y la frase “los números no existen, los inventa usted”, que puede entrar en tensión con el tratamiento posterior de los números como objetos matemáticos. Si se edita, conservar la intuición histórica/conceptual sin afirmar una tesis filosófica innecesariamente fuerte.
+- Revisar gradualmente la consistencia del tratamiento de **usted**, especialmente en el material inicial del capítulo 1.
+- Revisar afirmaciones sobre cierre y propiedades cuando se generalicen a nuevos conjuntos. Una propiedad puede mantenerse, pero su dominio debe indicarse explícitamente.
+- Mantener la distinción entre una decisión matemática y una convención de notación. Esto es especialmente importante para precedencia, escritura decimal, fracciones equivalentes y algoritmos.
 
-- clausura;
-- conmutatividad;
-- elemento neutro;
-- producto por cero;
-- asociatividad;
-- distributividad.
+---
 
-El siguiente paso natural sería desarrollar, revisar o reorganizar:
+## Próximo punto de trabajo
 
-1. términos, factores y estructura de expresiones;
-2. jerarquía de operaciones;
-3. ejercicios conceptuales de producto;
-4. algoritmo escrito de multiplicación;
-5. producto con enteros y signos;
-6. división;
-7. aparición de los racionales.
+El siguiente trabajo natural es desarrollar el capítulo de potencias. Antes de escribirlo, conviene decidir su recorrido exacto, pero debería conectar con lo ya establecido:
 
-Especial cuidado para la próxima conversación:
+1. potencia como producto repetido en naturales;
+2. base, exponente y valor de una potencia;
+3. relación entre producto y potencia;
+4. propiedades justificadas, no solo reglas de exponentes;
+5. extensión cuidadosa a enteros y, si corresponde, exponentes cero o negativos;
+6. ejercicios agrupados por propósito;
+7. resumen final en cajas.
 
-> La precedencia del producto sobre la suma debe presentarse como una convención de escritura ligada a la estructura de las expresiones, no como una supuesta consecuencia lógica de que el producto se construya inicialmente mediante sumas repetidas.
+Al continuar la redacción, no tratar el producto repetido como definición general de toda potencia sin delimitar el dominio. Conservar la estrategia central del libro: motivar la ampliación, distinguir número y representación, reconocer la estructura de las expresiones y separar concepto de algoritmo.

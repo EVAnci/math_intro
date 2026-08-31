@@ -1,0 +1,310 @@
+\section{Sumas de más de dos términos}
+
+Hasta ahora hemos definido la adición como una operación binaria:
+\[
++\colon\mathbb{Z}\times\mathbb{Z}\to\mathbb{Z}.
+\]
+Esto significa que la operación \(+\) recibe exactamente dos números cada vez que se aplica. Por ejemplo,
+\[
+3+5
+\]
+es una aplicación de la adición a los números \(3\) y \(5\).
+Sin embargo, es habitual encontrar expresiones como
+\[
+3+5+7
+\]
+o incluso
+\[
+12+4+(-8)+15+(-2).
+\]
+
+A primera vista podría parecer que ahora estamos sumando tres, cuatro o cinco números simultáneamente. No es así. La adición continúa siendo una operación binaria: lo que hacemos es aplicarla varias veces.
+
+\subsection{Sumar de a dos}
+
+Considere la expresión
+\[
+3+5+7.
+\]
+Una manera de interpretarla es realizar primero
+\[
+3+5
+\]
+y después sumar \(7\) al número obtenido:
+\[
+(3+5)+7.
+\]
+Primero tenemos
+\[
+3+5=8,
+\]
+y luego
+\[
+8+7=15.
+\]
+Por lo tanto,
+\[
+(3+5)+7=15.
+\]
+También podríamos comenzar sumando \(5\) y \(7\):
+\[
+3+(5+7).
+\]
+En este caso,
+\[
+5+7=12
+\]
+y luego
+\[
+3+12=15.
+\]
+Obtenemos nuevamente el mismo número:
+\[
+3+(5+7)=15.
+\]
+
+Esto no ocurre por casualidad. La adición posee una propiedad llamada \emph{asociatividad}.
+
+\subsection{La propiedad asociativa}
+
+Para cualesquiera números enteros \(a\), \(b\) y \(c\),
+\[
+(a+b)+c=a+(b+c).
+\]
+Esta propiedad nos dice que, cuando únicamente estamos sumando, podemos cambiar la manera en que agrupamos los sumandos sin modificar el número representado.
+Por ejemplo,
+\[
+(2+8)+5=2+(8+5).
+\]
+En ambos casos obtenemos
+\[
+15.
+\]
+Gracias a esta propiedad, normalmente omitimos los paréntesis y escribimos simplemente
+\[
+a+b+c.
+\]
+Por convención, esta escritura puede entenderse como aplicaciones sucesivas de la operación de adición. La propiedad asociativa garantiza que la forma de agruparlas no altera su valor.
+
+Por esta razón podemos escribir sin ambigüedad expresiones como
+\[
+2+5+7+9.
+\]
+
+La operación sigue aplicándose de a dos números cada vez; simplemente hemos evitado escribir todos los paréntesis que serían necesarios para mostrar cada aplicación individual.
+
+\subsection{Sumandos y términos}
+
+En una expresión como
+\[
+2+5+7+9,
+\]
+los números
+\[
+2,\qquad5,\qquad7,\qquad9
+\]
+son los \emph{sumandos} de la adición.
+
+También utilizaremos frecuentemente la palabra \emph{término} para referirnos a cada una de las partes principales que componen una expresión.
+
+En una suma como la anterior, cada término es también un sumando. Más adelante encontraremos expresiones en las que un término puede ser algo más complejo que un único número.
+Por ejemplo, en
+\[
+12+(3\cdot 4)+7,
+\]
+podemos considerar como términos principales
+\[
+12,\qquad 3\cdot4,\qquad7.
+\]
+Por ahora trabajaremos principalmente con términos que son números enteros.
+
+\subsection{Expresiones con sustracciones}
+
+La situación requiere un poco más de atención cuando aparecen signos de sustracción.
+Considere
+\[
+123+3-2+(-20).
+\]
+Sabemos que toda sustracción puede escribirse como la suma del opuesto. Por lo tanto,
+\[
+123+3-2+(-20)
+\]
+puede reescribirse como
+\[
+123+3+(-2)+(-20).
+\]
+Ahora la expresión contiene únicamente adiciones.
+Sus sumandos son
+\[
+123,\qquad3,\qquad-2,\qquad-20.
+\]
+Observe especialmente que uno de los sumandos es
+\[
+-2,
+\]
+no \(2\).
+
+Una vez escrita toda la expresión como una suma, podemos aprovechar las propiedades de la adición para agrupar y ordenar los sumandos de la manera que resulte más conveniente.
+Por ejemplo,
+\[
+123+3+(-2)+(-20)
+\]
+puede reorganizarse como
+\[
+123+(-20)+3+(-2).
+\]
+Luego podemos agrupar:
+\[
+\bigl(123+(-20)\bigr)+\bigl(3+(-2)\bigr),
+\]
+y evaluar:
+\[
+103+1=104.
+\]
+Por lo tanto,
+\[
+123+3-2+(-20)=104.
+\]
+
+\subsection{El signo forma parte del sumando}
+
+Esta forma de interpretar una expresión permite aclarar algo que será muy importante durante los cálculos.
+En
+\[
+7-4+9-12,
+\]
+podemos reemplazar las sustracciones por sumas de opuestos:
+\[
+7+(-4)+9+(-12).
+\]
+Ahora podemos identificar claramente los cuatro sumandos:
+\[
+7,\qquad-4,\qquad9,\qquad-12.
+\]
+Al reorganizar la suma, cada número conserva su signo:
+\[
+7+9+(-4)+(-12).
+\]
+Podemos incluso agrupar los positivos y los negativos:
+\[
+(7+9)+\bigl((-4)+(-12)\bigr).
+\]
+Así obtenemos
+\[
+16+(-16)=0.
+\]
+Esta manera de trabajar evita pensar que los signos se desplazan independientemente de los números. En una suma de enteros, números como
+\[
+-4
+\qquad\text{y}\qquad
+-12
+\]
+son sumandos completos.
+
+\subsection{Una precaución con la sustracción}
+
+La libertad para reagrupar aparece una vez que hemos expresado todo mediante adiciones.
+
+La sustracción, por sí misma, no es asociativa.
+Por ejemplo,
+\[
+(10-3)-2=7-2=5,
+\]
+mientras que
+\[
+10-(3-2)=10-1=9.
+\]
+Por lo tanto,
+\[
+(10-3)-2\neq10-(3-2).
+\]
+Cuando escribimos
+\[
+10-3-2,
+\]
+la convención habitual es interpretar las operaciones de izquierda a derecha:
+\[
+(10-3)-2.
+\]
+Sin embargo, podemos evitar esta dificultad reescribiendo primero las sustracciones:
+\[
+10-3-2
+=
+10+(-3)+(-2).
+\]
+Ahora sí tenemos únicamente una suma y podemos aplicar libremente las propiedades asociativa y conmutativa:
+\[
+10+(-3)+(-2)
+=
+10+\bigl((-3)+(-2)\bigr)
+=
+10+(-5)
+=
+5.
+\]
+
+\begin{note}
+No debe confundirse la posibilidad de reorganizar una suma con la posibilidad de reorganizar arbitrariamente una expresión que contiene sustracciones.
+
+Primero podemos transformar
+\[
+a-b+c-d
+\]
+en
+\[
+a+(-b)+c+(-d).
+\]
+Una vez hecho esto, tenemos una suma cuyos sumandos son
+\[
+a,\qquad -b,\qquad c,\qquad -d,
+\]
+y entonces sí podemos agruparlos u ordenarlos utilizando las propiedades de la adición.
+\end{note}
+
+\subsection{Una forma práctica de leer estas expresiones}
+
+Ante una expresión como
+\[
+25-8+3-(-4)-10,
+\]
+puede resultar útil realizar primero una tarea puramente simbólica: identificar qué números se están sumando.
+
+Reemplazamos cada sustracción por la suma del opuesto:
+\[
+25+(-8)+3+\bigl(-(-4)\bigr)+(-10).
+\]
+Como
+\[
+-(-4)=4,
+\]
+obtenemos
+\[
+25+(-8)+3+4+(-10).
+\]
+Ahora podemos leer la expresión como una suma de cinco términos:
+\[
+25,\qquad-8,\qquad3,\qquad4,\qquad-10.
+\]
+A partir de aquí podemos escoger una agrupación conveniente para evaluarla:
+\[
+25+(-10)+(-8)+3+4.
+\]
+Por ejemplo,
+\[
+\bigl(25+(-10)\bigr)+\bigl((-8)+3\bigr)+4
+=
+15+(-5)+4
+=
+14.
+\]
+
+El procedimiento puede resumirse de esta manera:
+\begin{enumerate}
+\item Reescriba cada sustracción como la suma de un opuesto.
+\item Identifique los sumandos de la expresión.
+\item Simplifique los dobles opuestos cuando aparezcan.
+\item Agrupe u ordene los sumandos de una manera conveniente.
+\item Evalúe las adiciones sucesivamente.
+\end{enumerate}
+
+No estamos introduciendo una nueva forma de sumar. Seguimos utilizando la misma operación binaria que ya conocemos, aplicada repetidas veces.

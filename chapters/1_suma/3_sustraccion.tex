@@ -1,0 +1,280 @@
+\section{Los números enteros y la sustracción}
+
+Hasta ahora hemos trabajado con números naturales y con la adición. Dentro de \(\mathbb{N}\), sumar dos números no presenta ningún inconveniente: la suma de dos naturales siempre vuelve a ser un número natural.
+
+Sin embargo, aparece una dificultad cuando intentamos realizar ciertas operaciones que habitualmente llamamos restas. Por ejemplo,
+\[
+7-3=4
+\]
+no parece presentar ningún problema, pues \(4\in\mathbb{N}\). Pero si intercambiamos los números,
+\[
+3-7,
+\]
+ya no encontramos ningún número natural que pueda representar esa cantidad.
+
+El conjunto \(\mathbb{N}\) resulta demasiado pequeño para expresar todas las cantidades que queremos considerar. Necesitamos ampliarlo.
+
+\subsection{Los números opuestos}
+
+Consideremos el número \(3\). Queremos introducir un número que, al sumarse con \(3\), produzca \(0\). A este número lo llamamos \emph{opuesto} de \(3\) y lo escribimos
+\[
+-3.
+\]
+Por definición de opuesto,
+\[
+3+(-3)=0.
+\]
+De manera general, el opuesto de un número \(a\) se representa mediante
+\[
+-a
+\]
+y cumple
+\[
+a+(-a)=0.
+\]
+El signo \(-\) que aparece en \(-a\) no representa aquí una resta entre dos números. Indica que estamos tomando el \emph{opuesto} de \(a\).
+
+Por ejemplo,
+\[
+-5,\qquad -18,\qquad -302
+\]
+son números, de la misma manera que
+\[
+5,\qquad18,\qquad302
+\]
+también lo son.
+Observe además que el opuesto de \(0\) es el propio \(0\):
+\[
+-0=0,
+\]
+pues
+\[
+0+0=0.
+\]
+
+\subsection{Los números enteros}
+
+Los números negativos que acabamos de introducir no pertenecen al conjunto de los números naturales. Por ejemplo,
+\[
+-3\notin\mathbb{N}.
+\]
+donde el símbolo \(\notin\) significa que no pertenece.
+
+Para trabajar conjuntamente con los números naturales, sus opuestos y el cero utilizamos el conjunto de los números enteros, representado mediante \(\mathbb{Z}\):
+\[
+\mathbb{Z}
+=
+\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}.
+\]
+De este modo, los números naturales son un subconjunto de los enteros
+\[
+\mathbb{N}\subseteq\mathbb{Z}.
+\]
+Es decir, los números
+\[
+1,2,3,\ldots
+\]
+son los enteros positivos (y también naturales); los números
+\[
+-1,-2,-3,\ldots
+\]
+son los enteros negativos; y el \(0\) no es positivo ni negativo.
+
+La adición puede ahora considerarse sobre este conjunto:
+\[
++\colon\mathbb{Z}\times\mathbb{Z}\to\mathbb{Z}.
+\]
+Esto significa que podemos adicionar dos números enteros cualesquiera y obtener nuevamente un número entero.
+
+Por ejemplo,
+\[
+5+(-2),\qquad
+(-4)+7,\qquad
+(-8)+(-3)
+\]
+son todas expresiones perfectamente válidas de adición entre números enteros.
+
+\subsection{Dos usos del símbolo menos}
+
+Llegados a este punto conviene hacer una distinción importante. El símbolo \(-\) aparece en matemáticas con dos funciones relacionadas, pero diferentes.
+
+En la expresión
+\[
+-5,
+\]
+el símbolo \(-\) actúa sobre un único número: indica el opuesto de \(5\). En este caso podemos llamarlo \emph{signo menos} u \emph{operador de oposición}.
+
+En cambio, en
+\[
+8-5,
+\]
+el símbolo aparece entre dos números e indica una sustracción.
+
+Ambos usos están íntimamente relacionados. De hecho, la sustracción puede definirse utilizando únicamente la adición y el concepto de opuesto.
+
+\subsection{La sustracción como suma del opuesto}
+
+Dados dos números enteros \(a\) y \(b\), definimos
+\[
+a-b=a+(-b).
+\]
+Esta igualdad contiene la idea fundamental de la sustracción:
+\[
+\boxed{\text{Restar un número equivale a sumar su opuesto.}}
+\]
+Por ejemplo,
+\[
+8-5
+\]
+puede escribirse como
+\[
+8+(-5).
+\]
+Ambas expresiones representan exactamente el mismo número:
+\[
+8-5=8+(-5)=3.
+\]
+Del mismo modo,
+\[
+3-7=3+(-7)=-4.
+\]
+Ahora podemos comprender por qué la operación que antes no podía efectuarse dentro de los números naturales sí puede evaluarse dentro de los enteros:
+\[
+-4\in\mathbb{Z}.
+\]
+No hemos necesitado inventar un procedimiento completamente independiente de la adición. La sustracción queda definida mediante una operación que ya conocemos y el concepto de número opuesto.
+
+\subsection{El signo acompaña al sumando}
+
+Esta forma de escribir la sustracción resulta especialmente útil cuando aparecen varias cantidades.
+
+Considere, por ejemplo,
+\[
+2-10.
+\]
+Utilizando la definición anterior podemos escribir
+\[
+2-10=2+(-10).
+\]
+Ahora vemos claramente cuáles son los dos sumandos:
+\[
+2
+\qquad\text{y}\qquad
+-10.
+\]
+El segundo sumando es el número \(-10\), no el número \(10\).
+
+Como ahora tenemos una adición, podemos utilizar la propiedad conmutativa:
+\[
+2+(-10)=(-10)+2.
+\]
+Por lo tanto,
+\[
+2-10
+=
+2+(-10)
+=
+(-10)+2
+=
+-8.
+\]
+Aquí aparece una idea que será muy útil en cálculos posteriores: una vez que una expresión ha sido escrita como una suma de enteros, cada sumando conserva su propio signo.
+
+Por ejemplo,
+\[
+7-4+2
+\]
+puede interpretarse como
+\[
+7+(-4)+2.
+\]
+Los sumandos son entonces
+\[
+7,\qquad -4,\qquad 2.
+\]
+Al trabajar de esta manera resulta más sencillo distinguir los números que participan de la operación y reorganizarlos cuando sea conveniente.
+
+\begin{note}
+No debe confundirse esto con afirmar que la sustracción es conmutativa.
+
+Por ejemplo,
+\[
+7-4=3,
+\]
+mientras que
+\[
+4-7=-3.
+\]
+Lo que sí podemos reorganizar libremente son los sumandos una vez que la expresión ha sido escrita como una adición:
+\[
+7+(-4)=(-4)+7.
+\]
+\end{note}
+
+\subsection{Restar un número negativo}
+
+La definición
+\[
+a-b=a+(-b)
+\]
+también explica qué ocurre cuando el número que restamos ya es negativo.
+Considere
+\[
+7-(-3).
+\]
+Restar \(-3\) significa sumar su opuesto:
+\[
+7-(-3)=7+\bigl(-(-3)\bigr).
+\]
+Pero el opuesto de \(-3\) es \(3\):
+\[
+-(-3)=3.
+\]
+Por lo tanto,
+\[
+7-(-3)=7+3=10.
+\]
+Esto explica la conocida regla según la cual ``dos signos menos se convierten en un más''. No se trata de una regla aislada que deba memorizarse: es una consecuencia de tomar el opuesto de un número que ya era negativo.
+
+En general,
+\[
+-(-a)=a
+\]
+y, por lo tanto,
+\[
+a-(-b)=a+b.
+\]
+
+\subsection{Algunas consecuencias}
+
+A partir de la adición y de los números opuestos podemos obtener inmediatamente varias relaciones útiles.
+
+Para cualquier \(a\in\mathbb{Z}\),
+\[
+a+0=a,
+\]
+pues \(0\) es el elemento neutro de la adición.
+Además,
+\[
+a+(-a)=0,
+\]
+pues \(-a\) es el opuesto de \(a\).
+
+Como la sustracción se define mediante la suma del opuesto, tenemos
+\begin{align*}
+a-a=a+(-a)=0,\\
+a-0=a+(-0)=a,
+\end{align*}
+y
+\[
+0-a=0+(-a)=-a.
+\]
+También,
+\[
+a-(-b)=a+b.
+\]
+Estas expresiones no necesitan aprenderse como reglas independientes. Todas ellas pueden deducirse a partir de una única idea:
+\[
+a-b=a+(-b).
+\]
+

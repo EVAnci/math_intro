@@ -1,0 +1,157 @@
+\section{El producto de números naturales}
+
+Al igual que la adición, el producto es una operación binaria: cada vez que se aplica recibe dos números.
+
+Sobre los números naturales podemos representarlo mediante
+\[
+\cdot\colon\mathbb{N}\times\mathbb{N}\to\mathbb{N}
+\]
+Dados dos números naturales \(a\) y \(b\), escribimos su producto como
+\[
+a\cdot b
+\]
+Los números \(a\) y \(b\) reciben el nombre de \emph{factores}.
+Cuando \(a\) es un número natural, la expresión
+\[
+a\cdot b
+\]
+puede interpretarse como una suma en la que \(b\) aparece \(a\) veces:
+\[
+a\cdot b
+=
+\underbrace{b+b+\cdots+b}_{a\text{ veces}}
+\]
+Por ejemplo,
+\[
+3\cdot5
+=
+5+5+5
+=
+15
+\]
+mientras que
+\[
+4\cdot2
+=
+2+2+2+2
+=
+8
+\]
+
+Esta interpretación nos permite comprender inicialmente el producto utilizando una operación que ya conocemos: la adición.
+
+\begin{note}
+La interpretación del producto como suma repetida resulta especialmente útil cuando trabajamos con números naturales.
+
+Más adelante ampliaremos el producto a otros conjuntos numéricos. Allí encontraremos expresiones como
+\[
+\frac12\cdot\frac34
+\]
+para las cuales ya no tendría sentido hablar literalmente de ``sumar una cantidad media vez''.
+
+Por esta razón, la suma repetida debe entenderse como una forma de construir y comprender inicialmente el producto sobre los números naturales, no como una descripción suficiente de todos los productos que estudiaremos.
+\end{note}
+
+\subsection{Producto y factores}
+
+En una suma como
+\[
+3+5
+\]
+los números \(3\) y \(5\) reciben el nombre de \emph{sumandos}.
+En un producto como
+\[
+3\cdot5
+\]
+los números \(3\) y \(5\) reciben el nombre de \emph{factores}.
+
+El valor de la expresión completa recibe el nombre de \emph{producto}. Así,
+\[
+3\cdot5=15
+\]
+
+De la misma manera que una suma puede aparecer como parte de una expresión mayor, un producto también puede constituir solamente una parte de ella.
+Por ejemplo, en
+\[
+7+3\cdot5
+\]
+tenemos una suma formada por dos términos:
+\[
+7
+\qquad\text{y}\qquad
+3\cdot5
+\]
+Dentro del segundo término aparece, a su vez, un producto cuyos factores son
+\[
+3
+\qquad\text{y}\qquad
+5.
+\]
+Por lo tanto, conviene distinguir el nivel de la expresión que estamos observando:
+\[
+\underbrace{7}_{\text{sumando}}
++
+\underbrace{\left(
+  \underbrace{3}_{\text{factor}}
+  \cdot
+  \underbrace{5}_{\text{factor}}
+\right)}_{\text{sumando}}
+\]
+El producto completo \(3\cdot5\) es uno de los sumandos de la suma exterior. Los números \(3\) y \(5\), en cambio, son factores de ese producto.
+
+\subsection{Una convención para evitar demasiados paréntesis}
+
+Si quisiéramos mostrar explícitamente la estructura de
+\[
+7+3\cdot5
+\]
+podríamos escribir
+\[
+7+(3\cdot5)
+\]
+Sin embargo, utilizar paréntesis continuamente haría muchas expresiones innecesariamente difíciles de leer.
+
+Por convenio, cuando aparecen productos y sumas en una misma expresión, los productos se consideran agrupados antes que las sumas. Así,
+\[
+7+3\cdot5
+\]
+se interpreta como
+\[
+7+(3\cdot5)
+\]
+y no como
+\[
+(7+3)\cdot5
+\]
+Esta convención recibe el nombre de \emph{precedencia} o \emph{jerarquía de las operaciones}.
+
+No significa que el producto sea una operación ``más importante'' que la suma. Es simplemente una regla de escritura que permite reconocer sin ambigüedad cuáles son los términos de una expresión.
+
+Por ejemplo, en
+\[
+2+4\cdot3+5
+\]
+los términos de la suma son
+\[
+2,\qquad4\cdot3,\qquad5
+\]
+Si evaluamos el producto,
+\[
+4\cdot3=12
+\]
+la expresión queda
+\[
+2+12+5
+\]
+Ahora resulta evidente que estamos ante una suma cuyos sumandos son
+\[
+2,\qquad12,\qquad5
+\]
+Por lo tanto,
+\[
+2+4\cdot3+5
+=
+2+12+5
+=
+19
+\]

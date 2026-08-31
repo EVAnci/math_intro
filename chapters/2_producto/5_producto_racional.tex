@@ -1,0 +1,684 @@
+\section{Números racionales}
+
+El producto de enteros funciona para cualesquiera dos enteros. Sin embargo, todavía existen ecuaciones que no pueden resolverse dentro de \(\mathbb{Z}\). Considere, por ejemplo,
+\[
+2\cdot x=1
+\]
+No existe ningún entero que, multiplicado por \(2\), produzca \(1\).
+
+Esta dificultad es análoga a la que apareció anteriormente con expresiones como
+\[
+3-7
+\]
+Allí fue necesario ampliar los números naturales para introducir los enteros. Ahora necesitamos una nueva ampliación que permita representar números capaces de resolver ecuaciones como \(2\cdot x=1\).
+
+\subsection{Fracciones}
+
+Sean \(a,b\in\mathbb{Z}\) con \(b\ne0\). Introducimos la escritura
+\[
+\begin{tikzpicture}[baseline=(frac.base),>=stealth]
+  \node (frac) {\(\displaystyle \frac{a}{b}\)};
+
+  \node[right=.5cm of frac, yshift=0.2cm ,font=\footnotesize] (num) {Numerador};
+  \node[right=.5cm of frac, yshift=-0.2cm,font=\footnotesize] (den) {Denominador};
+
+  \draw[->] (num.west) -- ([yshift=0.2cm]frac.east);
+  \draw[->] (den.west) -- ([yshift=-0.2cm]frac.east);
+\end{tikzpicture}
+\]
+para representar el número que satisface
+\[
+b\cdot\frac{a}{b}=a
+\]
+Por ejemplo,
+\[
+2\cdot\frac12=1
+\]
+de modo que \(\frac12\) resuelve precisamente la ecuación que no tenía solución en los enteros.
+
+La expresión \(\frac{a}{b}\) recibe el nombre de \emph{fracción}. Los números que pueden representarse mediante una fracción de enteros, con denominador distinto de cero, se llaman \emph{números racionales}.
+
+\begin{definition}[Número racional]
+Un número racional es un número que puede representarse mediante una fracción
+\[
+\frac{a}{b}
+\qquad a,b\in\mathbb{Z},\quad b\ne0
+\]
+El conjunto de los números racionales se representa mediante \(\mathbb{Q}\).
+\end{definition}
+
+Una misma cantidad puede tener distintas representaciones fraccionarias. Veamos primero un ejemplo.
+
+Sabemos que
+\[
+2\cdot\frac12=1
+\]
+Es decir, \(\frac12\) es el número que satisface la ecuación
+\[
+2x=1
+\]
+Multipliquemos ahora ambos lados de esta ecuación por \(2\):
+\[
+4x=2
+\]
+La solución sigue siendo la misma. Por lo tanto, el número que representábamos como \(\frac12\) también puede representarse como
+\[
+\frac24
+\]
+Así,
+\[
+\frac12=\frac24
+\]
+Podemos hacer lo mismo multiplicando la ecuación original por \(50\):
+\[
+100x=50
+\]
+Nuevamente, la solución no ha cambiado. Por eso,
+\[
+\frac12=\frac{50}{100}
+\]
+En consecuencia,
+\[
+\frac12=\frac24=\frac{50}{100}
+\]
+El mismo razonamiento funciona en general. Si
+\[
+bx=a
+\qquad b\ne0
+\]
+entonces \(x\) puede representarse mediante
+\[
+\frac{a}{b}
+\]
+Si multiplicamos ambos lados de la ecuación por un entero \(c\ne0\), obtenemos
+\[
+(bc)x=ac
+\]
+Pero \(x\) sigue siendo el mismo número. Por lo tanto, también puede representarse como
+\[
+\frac{ac}{bc}
+\]
+Así llegamos a la relación
+\[
+\boxed{
+\frac{a}{b}
+=
+\frac{ac}{bc}
+}
+\qquad c\ne0
+\]
+Es decir, multiplicar el numerador y el denominador por un mismo entero distinto de cero cambia la representación de una fracción, pero no el número que representa.
+
+Los enteros también son racionales. En efecto, para cualquier entero \(a\),
+\[
+1\cdot a=a
+\]
+de modo que \(a\) puede representarse como
+\[
+a=\frac{a}{1}
+\]
+Por lo tanto,
+\[
+\mathbb{Z}\subseteq\mathbb{Q}
+\]
+
+\subsection{Producto de números racionales}
+
+Ahora extendemos el producto a los números racionales. Antes de establecer cómo se multiplican dos fracciones, conviene preguntarse qué debe representar ese producto.
+
+Sean
+\[
+\frac{a}{b}
+  \qquad\text{y}\qquad
+  \frac{c}{d}
+\]
+con \(a,b,c,d\in\mathbb{Z}\), \(b\ne0\) y \(d\ne0\).
+
+Por la forma en que hemos construido las fracciones, sabemos que
+\[
+b\cdot\frac{a}{b}=a
+\]
+y
+\[
+d\cdot\frac{c}{d}=c
+\]
+Consideremos ahora el producto
+\[
+\frac{a}{b}\cdot\frac{c}{d}
+\]
+Queremos averiguar qué número representa. Para ello, multipliquémoslo por \(b\cdot d\):
+\[
+(b\cdot d)\cdot
+\left(
+\frac{a}{b}\cdot\frac{c}{d}
+\right)
+\]
+Usando la asociatividad y la conmutatividad del producto, podemos reorganizar los factores:
+\[
+(b\cdot d)\cdot
+\left(
+\frac{a}{b}\cdot\frac{c}{d}
+\right)
+=
+\left(
+b\cdot\frac{a}{b}
+\right)
+\cdot
+\left(
+d\cdot\frac{c}{d}
+\right)
+\]
+Pero
+\[
+b\cdot\frac{a}{b}=a
+\]
+y
+\[
+d\cdot\frac{c}{d}=c
+\]
+Por lo tanto,
+\[
+(b\cdot d)\cdot
+\left(
+\frac{a}{b}\cdot\frac{c}{d}
+\right)
+=
+a\cdot c
+\]
+Es decir, buscamos un número que, multiplicado por \(b\cdot d\), dé como resultado \(a\cdot c\). Precisamente, la fracción
+\[
+\frac{a\cdot c}{b\cdot d}
+\]
+representa ese número, pues
+\[
+(b\cdot d)\cdot
+\frac{a\cdot c}{b\cdot d}
+=
+a\cdot c
+\]
+Así obtenemos
+\[
+\boxed{
+\frac{a}{b}\cdot\frac{c}{d}
+=
+\frac{a\cdot c}{b\cdot d}
+}
+\]
+Esta expresión no es una regla arbitraria. Los denominadores se multiplican porque \(b\cdot d\) permite eliminar simultáneamente los dos denominadores, mientras que los numeradores se multiplican porque, al hacerlo, quedan las cantidades \(a\) y \(c\), cuyo producto es \(a\cdot c\).
+
+Veámoslo en un caso concreto:
+\[
+\frac23\cdot\frac34
+\]
+Si multiplicamos este producto por \(3\cdot4=12\), obtenemos
+\[
+12\cdot
+\left(
+\frac23\cdot\frac34
+\right)
+=
+\left(
+3\cdot\frac23
+\right)
+\cdot
+\left(
+4\cdot\frac34
+\right)
+\]
+Como
+\[
+3\cdot\frac23=2
+\]
+y
+\[
+4\cdot\frac34=3
+\]
+resulta
+\[
+12\cdot
+\left(
+\frac23\cdot\frac34
+\right)
+=
+2\cdot3
+=
+6
+\]
+Por lo tanto, el producto debe ser el número que multiplicado por \(12\) da \(6\):
+\[
+\frac23\cdot\frac34
+=
+\frac6{12}
+=
+\frac12
+\]
+Las relaciones de signo obtenidas para los enteros continúan siendo válidas. Por ejemplo,
+\[
+\frac{-2}{3}\cdot\frac34
+=
+-\left(
+\frac23\cdot\frac34
+\right)
+=
+-\frac12
+\]
+
+Así, la interpretación inicial del producto como suma repetida ya no es necesaria para describir todos los casos. El producto se ha extendido primero a los enteros y luego a los racionales conservando las propiedades que venimos utilizando.
+
+\subsection{Inverso multiplicativo}
+
+El número \(1\) es el elemento neutro del producto. Por eso resulta natural preguntar, dado un racional no nulo, qué número debemos multiplicar por él para obtener \(1\).
+
+Sea
+\[
+\frac{a}{b}\ne0
+\]
+
+Como \(b\ne0\), para que la fracción sea distinta de cero debe cumplirse también
+\[
+a\ne0
+\]
+
+Buscamos entonces un número \(x\) que satisfaga
+\[
+\frac{a}{b}\cdot x=1
+\]
+
+¿Qué forma debe tener ese número?
+
+Sabemos que, al multiplicar fracciones, los numeradores se multiplican entre sí y los denominadores también. Por lo tanto, necesitamos que los factores que aparecen en el numerador y en el denominador puedan formar dos productos iguales, ya que una fracción cuyo numerador y denominador representan el mismo número no nulo es igual a \(1\).
+
+Consideremos la fracción
+\[
+\frac{b}{a}
+\]
+
+Al multiplicarla por \(\frac{a}{b}\), obtenemos
+\[
+\frac{a}{b}\cdot\frac{b}{a}
+=
+\frac{a\cdot b}{b\cdot a}
+\]
+
+Por la conmutatividad del producto,
+\[
+a\cdot b=b\cdot a
+\]
+
+Así, el numerador y el denominador representan el mismo número:
+\[
+\frac{a\cdot b}{b\cdot a}
+=
+\frac{a\cdot b}{a\cdot b}
+=
+1
+\]
+
+Por lo tanto,
+\[
+\frac{a}{b}\cdot\frac{b}{a}=1
+\]
+
+Esto muestra que \(\frac{b}{a}\) es precisamente el número que, multiplicado por \(\frac{a}{b}\), produce el elemento neutro del producto.
+
+Por esta razón, llamamos \emph{inverso multiplicativo} de un número racional no nulo al número que, al multiplicarse por él, da como resultado \(1\).
+
+En particular,
+\[
+\boxed{
+\left(\frac{a}{b}\right)^{-1}
+=
+\frac{b}{a}
+}
+\qquad
+a\ne0
+\]
+
+La expresión anterior no debe entenderse solamente como una regla para ``dar vuelta'' una fracción. El intercambio entre numerador y denominador aparece porque buscamos que, al multiplicar ambas fracciones, el numerador y el denominador del resultado sean iguales.
+
+Por ejemplo, consideremos
+\[
+\frac{3}{5}
+\]
+
+Buscamos un número \(x\) tal que
+\[
+\frac{3}{5}\cdot x=1
+\]
+
+Si elegimos
+\[
+x=\frac{5}{3}
+\]
+entonces
+\[
+\frac{3}{5}\cdot\frac{5}{3}
+=
+\frac{3\cdot5}{5\cdot3}
+=
+\frac{15}{15}
+=
+1
+\]
+
+Por eso,
+\[
+\left(\frac35\right)^{-1}
+=
+\frac53
+\]
+
+El cero, en cambio, no posee inverso multiplicativo. Para que un número \(x\) fuera su inverso, debería cumplirse
+\[
+0\cdot x=1
+\]
+
+Pero ya sabemos que, para cualquier número \(x\),
+\[
+0\cdot x=0
+\]
+
+Por lo, no existe ningún número que multiplicado por \(0\) dé como resultado \(1\), y en consecuencia \(0\) no tiene inverso multiplicativo.
+
+\subsection{División}
+
+Una vez introducidos los inversos multiplicativos, podemos definir la división sin recurrir a restas repetidas.
+
+Dados \(x,y\in\mathbb{Q}\) con \(y\ne0\), definimos
+\[
+\boxed{x\div y=x\cdot y^{-1}}
+\]
+Es decir, dividir por un número no nulo consiste en multiplicar por su inverso.
+
+En particular,
+\[
+\frac{a}{b}\div\frac{c}{d}
+=
+\frac{a}{b}\cdot\frac{d}{c}
+=
+\frac{a\cdot d}{b\cdot c},
+\quad c\ne0.
+\]
+Por ejemplo,
+\[
+\frac34\div\frac25
+=
+\frac34\cdot\frac52
+=
+\frac{15}{8}
+\]
+
+Esta definición también explica expresiones como
+\[
+1\div2=\frac12
+\]
+La división ya no depende de que el cociente sea un número entero.
+
+\subsection{Restas sucesivas como estrategia de cálculo}
+
+En algunos casos particulares, cuando dividimos números naturales y el cociente es también natural, las restas sucesivas pueden utilizarse como una estrategia de cálculo.
+
+Por ejemplo, para evaluar
+\[
+12\div3
+\]
+podemos restar \(3\) repetidamente hasta llegar a cero:
+\begin{align*}
+12-3&=9\\
+9-3&=6\\
+6-3&=3\\
+3-3&=0
+\end{align*}
+Se realizaron cuatro restas, por lo que
+\[
+12\div3=4
+\]
+Sin embargo, este procedimiento encuentra rápidamente una dificultad. Consideremos
+\[
+1\div2
+\]
+No podemos restar \(2\) de \(1\) y continuar obteniendo números naturales. Esto no significa que la división carezca de resultado, sino que su resultado no pertenece a \(\mathbb N\).
+
+Ya sabemos que
+\[
+1\div2=\frac12
+\]
+Pero también podemos representar este mismo número de otra manera.
+
+\subsection{Partes de la unidad y escritura decimal}
+
+Nuestro sistema de numeración utiliza potencias\footnote{El término de potencia matemática se profundizará en el próximo capítulo.} de \(10\). Del mismo modo que podemos agrupar diez unidades para formar una decena, también podemos recorrer el camino contrario y dividir una unidad en diez partes iguales.
+
+Cada una de esas partes es un \emph{décimo}:
+\[
+\frac{1}{10}
+\]
+Cinco décimos se representan mediante
+\[
+\frac{5}{10}
+\]
+Como
+\begin{align*}
+  \frac12&=1\cdot\frac{1}{2}\\
+  &=\frac55\cdot\frac12\\ 
+  &=\frac{5}{10}
+\end{align*}
+podemos pensar en la mitad de una unidad como cinco décimos.
+
+La escritura decimal permite representar esos cinco décimos de la siguiente manera:
+\[
+0{,}5
+\]
+Por lo tanto,
+\[
+\frac12=\frac{5}{10}=0{,}5
+\]
+Y como
+\[
+1\div2=\frac12
+\]
+obtenemos
+\[
+\boxed{
+1\div2=\frac12=0{,}5
+}
+\]
+Las expresiones
+\[
+1\div2,\qquad \frac12,\qquad 0{,}5
+\]
+no representan tres números diferentes. Son distintas formas de representar el mismo número.
+
+La coma decimal separa la parte entera de las partes de la unidad. La primera posición situada a la derecha de la coma representa décimos:
+\[
+0{,}1=\frac{1}{10}
+\]
+La segunda posición representa centésimos:
+\[
+0{,}01=\frac{1}{100}
+\]
+La tercera representa milésimos:
+\[
+0{,}001=\frac{1}{1000}
+\]
+Por ejemplo,
+\[
+0{,}3=\frac{3}{10}
+\]
+y
+\[
+0{,}25=\frac{25}{100}
+\]
+Como
+\[
+\frac{25}{100}=\frac14
+\]
+también podemos escribir
+\[
+\frac14=0{,}25
+\]
+De este modo, la escritura decimal no introduce necesariamente números nuevos. Proporciona otra representación para aquellos números racionales que pueden expresarse mediante fracciones cuyo denominador es una potencia de \(10\), o mediante una fracción equivalente de ese tipo.
+
+Esto también permite comprender qué ocurre cuando el dividendo es menor que el divisor. En
+\[
+1\div2
+\]
+no hay ninguna unidad completa de \(2\) dentro de \(1\), pero podemos dividir la unidad en partes más pequeñas. Al expresarla como diez décimos,
+\[
+1=\frac{10}{10}
+\]
+la mitad de esos diez décimos es
+\[
+\frac{5}{10}
+\]
+es decir,
+\[
+0{,}5
+\]
+
+Las restas sucesivas siguen siendo útiles como estrategia para ciertos cocientes enteros, pero no constituyen una explicación general de la división. Cuando el cociente no es natural, necesitamos trabajar también con partes de la unidad y con otras representaciones de los números racionales.
+
+\subsection{Algoritmo de la división}
+
+Las restas sucesivas permiten comprender una idea fundamental de la división: averiguar cuántas veces podemos retirar una misma cantidad de otra.
+
+Sin embargo, este procedimiento puede resultar muy largo. Por ejemplo, para calcular
+\[
+156\div12
+\]
+podríamos restar \(12\) una y otra vez hasta llegar a cero, pero necesitaríamos muchas restas.
+
+Podemos abreviar el procedimiento si, en lugar de restar una sola vez el divisor, restamos de una vez un múltiplo conveniente suyo.
+
+Por ejemplo,
+\[
+10\cdot12=120
+\]
+
+Entonces podemos comenzar con
+\[
+156-120=36
+\]
+
+Como
+\[
+3\cdot12=36
+\]
+obtenemos
+\[
+36-36=0
+\]
+
+En total hemos retirado \(12\) diez veces y luego tres veces:
+\[
+10+3=13
+\]
+
+Por lo tanto,
+\[
+156\div12=13
+\]
+
+Esta es la idea que utiliza el algoritmo usual de la división. En lugar de escribir todas las restas sucesivas, buscamos múltiplos adecuados del divisor y registramos cuántas veces lo hemos tomado.
+
+\subsubsection{El papel del sistema decimal}
+
+El algoritmo resulta especialmente compacto porque nuestro sistema de numeración es posicional.
+
+Por ejemplo,
+\[
+156=100+50+6
+\]
+
+Al realizar la división, no necesitamos considerar las \(156\) unidades una por una. Podemos trabajar con centenas, decenas y unidades, aprovechando el valor que posee cada cifra según su posición.
+
+Por eso, en el algoritmo escrito aparecen cifras del cociente una posición a la vez. Cada una indica cuántas veces podemos tomar cierto múltiplo del divisor en la posición que estamos considerando.
+
+El procedimiento no introduce una nueva definición de división. Es un algoritmo de cálculo que organiza, mediante el sistema decimal, las mismas ideas que ya hemos utilizado: multiplicar, restar y descomponer números según su valor posicional.
+
+\subsubsection{Cuando el cociente tiene parte decimal}
+
+El mismo procedimiento puede continuar aunque el cociente no sea un número entero.
+
+Consideremos nuevamente
+\[
+1\div2
+\]
+
+Como \(2\) no cabe ninguna vez completa en \(1\), el cociente tiene inicialmente
+\(
+0
+\)
+unidades enteras.
+
+Pero podemos representar la unidad mediante décimos:
+\[
+1=1{,}0=\frac{10}{10}
+\]
+
+Ahora disponemos de \(10\) décimos. Como
+\[
+10\div2=5
+\]
+obtenemos cinco décimos:
+\[
+1\div2=0{,}5
+\]
+
+Esto concuerda con lo que ya habíamos obtenido mediante fracciones:
+\[
+1\div2=\frac12=0{,}5
+\]
+
+Agregar un cero después de la coma no modifica el número:
+\[
+1=1{,}0=1{,}00=1{,}000
+\]
+
+Lo que cambia es la forma en que lo representamos. Cada cero adicional permite expresar la cantidad utilizando unidades diez veces más pequeñas:
+\[
+1=\frac{10}{10}
+=\frac{100}{100}
+=\frac{1000}{1000}
+\]
+
+Por esta razón, cuando una división no termina en las unidades enteras, el algoritmo puede continuar trabajando con décimos, centésimos, milésimos y posiciones posteriores.
+
+Por ejemplo, en
+\[
+7\div4
+\]
+podemos obtener primero una unidad completa:
+\[
+7-4=3
+\]
+
+Quedan \(3\) unidades. Las expresamos como \(30\) décimos:
+\[
+3=3{,}0
+\]
+
+Como
+\[
+30\div4=7
+\]
+podemos tomar \(7\) décimos y queda un resto de \(2\) décimos:
+\[
+30-7\cdot4=2
+\]
+
+Esos \(2\) décimos pueden expresarse como \(20\) centésimos:
+\[
+0{,}2=0{,}20
+\]
+
+Como
+\[
+20\div4=5
+\]
+obtenemos
+\[
+7\div4=1{,}75
+\]
+
+El algoritmo de la división permite así trabajar de manera ordenada con cantidades que serían incómodas de calcular mediante restas sucesivas. Su eficacia no proviene de una nueva propiedad de los números, sino de combinar el producto, la resta y el valor posicional de nuestro sistema decimal en una notación mucho más compacta.
