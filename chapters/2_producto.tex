@@ -1,198 +1,1383 @@
 \chapter{Producto}
 
-En este capítulo estudiará una nueva operación llamada producto. El producto suele definirse como la suma de un número múltiples veces. 
+En el capítulo anterior estudiamos la adición como una operación entre números. También vimos que una suma con varios sumandos no constituye una operación nueva: seguimos aplicando la misma operación binaria repetidas veces.
+
+Considere, por ejemplo,
+\[
+2+2+2+2
+\]
+Podemos evaluarla sumando de a dos:
+\[
+(2+2)+(2+2)=4+4=8
+\]
+En esta expresión aparece algo particular: estamos sumando varias veces el mismo número. Naturalmente, no necesitamos una operación nueva para hallar el resultado: podríamos continuar sumando tantas veces como fuera necesario. Sin embargo, en muchos problemas interesa no sólo el total obtenido, sino también la relación entre la cantidad que se repite y el número de veces que se repite.
+
+Por ejemplo, si una superficie requiere \(2\) litros de pintura por mano y queremos aplicar \(3\) manos, la cantidad total de pintura puede calcularse mediante
+\[
+2+2+2=6
+\]
+Aquí intervienen dos cantidades con significados distintos: \(2\) litros por mano y \(3\) manos. Del mismo modo, si un rectángulo contiene \(4\) filas de \(5\) baldosas cada una, podríamos contar sus baldosas escribiendo
+\[
+5+5+5+5=20
+\]
+En ambos casos aparece la misma estructura: una cantidad se toma cierto número de veces.
+
+Situaciones de este tipo aparecen constantemente al medir, contar y comparar cantidades. Por ello resulta útil disponer de una operación que permita expresar directamente esta relación, sin tener que desarrollar cada vez la suma correspondiente.
+
+Esa operación es el \emph{producto}.
+
 \begin{example}\label{ej_intro_producto}
-  Sume la siguiente expresión:
-  \[
-    2+2+2+2
-  \]
-  Dicha cantidad, como usted ya sabe, debe sumarse tomando de a pares. Entonces
-  \begin{gather*}
-    2+2=4 \quad \text{por tanto} \quad 2+2+2+2=4+4 \\ 
-  \text{así} \quad 4+4=8
-  \end{gather*}
-  De esta manera, el resultado de sumar cuatro veces dos es ocho.
+Considere nuevamente
+\[
+2+2+2+2
+\]
+El número \(2\) aparece como sumando cuatro veces. Esta expresión puede escribirse de manera abreviada como
+\[
+4\cdot2
+\]
+Por lo tanto,
+\[
+4\cdot2
+=
+2+2+2+2
+=
+8
+\]
+Las expresiones
+\[
+4\cdot2,\qquad
+2+2+2+2
+\qquad\text{y}\qquad
+8
+\]
+representan el mismo número natural, aunque lo hacen de maneras diferentes.
 \end{example}
 
-El ejemplo \ref{ej_intro_producto} es una idea particular de la definición más general de producto. A continuación verá la definición de producto. La definición es similar a la de la suma, así que la idea de la notación ya comenzará a verse más familiar.
+\section{El producto de números naturales}
 
-\begin{definition}[Producto]\label{def_producto}
-  Se llama producto entre dos números \(a\) y \(b\) a la operación que representa la suma de \(a\) \(b\) veces.
-  \begin{align*}
-    \cdot ~ :& \mathbb{Q} \times \mathbb{Q}\mapsto \mathbb{Q}\\ 
-    (a,b)&\rightarrow a\cdot b
-  \end{align*}
-\end{definition}
+Al igual que la adición, el producto es una operación binaria: cada vez que se aplica recibe dos números.
 
-Aquí el significado de \(\cdot\) o \(\times\) para indicar el operando que determina la operación producto será equivalente. Es decir, puede usar cualquier símbolo indistintamente. Esta aclaración, aunque le parezca algo trivial, es importante. En determinados contextos cada símbolo significa algo distinto.
+Sobre los números naturales podemos representarlo mediante
+\[
+\cdot\colon\mathbb{N}\times\mathbb{N}\to\mathbb{N}
+\]
+Dados dos números naturales \(a\) y \(b\), escribimos su producto como
+\[
+a\cdot b
+\]
+Los números \(a\) y \(b\) reciben el nombre de \emph{factores}.
+Cuando \(a\) es un número natural, la expresión
+\[
+a\cdot b
+\]
+puede interpretarse como una suma en la que \(b\) aparece \(a\) veces:
+\[
+a\cdot b
+=
+\underbrace{b+b+\cdots+b}_{a\text{ veces}}
+\]
+Por ejemplo,
+\[
+3\cdot5
+=
+5+5+5
+=
+15
+\]
+mientras que
+\[
+4\cdot2
+=
+2+2+2+2
+=
+8
+\]
 
-El significado de esta definición (definición \ref{def_producto}) es similar al significado de la suma, pero reemplazando la palabra suma por producto y sumandos por factores.
+Esta interpretación nos permite comprender inicialmente el producto utilizando una operación que ya conocemos: la adición.
 
-La definición \ref{def_producto} puede leerse de la siguiente manera:
-\begin{quote}
-``El producto toma dos números, llamados \(a\) y \(b\) denominados factores, que tras aplicar la operación se obtiene el resultado llamado producto, que es \(b\) veces la suma de la cantidad \(a\).''
-\end{quote}
+\begin{note}
+La interpretación del producto como suma repetida resulta especialmente útil cuando trabajamos con números naturales.
 
-En esta descripción en palabras, tal vez pudo notar la ausencia de la explicación de un símbolo nuevo \(\mathbb{Q}\).
+Más adelante ampliaremos el producto a otros conjuntos numéricos. Allí encontraremos expresiones como
+\[
+\frac12\cdot\frac34
+\]
+para las cuales ya no tendría sentido hablar literalmente de ``sumar una cantidad media vez''.
 
-\section{Números Racionales}
+Por esta razón, la suma repetida debe entenderse como una forma de construir y comprender inicialmente el producto sobre los números naturales, no como una descripción suficiente de todos los productos que estudiaremos.
+\end{note}
 
-En este punto se amplía el abanico de posibilidades que ya existía.
+\subsection{Producto y factores}
 
-Un número racional requiere que conozca una operación llamada división. Sin embargo daremos una pequeña definición sobre el conjunto de los números racionales. Luego, al ver la operación de división notará como se construye el conjunto intuitivamente.
+En una suma como
+\[
+3+5
+\]
+los números \(3\) y \(5\) reciben el nombre de \emph{sumandos}.
+En un producto como
+\[
+3\cdot5
+\]
+los números \(3\) y \(5\) reciben el nombre de \emph{factores}.
+
+El valor de la expresión completa recibe el nombre de \emph{producto}. Así,
+\[
+3\cdot5=15
+\]
+
+De la misma manera que una suma puede aparecer como parte de una expresión mayor, un producto también puede constituir solamente una parte de ella.
+Por ejemplo, en
+\[
+7+3\cdot5
+\]
+tenemos una suma formada por dos términos:
+\[
+7
+\qquad\text{y}\qquad
+3\cdot5
+\]
+Dentro del segundo término aparece, a su vez, un producto cuyos factores son
+\[
+3
+\qquad\text{y}\qquad
+5.
+\]
+Por lo tanto, conviene distinguir el nivel de la expresión que estamos observando:
+\[
+\underbrace{7}_{\text{sumando}}
++
+\underbrace{\left(
+  \underbrace{3}_{\text{factor}}
+  \cdot
+  \underbrace{5}_{\text{factor}}
+\right)}_{\text{sumando}}
+\]
+El producto completo \(3\cdot5\) es uno de los sumandos de la suma exterior. Los números \(3\) y \(5\), en cambio, son factores de ese producto.
+
+\subsection{Una convención para evitar demasiados paréntesis}
+
+Si quisiéramos mostrar explícitamente la estructura de
+\[
+7+3\cdot5
+\]
+podríamos escribir
+\[
+7+(3\cdot5)
+\]
+Sin embargo, utilizar paréntesis continuamente haría muchas expresiones innecesariamente difíciles de leer.
+
+Por convenio, cuando aparecen productos y sumas en una misma expresión, los productos se consideran agrupados antes que las sumas. Así,
+\[
+7+3\cdot5
+\]
+se interpreta como
+\[
+7+(3\cdot5)
+\]
+y no como
+\[
+(7+3)\cdot5
+\]
+Esta convención recibe el nombre de \emph{precedencia} o \emph{jerarquía de las operaciones}.
+
+No significa que el producto sea una operación ``más importante'' que la suma. Es simplemente una regla de escritura que permite reconocer sin ambigüedad cuáles son los términos de una expresión.
+
+Por ejemplo, en
+\[
+2+4\cdot3+5
+\]
+los términos de la suma son
+\[
+2,\qquad4\cdot3,\qquad5
+\]
+Si evaluamos el producto,
+\[
+4\cdot3=12
+\]
+la expresión queda
+\[
+2+12+5
+\]
+Ahora resulta evidente que estamos ante una suma cuyos sumandos son
+\[
+2,\qquad12,\qquad5
+\]
+Por lo tanto,
+\[
+2+4\cdot3+5
+=
+2+12+5
+=
+19
+\]
+
+\section{Propiedades del producto}
+
+Hemos introducido el producto de números naturales mediante sumas repetidas. Esto nos permite hacer algo importante: muchas de sus propiedades pueden comprenderse utilizando únicamente ideas que ya conocemos sobre la adición.
+
+No se trata de memorizar una nueva colección de reglas independientes. En muchos casos podremos desarmar un producto en sumas, utilizar las propiedades de la adición y volver a escribir el resultado como un producto.
+
+\subsection{Clausura}
+
+Como el producto entre números naturales puede construirse mediante sumas de números naturales, su resultado vuelve a ser un número natural.
+
+Por ejemplo,
+\[
+4\cdot3
+=
+3+3+3+3
+=
+12
+\]
+y
+\[
+12\in\mathbb{N}
+\]
+De manera general, si
+\[
+a,b\in\mathbb{N}
+\]
+entonces
+\[
+a\cdot b\in\mathbb{N}
+\]
+Por eso decimos que los números naturales son \emph{cerrados} respecto del producto.
+
+\subsection{Propiedad conmutativa}
+
+Considere
+\[
+3\cdot4
+\]
+Según nuestra interpretación del producto,
+\[
+3\cdot4
+=
+4+4+4
+=
+12.
+\]
+En cambio,
+\[
+4\cdot3
+=
+3+3+3+3
+=
+12.
+\]
+En ambos casos obtenemos el mismo número:
+\[
+3\cdot4=4\cdot3
+\]
+Este hecho puede comprenderse de una manera sencilla si imaginamos una disposición rectangular de objetos. El producto
+\[
+3\cdot4
+\]
+puede representar tres filas de cuatro objetos:
+\[
+\begin{array}{cccc}
+\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet
+\end{array}
+\]
+Pero esa misma disposición también puede observarse como cuatro columnas de tres objetos. Contar por filas o contar por columnas no modifica la cantidad de objetos.
+De manera general,
+\[
+a\cdot b=b\cdot a
+\]
+Esta propiedad recibe el nombre de \emph{propiedad conmutativa del producto}.
+Gracias a ella, aunque inicialmente interpretemos
+\[
+a\cdot b
+\]
+como \(a\) repeticiones de \(b\), también podemos interpretarlo como \(b\) repeticiones de \(a\).
+
+\subsection{Elemento neutro}
+
+Considere ahora el producto
+\[
+1\cdot a
+\]
+Según la interpretación de suma repetida, esto significa tomar una sola vez el número \(a\). Por lo tanto,
+\[
+1\cdot a=a
+\]
+Como el producto es conmutativo,
+\[
+a\cdot1=1\cdot a=a
+\]
+Así,
+\[
+a\cdot1=1\cdot a=a
+\]
+El número \(1\) recibe el nombre de \emph{elemento neutro del producto}: multiplicar un número por \(1\) no modifica la cantidad representada.
+
+\subsection{Producto por cero}
+
+Veamos ahora qué ocurre con el número \(0\).
+
+La expresión
+\[
+a\cdot0
+\]
+representa la suma de \(a\) ceros:
+\[
+\underbrace{0+0+\cdots+0}_{a\text{ veces}}
+\]
+Como sumar ceros no modifica la cantidad,
+\[
+a\cdot0=0
+\]
+Por la propiedad conmutativa,
+\[
+0\cdot a=a\cdot0=0
+\]
+Por lo tanto,
+\[
+a\cdot0=0\cdot a=0
+\]
+El cero no es un elemento neutro del producto. Por el contrario, cualquier producto que tenga al \(0\) como factor representa el número \(0\).
+
+\subsection{Propiedad asociativa}
+
+El producto, al igual que la suma, es una operación binaria. Por esta razón, una expresión como
+\[
+2\cdot3\cdot4
+\]
+representa aplicaciones sucesivas del producto.
+Podríamos agrupar primero
+\[
+2\cdot3
+\]
+y escribir
+\[
+(2\cdot3)\cdot4
+\]
+Como
+\[
+2\cdot3=6
+\]
+obtenemos
+\[
+6\cdot4=24
+\]
+Pero también podríamos comenzar por
+\[
+3\cdot4
+\]
+y escribir
+\[
+2\cdot(3\cdot4)
+\]
+Como
+\[
+3\cdot4=12
+\]
+obtenemos
+\[
+2\cdot12=24
+\]
+Ambas formas de agrupar representan el mismo número:
+\[
+(2\cdot3)\cdot4
+=
+2\cdot(3\cdot4)
+\]
+Podemos comprender por qué ocurre esto utilizando nuevamente la suma repetida.
+La expresión
+\[
+a\cdot(b\cdot c)
+\]
+significa tomar \(a\) veces la cantidad \(b\cdot c\):
+\[
+\underbrace{(b\cdot c)+(b\cdot c)+\cdots+(b\cdot c)}_{a\text{ veces}}
+\]
+Pero cada \(b\cdot c\) representa, a su vez,
+\[
+\underbrace{c+c+\cdots+c}_{b\text{ veces}}
+\]
+Por lo tanto, en total estamos sumando \(c\) una cantidad de \(a\cdot b\) veces. Esto puede escribirse como
+\[
+(a\cdot b)\cdot c
+\]
+Así obtenemos, de manera general,
+\[
+(a\cdot b)\cdot c
+=
+a\cdot(b\cdot c)
+\]
+Esta es la \emph{propiedad asociativa del producto}.
+Gracias a ella podemos escribir simplemente
+\[
+a\cdot b\cdot c
+\]
+sin indicar mediante paréntesis qué producto debe realizarse primero, siempre que en la expresión intervengan únicamente productos.
+
+\subsection{Propiedad distributiva}
+
+Existe además una propiedad especialmente importante porque relaciona las dos operaciones que conocemos hasta ahora: la suma y el producto.
+
+Considere
+\[
+3\cdot(2+4)
+\]
+Como el primer factor indica cuántas veces repetimos el segundo,
+\[
+3\cdot(2+4)
+=
+(2+4)+(2+4)+(2+5)
+\]
+Utilizando las propiedades asociativa y conmutativa de la adición podemos reorganizar los sumandos:
+\[
+(2+2+2)+(4+4+4)
+\]
+Ahora reconocemos nuevamente dos productos:
+\[
+2+2+2=3\cdot2
+\]
+y
+\[
+4+4+4=3\cdot4
+\]
+Por lo tanto,
+\[
+3\cdot(2+4)
+=
+3\cdot2+3\cdot4
+\]
+De manera general,
+\[
+a\cdot(b+c)
+=
+a\cdot b+a\cdot c
+\]
+Esta propiedad recibe el nombre de \emph{propiedad distributiva del producto respecto de la suma}.
+
+También podemos encontrar la suma en el primer factor. Por ejemplo,
+\[
+(2+3)\cdot4
+\]
+Según la interpretación del producto, estamos sumando \(4\) un total de \(2+3\) veces:
+\[
+\underbrace{4+4}_{2\text{ veces}}
++
+\underbrace{4+4+4}_{3\text{ veces}}
+\]
+Podemos reconocer entonces
+\[
+2\cdot4+3\cdot4
+\]
+Por lo tanto,
+\[
+(a+b)\cdot c
+=
+a\cdot c+b\cdot c
+\]
+Ambas formas expresan la misma idea:
+\begin{gather*}
+a\cdot(b+c)=a\cdot b+a\cdot c \\
+(a+b)\cdot c=a\cdot c+b\cdot c
+\end{gather*}
+La propiedad distributiva será especialmente importante porque permite transformar expresiones que contienen productos y sumas sin modificar el número que representan.
+
+\subsection{¿Qué hemos obtenido a partir de la suma?}
+
+Resulta útil observar lo que acabamos de hacer.
+
+Partimos de una interpretación muy sencilla:
+\[
+a\cdot b
+=
+\underbrace{b+b+\cdots+b}_{a\text{ veces}}
+\]
+A partir de ella pudimos comprender varias propiedades del producto:
+\begin{gather*}
+  a\cdot b=b\cdot a,\\
+  (a\cdot b)\cdot c=a\cdot(b\cdot c),\\
+  a\cdot1=a,\\
+  a\cdot0=0,
+\end{gather*}
+y
+\[
+a\cdot(b+c)=a\cdot b+a\cdot c.
+\]
+Esto muestra que la relación entre suma y producto es más profunda que una simple abreviatura de escritura. Sobre los números naturales, el producto puede construirse a partir de sumas repetidas y gran parte de su comportamiento puede comprenderse utilizando las propiedades que ya conocemos de la adición.
+
+Sin embargo, suma y producto continúan siendo operaciones diferentes. En una expresión es importante reconocer cuál de ellas está actuando en cada nivel.
+
+Por ejemplo, en
+\[
+2+3\cdot4+5
+\]
+los sumandos de la expresión principal son
+\[
+2,\qquad3\cdot4,\qquad5,
+\]
+mientras que \(3\) y \(4\) son los factores del producto
+\[
+3\cdot4
+\]
+Esta distinción será fundamental para interpretar correctamente expresiones que combinen varias operaciones.
+
+\section{El producto de números enteros}
+
+La interpretación del producto como suma repetida nos permitió construir el producto de números naturales. Sin embargo, ya no basta para explicar expresiones como
+\[
+(-3)\cdot4,
+\qquad
+3\cdot(-4)
+\qquad\text{o}\qquad
+(-3)\cdot(-4).
+\]
+No tiene sentido interpretar literalmente la primera de ellas como ``sumar \(4\) menos tres veces''. Necesitamos extender el producto a los números enteros.
+
+Al hacerlo, no abandonaremos las propiedades que ya conocemos: el producto seguirá siendo asociativo y conmutativo, tendrá al \(1\) como elemento neutro, se distribuirá respecto de la suma y continuará cumpliendo que el producto por cero es cero. Estas propiedades permitirán determinar qué debe significar multiplicar por un número negativo.
+
+Así, el producto puede considerarse ahora como una operación
+\[
+\cdot\colon\mathbb{Z}\times\mathbb{Z}\to\mathbb{Z}.
+\]
+En particular, el producto de dos enteros vuelve a ser un entero.
+
+\subsection{El opuesto como producto por \texorpdfstring{\(-1\)}{-1}}
+
+Recordemos que \(-1\) es el opuesto de \(1\). Por lo tanto,
+\[
+(-1)+1=0
+\]
+Multipliquemos ambos sumandos por un entero \(a\). Por la propiedad distributiva,
+\begin{gather*}
+a\cdot\bigl((-1)+1\bigr)
+=a\cdot(-1)+a\cdot1
+\end{gather*}
+Operando usando las propiedades, obtenemos
+\begin{align*}
+  a\cdot\bigl((-1)+1\bigr) &= a\cdot(-1)+a\cdot 1 \\ 
+  a \cdot (0) &= a\cdot(-1) + a\cdot1 \\ 
+  0 &= a\cdot(-1) + a \\ 
+  -a + 0 &= a\cdot(-1) +a - a \\ 
+  -a &= a\cdot(-1)
+\end{align*}
+Es decir, \(a\cdot(-1)\) es el opuesto de \(a\). Por la definición de opuesto,
+\[
+\boxed{a\cdot(-1)=-a}
+\]
+Esta igualdad conecta el producto con la idea estudiada en el capítulo anterior: un entero negativo puede escribirse como el producto de su opuesto positivo por \(-1\).
+
+\subsection{Producto por un opuesto}
+
+Si \(b\) es un entero, acabamos de ver que
+\[
+-b=b\cdot(-1)
+\]
+Entonces, usando la propiedad asociativa,
+\begin{align*}
+a\cdot(-b)
+&=a\cdot\bigl(b\cdot(-1)\bigr)\\
+&=(a\cdot b)\cdot(-1)\\
+&=-(a\cdot b)
+\end{align*}
+Por la propiedad conmutativa se obtiene también
+\[
+(-a)\cdot b=-(a\cdot b)
+\]
+Por lo tanto, multiplicar exactamente uno de los factores por su opuesto produce el opuesto del producto.
+
+\subsection{Producto de dos opuestos}
+
+Ahora podemos determinar el producto de dos números negativos sin memorizar una regla nueva. Como \(-a=a\cdot(-1)\), tenemos
+\begin{align*}
+(-a)\cdot(-b)
+&=\bigl(a\cdot(-1)\bigr)\cdot(-b)\\
+&=(-1)\cdot\bigl(a\cdot(-b)\bigr)
+\end{align*}
+En la segunda igualdad usamos las propiedades asociativa y conmutativa. Por la sección anterior,
+\[
+a\cdot(-b)=-(a\cdot b)
+\]
+Por consiguiente,
+\begin{align*}
+(-a)\cdot(-b)
+&=(-1)\cdot\bigl(-(a\cdot b)\bigr)\\
+&=-\bigl(-(a\cdot b)\bigr)\\
+&=a\cdot b
+\end{align*}
+Así, el producto de dos opuestos es el producto de los números originales:
+\[
+\boxed{(-a)\cdot(-b)=a\cdot b}
+\]
+
+Las cuatro posibilidades para los signos se resumen ahora en consecuencias de los opuestos:
+\begin{gather*}
+(+a)\cdot(+b)=a\cdot b\\
+(-a)\cdot(+b)=-(a\cdot b)\\
+(+a)\cdot(-b)=-(a\cdot b)\\
+(-a)\cdot(-b)=a\cdot b
+\end{gather*}
+Por ejemplo,
+\[
+(-3)\cdot(-4)=3\cdot4=12
+\]
+
+\section{Números racionales}
+
+El producto de enteros funciona para cualesquiera dos enteros. Sin embargo, todavía existen ecuaciones que no pueden resolverse dentro de \(\mathbb{Z}\). Considere, por ejemplo,
+\[
+2\cdot x=1
+\]
+No existe ningún entero que, multiplicado por \(2\), produzca \(1\).
+
+Esta dificultad es análoga a la que apareció anteriormente con expresiones como
+\[
+3-7
+\]
+Allí fue necesario ampliar los números naturales para introducir los enteros. Ahora necesitamos una nueva ampliación que permita representar números capaces de resolver ecuaciones como \(2\cdot x=1\).
+
+\subsection{Fracciones}
+
+Sean \(a,b\in\mathbb{Z}\) con \(b\ne0\). Introducimos la escritura
+\[
+\begin{tikzpicture}[baseline=(frac.base),>=stealth]
+  \node (frac) {\(\displaystyle \frac{a}{b}\)};
+
+  \node[right=.5cm of frac, yshift=0.2cm ,font=\footnotesize] (num) {Numerador};
+  \node[right=.5cm of frac, yshift=-0.2cm,font=\footnotesize] (den) {Denominador};
+
+  \draw[->] (num.west) -- ([yshift=0.2cm]frac.east);
+  \draw[->] (den.west) -- ([yshift=-0.2cm]frac.east);
+\end{tikzpicture}
+\]
+para representar el número que satisface
+\[
+b\cdot\frac{a}{b}=a
+\]
+Por ejemplo,
+\[
+2\cdot\frac12=1
+\]
+de modo que \(\frac12\) resuelve precisamente la ecuación que no tenía solución en los enteros.
+
+La expresión \(\frac{a}{b}\) recibe el nombre de \emph{fracción}. Los números que pueden representarse mediante una fracción de enteros, con denominador distinto de cero, se llaman \emph{números racionales}.
 
 \begin{definition}[Número racional]
-  Se llama número racional a cualquier número que puede ser expresado entre dos cantidades enteras \(a\) y \(b\) como una división o \emph{fracción}.
+Un número racional es un número que puede representarse mediante una fracción
+\[
+\frac{a}{b}
+\qquad a,b\in\mathbb{Z},\quad b\ne0
+\]
+El conjunto de los números racionales se representa mediante \(\mathbb{Q}\).
 \end{definition}
 
-No se alarme por conocer la división. Por ahora puede tomar el concepto de la misma. 
+Una misma cantidad puede tener distintas representaciones fraccionarias. Veamos primero un ejemplo.
 
-La división matemática es una operación que, intuitivamente permite dividir cantidades. Pero, coloquialmente, puede entenderlo como el proceso de repartir cantidades o dividir una unidad de algo en partes (suponga iguales). Con esta idea en mente, entonces, un número puede ser representado mediante una infinidad de números racionales. Esto será un problema que resolverá luego de ver la división.
+Sabemos que
+\[
+2\cdot\frac12=1
+\]
+Es decir, \(\frac12\) es el número que satisface la ecuación
+\[
+2x=1
+\]
+Multipliquemos ahora ambos lados de esta ecuación por \(2\):
+\[
+4x=2
+\]
+La solución sigue siendo la misma. Por lo tanto, el número que representábamos como \(\frac12\) también puede representarse como
+\[
+\frac24
+\]
+Así,
+\[
+\frac12=\frac24
+\]
+Podemos hacer lo mismo multiplicando la ecuación original por \(50\):
+\[
+100x=50
+\]
+Nuevamente, la solución no ha cambiado. Por eso,
+\[
+\frac12=\frac{50}{100}
+\]
+En consecuencia,
+\[
+\frac12=\frac24=\frac{50}{100}
+\]
+El mismo razonamiento funciona en general. Si
+\[
+bx=a
+\qquad b\ne0
+\]
+entonces \(x\) puede representarse mediante
+\[
+\frac{a}{b}
+\]
+Si multiplicamos ambos lados de la ecuación por un entero \(c\ne0\), obtenemos
+\[
+(bc)x=ac
+\]
+Pero \(x\) sigue siendo el mismo número. Por lo tanto, también puede representarse como
+\[
+\frac{ac}{bc}
+\]
+Así llegamos a la relación
+\[
+\boxed{
+\frac{a}{b}
+=
+\frac{ac}{bc}
+}
+\qquad c\ne0
+\]
+Es decir, multiplicar el numerador y el denominador por un mismo entero distinto de cero cambia la representación de una fracción, pero no el número que representa.
+
+Los enteros también son racionales. En efecto, para cualquier entero \(a\),
+\[
+1\cdot a=a
+\]
+de modo que \(a\) puede representarse como
+\[
+a=\frac{a}{1}
+\]
+Por lo tanto,
+\[
+\mathbb{Z}\subseteq\mathbb{Q}
+\]
+
+\subsection{Producto de números racionales}
+
+Ahora extendemos el producto a los números racionales. Antes de establecer cómo se multiplican dos fracciones, conviene preguntarse qué debe representar ese producto.
+
+Sean
+\[
+\frac{a}{b}
+  \qquad\text{y}\qquad
+  \frac{c}{d}
+\]
+con \(a,b,c,d\in\mathbb{Z}\), \(b\ne0\) y \(d\ne0\).
+
+Por la forma en que hemos construido las fracciones, sabemos que
+\[
+b\cdot\frac{a}{b}=a
+\]
+y
+\[
+d\cdot\frac{c}{d}=c
+\]
+Consideremos ahora el producto
+\[
+\frac{a}{b}\cdot\frac{c}{d}
+\]
+Queremos averiguar qué número representa. Para ello, multipliquémoslo por \(b\cdot d\):
+\[
+(b\cdot d)\cdot
+\left(
+\frac{a}{b}\cdot\frac{c}{d}
+\right)
+\]
+Usando la asociatividad y la conmutatividad del producto, podemos reorganizar los factores:
+\[
+(b\cdot d)\cdot
+\left(
+\frac{a}{b}\cdot\frac{c}{d}
+\right)
+=
+\left(
+b\cdot\frac{a}{b}
+\right)
+\cdot
+\left(
+d\cdot\frac{c}{d}
+\right)
+\]
+Pero
+\[
+b\cdot\frac{a}{b}=a
+\]
+y
+\[
+d\cdot\frac{c}{d}=c
+\]
+Por lo tanto,
+\[
+(b\cdot d)\cdot
+\left(
+\frac{a}{b}\cdot\frac{c}{d}
+\right)
+=
+a\cdot c
+\]
+Es decir, buscamos un número que, multiplicado por \(b\cdot d\), dé como resultado \(a\cdot c\). Precisamente, la fracción
+\[
+\frac{a\cdot c}{b\cdot d}
+\]
+representa ese número, pues
+\[
+(b\cdot d)\cdot
+\frac{a\cdot c}{b\cdot d}
+=
+a\cdot c
+\]
+Así obtenemos
+\[
+\boxed{
+\frac{a}{b}\cdot\frac{c}{d}
+=
+\frac{a\cdot c}{b\cdot d}
+}
+\]
+Esta expresión no es una regla arbitraria. Los denominadores se multiplican porque \(b\cdot d\) permite eliminar simultáneamente los dos denominadores, mientras que los numeradores se multiplican porque, al hacerlo, quedan las cantidades \(a\) y \(c\), cuyo producto es \(a\cdot c\).
+
+Veámoslo en un caso concreto:
+\[
+\frac23\cdot\frac34
+\]
+Si multiplicamos este producto por \(3\cdot4=12\), obtenemos
+\[
+12\cdot
+\left(
+\frac23\cdot\frac34
+\right)
+=
+\left(
+3\cdot\frac23
+\right)
+\cdot
+\left(
+4\cdot\frac34
+\right)
+\]
+Como
+\[
+3\cdot\frac23=2
+\]
+y
+\[
+4\cdot\frac34=3
+\]
+resulta
+\[
+12\cdot
+\left(
+\frac23\cdot\frac34
+\right)
+=
+2\cdot3
+=
+6
+\]
+Por lo tanto, el producto debe ser el número que multiplicado por \(12\) da \(6\):
+\[
+\frac23\cdot\frac34
+=
+\frac6{12}
+=
+\frac12
+\]
+Las relaciones de signo obtenidas para los enteros continúan siendo válidas. Por ejemplo,
+\[
+\frac{-2}{3}\cdot\frac34
+=
+-\left(
+\frac23\cdot\frac34
+\right)
+=
+-\frac12
+\]
+
+Así, la interpretación inicial del producto como suma repetida ya no es necesaria para describir todos los casos. El producto se ha extendido primero a los enteros y luego a los racionales conservando las propiedades que venimos utilizando.
+
+\subsection{Inverso multiplicativo}
+
+El número \(1\) es el elemento neutro del producto. Por eso resulta natural preguntar, dado un racional no nulo, qué número debemos multiplicar por él para obtener \(1\).
+
+Sea
+\[
+\frac{a}{b}\ne0
+\]
+
+Como \(b\ne0\), para que la fracción sea distinta de cero debe cumplirse también
+\[
+a\ne0
+\]
+
+Buscamos entonces un número \(x\) que satisfaga
+\[
+\frac{a}{b}\cdot x=1
+\]
+
+¿Qué forma debe tener ese número?
+
+Sabemos que, al multiplicar fracciones, los numeradores se multiplican entre sí y los denominadores también. Por lo tanto, necesitamos que los factores que aparecen en el numerador y en el denominador puedan formar dos productos iguales, ya que una fracción cuyo numerador y denominador representan el mismo número no nulo es igual a \(1\).
+
+Consideremos la fracción
+\[
+\frac{b}{a}
+\]
+
+Al multiplicarla por \(\frac{a}{b}\), obtenemos
+\[
+\frac{a}{b}\cdot\frac{b}{a}
+=
+\frac{a\cdot b}{b\cdot a}
+\]
+
+Por la conmutatividad del producto,
+\[
+a\cdot b=b\cdot a
+\]
+
+Así, el numerador y el denominador representan el mismo número:
+\[
+\frac{a\cdot b}{b\cdot a}
+=
+\frac{a\cdot b}{a\cdot b}
+=
+1
+\]
+
+Por lo tanto,
+\[
+\frac{a}{b}\cdot\frac{b}{a}=1
+\]
+
+Esto muestra que \(\frac{b}{a}\) es precisamente el número que, multiplicado por \(\frac{a}{b}\), produce el elemento neutro del producto.
+
+Por esta razón, llamamos \emph{inverso multiplicativo} de un número racional no nulo al número que, al multiplicarse por él, da como resultado \(1\).
+
+En particular,
+\[
+\boxed{
+\left(\frac{a}{b}\right)^{-1}
+=
+\frac{b}{a}
+}
+\qquad
+a\ne0
+\]
+
+La expresión anterior no debe entenderse solamente como una regla para ``dar vuelta'' una fracción. El intercambio entre numerador y denominador aparece porque buscamos que, al multiplicar ambas fracciones, el numerador y el denominador del resultado sean iguales.
+
+Por ejemplo, consideremos
+\[
+\frac{3}{5}
+\]
+
+Buscamos un número \(x\) tal que
+\[
+\frac{3}{5}\cdot x=1
+\]
+
+Si elegimos
+\[
+x=\frac{5}{3}
+\]
+entonces
+\[
+\frac{3}{5}\cdot\frac{5}{3}
+=
+\frac{3\cdot5}{5\cdot3}
+=
+\frac{15}{15}
+=
+1
+\]
+
+Por eso,
+\[
+\left(\frac35\right)^{-1}
+=
+\frac53
+\]
+
+El cero, en cambio, no posee inverso multiplicativo. Para que un número \(x\) fuera su inverso, debería cumplirse
+\[
+0\cdot x=1
+\]
+
+Pero ya sabemos que, para cualquier número \(x\),
+\[
+0\cdot x=0
+\]
+
+Por lo tanto, no existe ningún número que multiplicado por \(0\) dé como resultado \(1\), y en consecuencia \(0\) no tiene inverso multiplicativo.
 
 \subsection{División}
 
-La división, es realmente un caso particular del producto. En particular es el producto de dos números racionales.
+Una vez introducidos los inversos multiplicativos, podemos definir la división sin recurrir a restas repetidas.
 
+Dados \(x,y\in\mathbb{Q}\) con \(y\ne0\), definimos
+\[
+\boxed{x\div y=x\cdot y^{-1}}
+\]
+Es decir, dividir por un número no nulo consiste en multiplicar por su inverso.
 
-Formalmente, la división es la operación inversa al producto. Sin embargo, tal como hicimos con la resta, podemos verla de una forma más mecánica e intuitiva.
+En particular,
+\[
+\frac{a}{b}\div\frac{c}{d}
+=
+\frac{a}{b}\cdot\frac{d}{c}
+=
+\frac{a\cdot d}{b\cdot c},
+\quad c\ne0.
+\]
+Por ejemplo,
+\[
+\frac34\div\frac25
+=
+\frac34\cdot\frac52
+=
+\frac{15}{8}
+\]
 
-\begin{definition}[División]
-  Dados dos números \(a\) y \(b\) (donde \(b\) debe ser distinto de cero), la división se define como:
-  \begin{align*}
-    / ~ :& \mathbb{Q} \times \mathbb{Q}^* \mapsto \mathbb{Q}\\ 
-    (a,b)&\rightarrow a / b
-  \end{align*}
-  El resultado de esta operación nos dice cuántas veces ``entra'' la cantidad \(b\) en la cantidad \(a\).
-\end{definition}
+Esta definición también explica expresiones como
+\[
+1\div2=\frac12
+\]
+La división ya no depende de que el cociente sea un número entero.
 
-\subsection{El algoritmo de las restas sucesivas}
+\subsection{Restas sucesivas como estrategia de cálculo}
 
-Tal vez te preguntes: ``¿Cómo calculo esto si no tengo calculadora?''. Aquí es donde todo lo que aprendiste se conecta. 
-Si multiplicar era \textit{sumar} muchas veces, dividir es \textit{restar} muchas veces.
+En algunos casos particulares, cuando dividimos números naturales y el cociente es también natural, las restas sucesivas pueden utilizarse como una estrategia de cálculo.
 
-Imagina que tienes el número 12 y quieres dividirlo por 3 (\(12/3\)). El método de las restas sucesivas consiste en quitarle 3 al 12 tantas veces como puedas hasta llegar a cero (o lo más cerca posible).
+Por ejemplo, para evaluar
+\[
+12\div3
+\]
+podemos restar \(3\) repetidamente hasta llegar a cero:
+\begin{align*}
+12-3&=9\\
+9-3&=6\\
+6-3&=3\\
+3-3&=0
+\end{align*}
+Se realizaron cuatro restas, por lo que
+\[
+12\div3=4
+\]
+Sin embargo, este procedimiento encuentra rápidamente una dificultad. Consideremos
+\[
+1\div2
+\]
+No podemos restar \(2\) de \(1\) y continuar obteniendo números naturales. Esto no significa que la división carezca de resultado, sino que su resultado no pertenece a \(\mathbb N\).
 
-\begin{example}
-  Dividamos \(12\) entre \(3\):
-  \begin{enumerate}
-      \item \(12 - 3 = 9\) (llevamos 1 resta)
-      \item \(9 - 3 = 6\) (llevamos 2 restas)
-      \item \(6 - 3 = 3\) (llevamos 3 restas)
-      \item \(3 - 3 = 0\) (llevamos 4 restas)
-  \end{enumerate}
-  Como pudimos restar el número 3 un total de \textbf{cuatro veces} hasta quedarnos sin nada, entonces \(12 / 3 = 4\).
-\end{example}
+Ya sabemos que
+\[
+1\div2=\frac12
+\]
+Pero también podemos representar este mismo número de otra manera.
 
-Este método es muy poderoso porque transforma una operación nueva y temible en algo que ya dominas: la resta.
+\subsection{Partes de la unidad y escritura decimal}
 
-\section{Práctica de divisiones}
+Nuestro sistema de numeración utiliza potencias\footnote{El término de potencia matemática se profundizará en el próximo capítulo.} de \(10\). Del mismo modo que podemos agrupar diez unidades para formar una decena, también podemos recorrer el camino contrario y dividir una unidad en diez partes iguales.
 
-Intenta resolver las siguientes divisiones pensando en el método de restas sucesivas (o ``cuántas veces entra el número de abajo en el de arriba'').
+Cada una de esas partes es un \emph{décimo}:
+\[
+\frac{1}{10}
+\]
+Cinco décimos se representan mediante
+\[
+\frac{5}{10}
+\]
+Como
+\begin{align*}
+  \frac12&=1\cdot\frac{1}{2}\\
+  &=\frac55\cdot\frac12\\ 
+  &=\frac{5}{10}
+\end{align*}
+podemos pensar en la mitad de una unidad como cinco décimos.
 
-\subsection*{Nivel Básico}
+La escritura decimal permite representar esos cinco décimos de la siguiente manera:
+\[
+0{,}5
+\]
+Por lo tanto,
+\[
+\frac12=\frac{5}{10}=0{,}5
+\]
+Y como
+\[
+1\div2=\frac12
+\]
+obtenemos
+\[
+\boxed{
+1\div2=\frac12=0{,}5
+}
+\]
+Las expresiones
+\[
+1\div2,\qquad \frac12,\qquad 0{,}5
+\]
+no representan tres números diferentes. Son distintas formas de representar el mismo número.
 
-\begin{enumerate}
-  \item División exacta simple:
-  \[
-  \begin{array}{r}
-      8 \\
-      / 2 \\
-      \hline
-      \phantom{4}
-  \end{array}
-  \]
-  
-  \item El número por sí mismo:
-  \[
-  \begin{array}{r}
-      5 \\
-      / 5 \\
-      \hline
-      \phantom{1}
-  \end{array}
-  \]
-  
-  \item División por la unidad:
-  \[
-  \begin{array}{r}
-      7 \\
-      / 1 \\
-      \hline
-      \phantom{7}
-  \end{array}
-  \]
-\end{enumerate}
+La coma decimal separa la parte entera de las partes de la unidad. La primera posición situada a la derecha de la coma representa décimos:
+\[
+0{,}1=\frac{1}{10}
+\]
+La segunda posición representa centésimos:
+\[
+0{,}01=\frac{1}{100}
+\]
+La tercera representa milésimos:
+\[
+0{,}001=\frac{1}{1000}
+\]
+Por ejemplo,
+\[
+0{,}3=\frac{3}{10}
+\]
+y
+\[
+0{,}25=\frac{25}{100}
+\]
+Como
+\[
+\frac{25}{100}=\frac14
+\]
+también podemos escribir
+\[
+\frac14=0{,}25
+\]
+De este modo, la escritura decimal no introduce necesariamente números nuevos. Proporciona otra representación para aquellos números racionales que pueden expresarse mediante fracciones cuyo denominador es una potencia de \(10\), o mediante una fracción equivalente de ese tipo.
 
-\subsection*{Nivel Intermedio}
+Esto también permite comprender qué ocurre cuando el dividendo es menor que el divisor. En
+\[
+1\div2
+\]
+no hay ninguna unidad completa de \(2\) dentro de \(1\), pero podemos dividir la unidad en partes más pequeñas. Al expresarla como diez décimos,
+\[
+1=\frac{10}{10}
+\]
+la mitad de esos diez décimos es
+\[
+\frac{5}{10}
+\]
+es decir,
+\[
+0{,}5
+\]
 
-\begin{enumerate}
-  \setcounter{enumi}{3}
-  \item División exacta con dos cifras:
-  \[
-  \begin{array}{r}
-      15 \\
-      / 3 \\
-      \hline
-      \phantom{5}
-  \end{array}
-  \]
-  
-  \item División con resultado mayor:
-  \[
-  \begin{array}{r}
-      20 \\
-      / 4 \\
-      \hline
-      \phantom{5}
-  \end{array}
-  \]
-\end{enumerate}
+Las restas sucesivas siguen siendo útiles como estrategia para ciertos cocientes enteros, pero no constituyen una explicación general de la división. Cuando el cociente no es natural, necesitamos trabajar también con partes de la unidad y con otras representaciones de los números racionales.
 
-\section{El zoológico de los números: Clasificación}
+\subsection{Algoritmo de la división}
 
-Hasta ahora hemos visto tres ``bolsas'' o conjuntos de números. Es normal sentir que son cosas separadas, pero en matemáticas, a veces una bolsa está \textit{dentro} de otra.
+Las restas sucesivas permiten comprender una idea fundamental de la división: averiguar cuántas veces podemos retirar una misma cantidad de otra.
 
-Hagamos un repaso mental:
+Sin embargo, este procedimiento puede resultar muy largo. Por ejemplo, para calcular
+\[
+156\div12
+\]
+podríamos restar \(12\) una y otra vez hasta llegar a cero, pero necesitaríamos muchas restas.
+
+Podemos abreviar el procedimiento si, en lugar de restar una sola vez el divisor, restamos de una vez un múltiplo conveniente suyo.
+
+Por ejemplo,
+\[
+10\cdot12=120
+\]
+
+Entonces podemos comenzar con
+\[
+156-120=36
+\]
+
+Como
+\[
+3\cdot12=36
+\]
+obtenemos
+\[
+36-36=0
+\]
+
+En total hemos retirado \(12\) diez veces y luego tres veces:
+\[
+10+3=13
+\]
+
+Por lo tanto,
+\[
+156\div12=13
+\]
+
+Esta es la idea que utiliza el algoritmo usual de la división. En lugar de escribir todas las restas sucesivas, buscamos múltiplos adecuados del divisor y registramos cuántas veces lo hemos tomado.
+
+\subsubsection{El papel del sistema decimal}
+
+El algoritmo resulta especialmente compacto porque nuestro sistema de numeración es posicional.
+
+Por ejemplo,
+\[
+156=100+50+6
+\]
+
+Al realizar la división, no necesitamos considerar las \(156\) unidades una por una. Podemos trabajar con centenas, decenas y unidades, aprovechando el valor que posee cada cifra según su posición.
+
+Por eso, en el algoritmo escrito aparecen cifras del cociente una posición a la vez. Cada una indica cuántas veces podemos tomar cierto múltiplo del divisor en la posición que estamos considerando.
+
+El procedimiento no introduce una nueva definición de división. Es un algoritmo de cálculo que organiza, mediante el sistema decimal, las mismas ideas que ya hemos utilizado: multiplicar, restar y descomponer números según su valor posicional.
+
+\subsubsection{Cuando el cociente tiene parte decimal}
+
+El mismo procedimiento puede continuar aunque el cociente no sea un número entero.
+
+Consideremos nuevamente
+\[
+1\div2
+\]
+
+Como \(2\) no cabe ninguna vez completa en \(1\), el cociente tiene inicialmente
+\(
+0
+\)
+unidades enteras.
+
+Pero podemos representar la unidad mediante décimos:
+\[
+1=1{,}0=\frac{10}{10}
+\]
+
+Ahora disponemos de \(10\) décimos. Como
+\[
+10\div2=5
+\]
+obtenemos cinco décimos:
+\[
+1\div2=0{,}5
+\]
+
+Esto concuerda con lo que ya habíamos obtenido mediante fracciones:
+\[
+1\div2=\frac12=0{,}5
+\]
+
+Agregar un cero después de la coma no modifica el número:
+\[
+1=1{,}0=1{,}00=1{,}000
+\]
+
+Lo que cambia es la forma en que lo representamos. Cada cero adicional permite expresar la cantidad utilizando unidades diez veces más pequeñas:
+\[
+1=\frac{10}{10}
+=\frac{100}{100}
+=\frac{1000}{1000}
+\]
+
+Por esta razón, cuando una división no termina en las unidades enteras, el algoritmo puede continuar trabajando con décimos, centésimos, milésimos y posiciones posteriores.
+
+Por ejemplo, en
+\[
+7\div4
+\]
+podemos obtener primero una unidad completa:
+\[
+7-4=3
+\]
+
+Quedan \(3\) unidades. Las expresamos como \(30\) décimos:
+\[
+3=3{,}0
+\]
+
+Como
+\[
+30\div4=7
+\]
+podemos tomar \(7\) décimos y queda un resto de \(2\) décimos:
+\[
+30-7\cdot4=2
+\]
+
+Esos \(2\) décimos pueden expresarse como \(20\) centésimos:
+\[
+0{,}2=0{,}20
+\]
+
+Como
+\[
+20\div4=5
+\]
+obtenemos
+\[
+7\div4=1{,}75
+\]
+
+El algoritmo de la división permite así trabajar de manera ordenada con cantidades que serían incómodas de calcular mediante restas sucesivas. Su eficacia no proviene de una nueva propiedad de los números, sino de combinar el producto, la resta y el valor posicional de nuestro sistema decimal en una notación mucho más compacta.
+
+\section{Clasificación de los conjuntos numéricos}
+
+Hasta aquí hemos trabajado con tres conjuntos numéricos relacionados entre sí:
 \begin{itemize}
-    \item \(\mathbb{N}\) (Naturales): Sirven para contar (1, 2, 3...).
-    \item \(\mathbb{Z}\) (Enteros): Son los naturales y sus opuestos negativos (..., -2, -1, 0, 1, 2...).
-    \item \(\mathbb{Q}\) (Racionales): Son todos los que se pueden escribir como fracción (1/2, 3/4, 5, -2...).
+    \item \(\mathbb{N}\), los números naturales:
+    \[
+    0,1,2,3,\ldots
+    \]
+    \item \(\mathbb{Z}\), los números enteros, que incluyen a los naturales y a sus opuestos:
+    \[
+    \ldots,-3,-2,-1,0,1,2,3,\ldots
+    \]
+    \item \(\mathbb{Q}\), los números racionales, que pueden representarse mediante fracciones de enteros con denominador distinto de cero.
 \end{itemize}
 
-¡Espera! ¿Has notado algo raro en la lista de racionales? Puse el número \(5\).
-¿Es el \(5\) un número racional? La definición dice que debe poder escribirse como división de dos enteros.
-\[ 5 = \frac{10}{2} = \frac{5}{1} \]
-¡Sí! El 5 es natural, pero también es entero, y también es racional.
+Como todo natural es entero y todo entero puede escribirse como una fracción con denominador \(1\), tenemos
+\[
+\boxed{\mathbb{N}\subseteq\mathbb{Z}\subseteq\mathbb{Q}}
+\]
 
-Podemos visualizar esto con un diagrama de conjuntos (Diagrama de Venn) anidados, como muñecas rusas\footnote{Las muñecas rusas, también conocidas como matrioshka son muñecas conocidas por su originalidad, que consiste en el que las muñecas se encuentran huecas y en su interior albergan una nueva muñeca, y esta a su vez a otra, hasta llegar a la más pequeña posible.}:
+Por ejemplo,
+\[
+5=\frac51
+\]
+de modo que \(5\) es a la vez natural, entero y racional. Del mismo modo,
+\[
+-2=\frac{-2}{1}
+\]
+por lo que \(-2\) es entero y racional, pero no natural.
 
-\begin{figure}[ht]
+En la figura \ref{fig:jerarquia_numeros} se representan estas inclusiones mediante conjuntos anidados.
+
+\begin{figure}[!ht]
   \centering
   \begin{tikzpicture}[scale=1.2]
-      % Elipse Q
-      \draw[fill=blue!5] (0,0) ellipse (3.5cm and 2.5cm);
-      \node at (2.1, 1.6) {\Large \(\mathbb{Q}\)};
-      \node at (-2.5, 0.5) {\(\frac{1}{2}\)};
-      \node at (0, -1.8) {\(-1.5\)};
-      
-      % Elipse Z
-      \draw[fill=green!10] (0.5,0.2) ellipse (2cm and 1.5cm);
-      \node at (1.8, 1.0) {\Large \(\mathbb{Z}\)};
-      \node at (-0.5, 0.5) {\(-3\)};
-      \node at (0.5, -0.8) {\(0\)};
-      
-      % Elipse N
-      \draw[fill=red!10] (1,0.2) ellipse (0.8cm and 0.8cm);
-      \node at (1, 0.2) {\(\mathbb{N}\)};
-      \node at (1, 0.5) {\(5\)};
+    % Elipse Q
+    \draw[fill=blue!5,thick] (0,0) ellipse (3.5cm and 2.5cm);
+    \node[font=\Large] at (2.1, 1.6) {\(\mathbb{Q}\)};
+    
+    % Elipse Z
+    \draw[fill=green!10,thick] (0.5,0.2) ellipse (2cm and 1.5cm);
+    \node[font=\Large] at (1.8, 1.0) {\(\mathbb{Z}\)};
+    
+    % Elipse N
+    \draw[fill=red!10,thick] (1,0.2) ellipse (0.8cm and 0.8cm);
+    \node[font=\Large] at (1, 0.2) {\(\mathbb{N}\)};
   \end{tikzpicture}
-  \caption{Jerarquía de los conjuntos numéricos: Los naturales están dentro de los enteros, y los enteros dentro de los racionales.}
+  \caption{Los números naturales están contenidos en los enteros, y los enteros están contenidos en los racionales.}
   \label{fig:jerarquia_numeros}
 \end{figure}
 
-\subsection{Ejercicio de Intuición: ¿Quién es quién?}
+Recuerde que la escritura decimal no constituye un nuevo conjunto numérico. Por ejemplo,
+\[
+0{,}5=\frac12
+\]
+por lo que \(0{,}5\) es un número racional.
 
-Para perder el miedo a los nombres, marca con una cruz (\( \times \)) a qué conjuntos pertenece cada número. ¡Ojo! Un mismo número puede tener muchas cruces. Recuerda la figura \ref{fig:jerarquia_numeros}.
+\section{Ejercicios}
+
+\subsection{Ejercicios: cocientes enteros mediante restas sucesivas}
+
+Utilice restas sucesivas para evaluar las siguientes expresiones y explique qué representa la cantidad de restas realizadas:
+\begin{enumerate}
+  \item \(8\div2\).
+  \item \(5\div5\).
+  \item \(7\div1\).
+  \item \(15\div3\).
+  \item \(20\div4\).
+\end{enumerate}
+
+\subsection{Ejercicio: pertenencia a conjuntos numéricos}
+
+Indique con una cruz (\(\times\)) a qué conjuntos pertenece cada número. Recuerde que un mismo número puede pertenecer a más de uno.
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -200,15 +1385,12 @@ Para perder el miedo a los nombres, marca con una cruz (\( \times \)) a qué con
 \textbf{Número} & \textbf{Natural} (\(\mathbb{N}\)) & \textbf{Entero} (\(\mathbb{Z}\)) & \textbf{Racional} (\(\mathbb{Q}\)) \\ \hline
 \(4\) & \(\times\) & \(\times\) & \(\times\) \\ \hline
 \(-2\) & & \(\times\) & \(\times\) \\ \hline
-\(0.5\) & & & \(\times\) \\ \hline
+\(\frac12\) & & & \(\times\) \\ \hline
 \(10\) & & & \\ \hline
 \(-7\) & & & \\ \hline
-\(\frac{3}{4}\) & & & \\ \hline
+\(\frac34\) & & & \\ \hline
 \(0\) & & & \\ \hline
 \(1\) & & & \\ \hline
 \end{tabular}
 \end{center}
 
-\begin{note}
-    Si logras ver que el \(4\) es a la vez natural, entero y racional, habrás entendido uno de los pilares de la estructura numérica. No son mundos aislados, son capas de profundidad.
-\end{note}
