@@ -385,8 +385,6 @@ Una escritura puede ocultar el conjunto más pequeño al que pertenece el númer
 ## Puntos pendientes y precauciones
 
 - Desarrollar `chapters/3_potencia/main.tex` siguiendo la metodología ya establecida. La nota al pie de `5_producto_racional.tex` anuncia que las potencias se profundizarán allí.
-- Revisar la introducción de `1_sistemas_numeracion.tex`: contiene formulaciones coloquiales y la frase “los números no existen, los inventa usted”, que puede entrar en tensión con el tratamiento posterior de los números como objetos matemáticos. Si se edita, conservar la intuición histórica/conceptual sin afirmar una tesis filosófica innecesariamente fuerte.
-- Revisar gradualmente la consistencia del tratamiento de **usted**, especialmente en el material inicial del capítulo 1.
 - Revisar afirmaciones sobre cierre y propiedades cuando se generalicen a nuevos conjuntos. Una propiedad puede mantenerse, pero su dominio debe indicarse explícitamente.
 - Mantener la distinción entre una decisión matemática y una convención de notación. Esto es especialmente importante para precedencia, escritura decimal, fracciones equivalentes y algoritmos.
 
