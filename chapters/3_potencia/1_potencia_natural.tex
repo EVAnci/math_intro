@@ -1,0 +1,311 @@
+\section{La potencia como producto repetido}
+
+Considere nuevamente el producto
+\[
+2\cdot2\cdot2\cdot2.
+\]
+Como los cuatro factores son iguales, podemos abreviarlo mediante
+\[
+2^4.
+\]
+Por lo tanto,
+\[
+2^4=2\cdot2\cdot2\cdot2=16.
+\]
+Las tres escrituras representan el mismo número, pero muestran aspectos diferentes. La primera hace visibles los factores; la segunda señala directamente qué factor se repite y cuántas veces; la tercera es el numeral obtenido al evaluar la expresión.
+
+\begin{definitionbox}[Potencia con exponente natural positivo]
+Sean \(a\in\mathbb N\) y \(n\in\mathbb N\) con \(n>0\). Se define
+\[
+a^n=
+\underbrace{a\cdot a\cdot\ldots\cdot a}_{n\text{ factores}}.
+\]
+El número \(a\) recibe el nombre de \emph{base}; el número \(n\), el de \emph{exponente}; y el valor de la expresión completa, el de \emph{potencia}.
+\end{definitionbox}
+
+Por ejemplo, en
+\[
+3^5=3\cdot3\cdot3\cdot3\cdot3=243,
+\]
+la base es \(3\), el exponente es \(5\) y la potencia es \(243\).
+
+La posición de cada número es parte de la notación. La base indica cuál es el factor repetido; el exponente indica cuántas veces aparece. Por eso, en general, intercambiarlos modifica la cantidad representada:
+\[
+2^3=2\cdot2\cdot2=8,
+\qquad
+3^2=3\cdot3=9.
+\]
+No existe una propiedad conmutativa de la potenciación: normalmente \(a^n\ne n^a\).
+
+\subsection{Exponente uno}
+
+Si el exponente es \(1\), la base aparece como factor una sola vez. En consecuencia,
+\[
+a^1=a.
+\]
+No es necesario imaginar un producto de varios factores: la expresión \(a^1\) representa simplemente el mismo número que \(a\).
+
+\subsection{Exponente cero}
+
+La definición como producto repetido nos permite entender las potencias con exponente positivo. También muestra una relación sencilla entre potencias consecutivas.
+
+Por ejemplo,
+\[
+2^4
+=2\cdot2\cdot2\cdot2
+=(2\cdot2\cdot2)\cdot2
+=2^3\cdot2.
+\]
+Del mismo modo,
+\[
+2^3=2^2\cdot2,
+\qquad
+2^2=2^1\cdot2.
+\]
+
+En general, aumentar el exponente en una unidad equivale a agregar un factor igual a la base:
+\[
+a^{n+1}=a^n\cdot a,
+\qquad n>0.
+\]
+Esta igualdad no es una nueva regla que debamos memorizar; se obtiene directamente de la definición de potencia como producto repetido.
+
+Ahora queremos extender la notación para incluir el exponente \(0\). Para hacerlo de manera compatible con la relación anterior, debería cumplirse también
+\[
+a^1=a^0\cdot a.
+\]
+Pero ya sabemos que
+\[
+a^1=a.
+\]
+Por lo tanto,
+\[
+a=a^0\cdot a.
+\]
+
+Si \(a\ne0\), podemos dividir ambos lados entre \(a\):
+\[
+\frac{a}{a}
+=
+\frac{a^0\cdot a}{a},
+\]
+y obtenemos
+\[
+1=a^0.
+\]
+
+Esto nos conduce a la siguiente definición.
+
+\begin{definitionbox}[Potencia con exponente cero]
+Para todo número \(a\ne0\), se define
+\[
+a^0=1.
+\]
+\end{definitionbox}
+
+La condición \(a\ne0\) es importante. Si intentáramos hacer el mismo razonamiento con base cero, la relación
+\[
+a^1=a^0\cdot a
+\]
+se convertiría en
+\[
+0=0^0\cdot0.
+\]
+Pero esta igualdad se cumple cualquiera sea el valor colocado en lugar de \(0^0\), ya que todo número multiplicado por cero da cero. Por lo tanto, este razonamiento no determina un valor para \(0^0\).
+
+En este libro dejaremos \(0^0\) sin definir. En contextos más avanzados puede asignársele algún valor por conveniencia, pero esa elección depende del contexto.
+
+En cambio, cuando el exponente es positivo,
+\[
+0^n=0
+\qquad(n>0),
+\]
+porque el producto contiene al menos un factor igual a cero.
+
+\subsection{La base no tiene que natural}
+
+Hasta ahora hemos utilizado principalmente números positivos como base, pero la idea de potencia como producto repetido también funciona cuando la base es negativa.
+
+Por ejemplo,
+\[
+(-2)^3=(-2)\cdot(-2)\cdot(-2)=-8,
+\]
+mientras que
+\[
+(-2)^4=(-2)\cdot(-2)\cdot(-2)\cdot(-2)=16.
+\]
+
+La diferencia está en la cantidad de factores negativos.
+
+Recordemos que el producto de dos números negativos es positivo:
+\[
+(-a)(-a)=a^2.
+\]
+
+Por eso, si tenemos una cantidad par de factores negativos, podemos agruparlos de dos en dos. Cada pareja produce un resultado positivo. Por ejemplo,
+\[
+(-2)^6
+=
+\bigl((-2)(-2)\bigr)
+\bigl((-2)(-2)\bigr)
+\bigl((-2)(-2)\bigr),
+\]
+y por lo tanto el resultado es positivo.
+
+En cambio, si la cantidad de factores es impar, después de formar todas las parejas posibles queda un factor negativo sin pareja:
+\[
+(-2)^5
+=
+\bigl((-2)(-2)\bigr)
+\bigl((-2)(-2)\bigr)
+(-2),
+\]
+de modo que el resultado es negativo.
+
+Este razonamiento no depende de cuántos factores haya. Siempre podemos agrupar los factores negativos de dos en dos. Por ello, para \(a>0\),
+\[
+(-a)^n=
+\begin{cases}
+a^n, & \text{si \(n\) es par},\\[4pt]
+-a^n, & \text{si \(n\) es impar}.
+\end{cases}
+\]
+
+No es necesario memorizar esta expresión: el signo puede determinarse simplemente observando si la cantidad de factores negativos es par o impar.
+
+\begin{note}
+  Mucho cuidado con expresiones como 
+  \[
+    -a^n
+  \]
+  ya que el signo \(-\) en tal caso no se considera parte de la potencia. Es decir, la interpretación es 
+  \[
+    - (a^n)
+  \]
+\end{note}
+
+\subsubsection{Los paréntesis importan}
+
+Cuando la base es negativa, los paréntesis permiten indicar que el signo forma parte de la base.
+
+Por ejemplo,
+\[
+(-2)^4
+\qquad\text{y}\qquad
+-2^4
+\]
+representan expresiones diferentes.
+
+En
+\[
+(-2)^4,
+\]
+la base es \(-2\), por lo que
+\[
+(-2)^4
+=
+(-2)(-2)(-2)(-2)
+=
+16.
+\]
+
+En cambio, en
+\[
+-2^4,
+\]
+la base de la potencia es \(2\). Primero se calcula
+\[
+2^4=16
+\]
+y luego se toma su opuesto:
+\[
+-2^4=-(2^4)=-16.
+\]
+
+Por lo tanto,
+\[
+(-2)^4=16,
+\qquad
+-2^4=-16.
+\]
+
+\subsection{Una fracción también puede ser la base}
+
+La base de una potencia también puede ser una fracción. La interpretación sigue siendo exactamente la misma: elevar a un exponente natural positivo significa multiplicar la base por sí misma tantas veces como indica el exponente.
+
+Por ejemplo,
+\[
+\left(\frac{2}{3}\right)^3
+=
+\frac{2}{3}\cdot
+\frac{2}{3}\cdot
+\frac{2}{3}.
+\]
+
+Como ya sabemos multiplicar fracciones, podemos multiplicar los numeradores entre sí y los denominadores entre sí:
+\[
+\left(\frac{2}{3}\right)^3
+=
+\frac{2\cdot2\cdot2}{3\cdot3\cdot3}
+=
+\frac{8}{27}.
+\]
+
+Observemos ahora la forma en que aparecen el numerador y el denominador:
+\[
+2\cdot2\cdot2=2^3,
+\qquad
+3\cdot3\cdot3=3^3.
+\]
+Por lo tanto,
+\[
+\left(\frac{2}{3}\right)^3
+=
+\frac{2^3}{3^3}.
+\]
+
+El mismo razonamiento funciona con cualquier fracción cuyo denominador sea distinto de cero. Si \(b\ne0\), entonces
+\[
+\left(\frac{a}{b}\right)^n
+=
+\frac{a^n}{b^n},
+\qquad n>0.
+\]
+
+Esta igualdad no introduce una nueva manera de calcular potencias. Es simplemente lo que obtenemos al escribir la potencia como un producto repetido:
+\[
+\left(\frac{a}{b}\right)^n
+=
+\underbrace{
+\frac{a}{b}\cdot
+\frac{a}{b}\cdots
+\frac{a}{b}
+}_{n\text{ factores}}
+=
+\frac{
+  \overbrace{a\cdot a\cdots a}^{n\text{ factores}}
+}{
+\underbrace{b\cdot b\cdots b}_{n\text{ factores}}
+}
+=
+\frac{a^n}{b^n}.
+\]
+
+La fracción también puede ser negativa. Por ejemplo,
+\[
+\left(-\frac{2}{3}\right)^3
+=
+\left(-\frac{2}{3}\right)
+\left(-\frac{2}{3}\right)
+\left(-\frac{2}{3}\right)
+=
+-\frac{8}{27},
+\]
+mientras que
+\[
+\left(-\frac{2}{3}\right)^4
+=
+\frac{16}{81}.
+\]
+
+Nuevamente, el signo depende de la cantidad de factores negativos: un exponente par produce un resultado positivo y un exponente impar produce un resultado negativo.

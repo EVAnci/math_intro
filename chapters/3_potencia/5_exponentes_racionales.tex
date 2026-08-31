@@ -1,0 +1,749 @@
+\section{Potencias con exponentes racionales}
+
+Hasta ahora hemos dado significado a expresiones como
+\[
+a^3,\qquad a^0,\qquad a^{-2},
+\]
+es decir, a potencias cuyos exponentes son números enteros.
+
+Queremos ahora comprender qué podría significar que el exponente sea una fracción:
+\[
+a^{1/2},
+\qquad
+a^{1/3},
+\qquad
+a^{2/5}.
+\]
+
+La idea será la misma que hemos seguido hasta ahora: no inventaremos una regla nueva de manera aislada, sino que buscaremos una definición compatible con las propiedades de las potencias que ya conocemos.
+
+Para evitar dificultades relacionadas con los signos, comenzaremos trabajando con
+\[
+a>0.
+\]
+
+\subsection{El significado de exponentes fraccionarios}
+
+Comencemos con un exponente sencillo:
+\[
+a^{1/2}.
+\]
+
+Sabemos que una potencia de otra potencia satisface
+\[
+(a^m)^n=a^{mn}.
+\]
+
+Si queremos que esta propiedad siga siendo válida al introducir exponentes fraccionarios, entonces debería ocurrir que
+\[
+\left(a^{1/2}\right)^2
+=
+a^{(1/2)\cdot2}
+=
+a^1
+=
+a.
+\]
+
+Por lo tanto, \(a^{1/2}\) debe representar un número cuyo cuadrado sea \(a\).
+
+Pero ya tenemos una operación que responde exactamente a esa pregunta:
+\[
+\sqrt a.
+\]
+
+Por eso definimos
+\[
+a^{1/2}=\sqrt a.
+\]
+
+El mismo razonamiento puede hacerse con cualquier entero positivo \(q\). Si queremos que
+\[
+\left(a^{1/q}\right)^q
+=
+a^{(1/q)q}
+=
+a,
+\]
+entonces \(a^{1/q}\) debe ser el número cuya potencia \(q\)-ésima es \(a\).
+
+Por lo tanto,
+\[
+\boxed{a^{1/q}=\sqrt[q]{a}}.
+\]
+
+Así, por ejemplo,
+\[
+16^{1/2}=\sqrt{16}=4
+\]
+y
+\[
+8^{1/3}=\sqrt[3]{8}=2.
+\]
+
+El exponente fraccionario \(1/q\) no introduce entonces una operación completamente nueva: es otra manera de escribir una raíz.
+
+\subsubsection{Exponentes fraccionarios de la forma \(p/q\)}
+
+Consideremos ahora un exponente como
+\[
+\frac{p}{q},
+\]
+donde inicialmente supondremos que \(p\) y \(q\) son naturales positivos.
+
+Podemos escribir
+\[
+\frac pq=p\cdot\frac1q.
+\]
+
+Utilizando nuevamente la propiedad de una potencia elevada a otra potencia,
+\[
+a^{p/q}
+=
+a^{p(1/q)}
+=
+\left(a^{1/q}\right)^p.
+\]
+
+Como acabamos de establecer que
+\[
+a^{1/q}=\sqrt[q]{a},
+\]
+obtenemos
+\[
+\boxed{
+a^{p/q}
+=
+\left(\sqrt[q]{a}\right)^p
+}.
+\]
+
+Esto nos da una forma concreta de interpretar el exponente racional:
+
+\begin{enumerate}
+    \item calculamos la raíz \(q\)-ésima de la base;
+    \item elevamos el resultado a la potencia \(p\).
+\end{enumerate}
+
+Por ejemplo,
+\[
+8^{2/3}
+=
+\left(\sqrt[3]{8}\right)^2
+=
+2^2
+=
+4.
+\]
+
+\subsection{¿Podemos realizar las operaciones en el orden contrario?}
+
+Ya vimos que
+\[
+a^{p/q}
+=
+\left(\sqrt[q]{a}\right)^p.
+\]
+
+Esto significa que podemos calcular primero la raíz \(q\)-ésima y después elevar el resultado a la potencia \(p\).
+
+Pero observemos nuevamente el exponente:
+\[
+\frac pq
+=
+p\cdot\frac1q.
+\]
+
+Como la multiplicación es conmutativa, también podemos escribir
+\[
+\frac pq
+=
+\frac1q\cdot p.
+\]
+
+Los dos factores son exactamente los mismos. Solo hemos cambiado su orden.
+
+Y aquí ocurre algo interesante.
+
+Si una potencia elevada a otra potencia multiplica sus exponentes, entonces
+\[
+a^{p/q}
+=
+a^{(1/q)p}
+=
+\left(a^p\right)^{1/q}.
+\]
+
+Pero ya sabemos que un exponente de la forma \(1/q\) representa una raíz \(q\)-ésima:
+\[
+x^{1/q}=\sqrt[q]{x}.
+\]
+
+Por lo tanto,
+\[
+\left(a^p\right)^{1/q}
+=
+\sqrt[q]{a^p}.
+\]
+
+Así obtenemos
+\[
+\boxed{
+a^{p/q}
+=
+\left(\sqrt[q]{a}\right)^p
+=
+\sqrt[q]{a^p}
+}.
+\]
+
+Podemos verlo directamente en los exponentes:
+\[
+p\cdot\frac1q
+=
+\frac1q\cdot p.
+\]
+
+En el primer orden,
+\[
+\left(a^{1/q}\right)^p,
+\]
+calculamos primero la raíz y después la potencia.
+
+En el segundo,
+\[
+\left(a^p\right)^{1/q},
+\]
+calculamos primero la potencia y después la raíz.
+
+No son dos reglas diferentes. Son las mismas operaciones realizadas en distinto orden.
+
+Veamos un ejemplo:
+\[
+27^{2/3}.
+\]
+
+Podemos calcular primero la raíz:
+\[
+27^{2/3}
+=
+\left(\sqrt[3]{27}\right)^2
+=
+3^2
+=
+9.
+\]
+
+O podemos calcular primero la potencia:
+\[
+27^{2/3}
+=
+\sqrt[3]{27^2}
+=
+\sqrt[3]{729}
+=
+9.
+\]
+
+En ambos casos llegamos al mismo resultado.
+
+Normalmente convendrá elegir el camino que produzca cálculos más sencillos. En este ejemplo,
+\[
+\sqrt[3]{27}=3
+\]
+hace que calcular primero la raíz sea mucho más cómodo que comenzar con
+\[
+27^2=729.
+\]
+
+\subsection{La fracción utilizada no puede cambiar el resultado}
+
+Hay todavía un detalle importante.
+
+Sabemos que una misma fracción puede escribirse de muchas maneras:
+\[
+\frac12=\frac24=\frac36=\cdots
+\]
+
+Por lo tanto, si utilizamos estas fracciones como exponentes, todas deben producir el mismo resultado.
+
+Por ejemplo,
+\[
+16^{1/2}=4.
+\]
+
+Pero también podemos escribir
+\[
+\frac12=\frac24.
+\]
+
+Entonces deberíamos obtener igualmente
+\[
+16^{2/4}=4.
+\]
+
+Y, en efecto,
+\[
+16^{2/4}
+=
+\sqrt[4]{16^2}
+=
+\sqrt[4]{256}
+=
+4.
+\]
+
+No parece haber ningún problema.
+
+Pero queremos asegurarnos de que esto ocurra siempre.
+
+Supongamos que tenemos el exponente
+\[
+\frac pq
+\]
+y multiplicamos su numerador y su denominador por el mismo número natural positivo \(k\):
+\[
+\frac pq=\frac{pk}{qk}.
+\]
+
+Utilizando la primera fracción obtenemos
+\[
+a^{p/q}
+=
+\sqrt[q]{a^p}.
+\]
+
+Ahora preguntémonos: ¿qué sucede si usamos la segunda?
+Obtendríamos
+\[
+a^{pk/qk}
+=
+\sqrt[qk]{a^{pk}}.
+\]
+
+A primera vista las dos raíces parecen bastante diferentes:
+\[
+\sqrt[q]{a^p}
+\qquad\text{y}\qquad
+\sqrt[qk]{a^{pk}}.
+\]
+
+Para comprobar si son iguales, planteamos la igualdad:
+\begin{align*}
+  \sqrt[q]{a^p} &\stackrel{?}{=} \sqrt[qk]{a^{pk}} \\ 
+  \left(\sqrt[q]{a^p}\right)^{qk}
+  &\stackrel{?}{=}
+  \left(\sqrt[qk]{a^{pk}}\right)^{qk}
+\end{align*}
+
+Aplicando las propiedades de los exponentes y las raíces que hemos visto:
+\begin{align*}
+  \left(\sqrt[q]{a^p}\right)^{qk}
+  &\stackrel{?}{=}
+  \left(a^{pk}\right)^{\frac{qk}{qk}} \\ 
+  \left(a^p\right)^{\frac{qk}{q}}
+  &\stackrel{?}{=}
+  a^{pk} \\ 
+  \left(a^p\right)^k
+  &\stackrel{?}{=}
+  a^{pk} \\ 
+  a^{pk}
+  &\stackrel{?}{=}
+  a^{pk}.
+\end{align*}
+
+La última igualdad es verdadera. Además, como estamos trabajando con raíces principales, las dos expresiones originales son positivas. Por lo tanto, si sus potencias \(qk\)-ésimas son iguales, ellas también deben ser iguales.
+
+Así,
+\[
+\sqrt[q]{a^p}
+=
+\sqrt[qk]{a^{pk}}.
+\]
+
+Y, en consecuencia,
+\[
+\boxed{
+a^{p/q}=a^{pk/qk}
+}.
+\]
+
+Así que ampliar una fracción no cambia el valor de la potencia.
+
+Por ejemplo,
+\[
+\frac12=\frac24,
+\]
+y por eso
+\[
+16^{1/2}
+=
+16^{2/4}
+=
+4.
+\]
+
+Lo mismo ocurriría con
+\[
+\frac12=\frac36,
+\qquad
+\frac23=\frac46,
+\qquad
+\frac34=\frac68,
+\]
+o con cualquier otra fracción equivalente.
+
+Esto es fundamental: el valor de
+\[
+a^{p/q}
+\]
+depende del número racional \(\frac pq\), no de la manera particular en que hayamos escrito esa fracción.
+
+\subsection{Numerador cero o negativo}
+
+Hasta ahora supusimos que \(p>0\). Podemos completar la definición utilizando lo que ya sabemos sobre exponentes enteros.
+
+Si
+\[
+p=0,
+\]
+entonces
+\[
+\frac pq=0,
+\]
+y recuperamos
+\[
+a^{0/q}=a^0=1.
+\]
+
+Si \(p<0\), utilizamos la misma idea que empleamos para los exponentes enteros negativos: el exponente negativo indica el inverso multiplicativo.
+
+Así,
+\[
+a^{-p/q}
+=
+\frac{1}{a^{p/q}}.
+\]
+
+Por ejemplo,
+\[
+8^{-2/3}
+=
+\frac{1}{8^{2/3}}.
+\]
+
+Como
+\[
+8^{2/3}
+=
+\left(\sqrt[3]{8}\right)^2
+=
+2^2
+=
+4,
+\]
+obtenemos
+\[
+8^{-2/3}
+=
+\frac14.
+\]
+
+De este modo, para una base positiva \(a\), los exponentes racionales quedan conectados con operaciones que ya conocemos: potencias, raíces e inversos multiplicativos.
+
+\subsection{Base cero}
+
+Para \(r\in\mathbb Q\) positivo, podemos definir
+\[
+0^r=0.
+\]
+Pero \(0^0\) queda sin definir en este capítulo y \(0^r\) tampoco está definido cuando \(r<0\), porque un exponente negativo exigiría dividir por una potencia de cero.
+
+\subsection{Bases negativas}
+
+Hasta ahora hemos trabajado principalmente con bases positivas. Con ellas, las raíces y los exponentes racionales se comportan de una manera bastante cómoda.
+
+Con las bases negativas debemos prestar un poco más de atención.
+
+Comencemos con algo que ya conocemos:
+\[
+(-8)^{1/3}.
+\]
+
+Como el exponente \(1/3\) indica una raíz cúbica,
+\[
+(-8)^{1/3}
+=
+\sqrt[3]{-8}
+=
+-2.
+\]
+
+No hay ningún problema: una cantidad negativa puede tener una raíz de índice impar, ya que
+\[
+(-2)^3=-8.
+\]
+
+Algo parecido ocurre con
+\[
+(-8)^{2/3}.
+\]
+
+Primero calculamos la raíz cúbica y después elevamos al cuadrado:
+\[
+(-8)^{2/3}
+=
+\left(\sqrt[3]{-8}\right)^2
+=
+(-2)^2
+=
+4.
+\]
+
+Observemos algo interesante: la base sigue siendo negativa, pero ahora el resultado es positivo.
+
+Esto no es extraño. La raíz cúbica nos dio \(-2\), y al elevarlo al cuadrado desapareció el signo negativo.
+
+En general, si escribimos el exponente racional en su forma irreducible
+\[
+\frac pq,
+\]
+el denominador \(q\) nos indica qué raíz debemos calcular.
+
+Si \(q\) es impar, podemos calcular una raíz \(q\)-ésima de un número negativo dentro de los números reales.
+
+Por ejemplo,
+\[
+\sqrt[3]{-8}=-2,
+\qquad
+\sqrt[5]{-32}=-2.
+\]
+
+Después, el numerador \(p\) nos indica a qué potencia debemos elevar ese resultado. Según sea esa potencia par o impar, el signo final puede cambiar.
+
+Pero si \(q\) es par, aparece un problema.
+
+Por ejemplo,
+\[
+(-16)^{1/4}
+=
+\sqrt[4]{-16}.
+\]
+
+No existe ningún número real cuya cuarta potencia sea \(-16\), porque una potencia par de un número real nunca es negativa.
+
+Por lo tanto,
+\[
+(-16)^{1/4}
+\]
+no representa un número real.
+
+\subsubsection*{Una pequeña trampa}
+
+Aquí aparece una razón muy importante para reducir siempre la fracción del exponente.
+
+Sabemos que
+\[
+\frac13=\frac26.
+\]
+
+Por lo tanto,
+\[
+(-8)^{1/3}
+\qquad\text{y}\qquad
+(-8)^{2/6}
+\]
+tienen exactamente el mismo exponente.
+
+Ya sabemos que
+\[
+(-8)^{1/3}=-2.
+\]
+
+Pero imaginemos que tomamos \(2/6\) sin reducirlo y aplicamos mecánicamente la expresión
+\[
+a^{p/q}=\sqrt[q]{a^p}.
+\]
+
+Obtendríamos
+\[
+(-8)^{2/6}
+\stackrel{?}{=}
+\sqrt[6]{(-8)^2}
+=
+\sqrt[6]{64}
+=
+2.
+\]
+
+¡Pero acabamos de obtener \(2\) cuando antes habíamos obtenido \(-2\)!
+
+El problema no está en que
+\[
+\frac13
+\quad\text{y}\quad
+\frac26
+\]
+sean exponentes diferentes. Son exactamente el mismo número racional.
+
+El problema es que, al utilizar \(2/6\) sin reducir, introdujimos artificialmente una raíz de índice par. Al elevar primero \(-8\) al cuadrado, además, perdimos el signo negativo antes de calcular la raíz.
+
+Por eso, cuando la base es negativa, primero debemos escribir el exponente racional en su forma irreducible:
+\[
+\frac26=\frac13.
+\]
+
+Entonces calculamos
+\[
+(-8)^{2/6}
+=
+(-8)^{1/3}
+=
+\sqrt[3]{-8}
+=
+-2.
+\]
+
+Así evitamos que una forma innecesariamente complicada de escribir la fracción nos lleve por un camino equivocado.
+
+Podemos encontrar una situación todavía más peligrosa.
+
+Consideremos
+\[
+(-5)^{2/4}.
+\]
+
+Si observamos solamente la expresión tal como está escrita, podríamos pensar en calcular primero la potencia:
+\[
+(-5)^{2/4}
+\stackrel{?}{=}
+\sqrt[4]{(-5)^2}.
+\]
+
+Entonces,
+\[
+\sqrt[4]{(-5)^2}
+=
+\sqrt[4]{25}
+=
+\sqrt{5}.
+\]
+
+¡Parece que hemos encontrado un resultado perfectamente válido! Pero algo huele mal de este resultado. Observemos que ocurre si intentamos verificar la solución. 
+
+Supuestamente decimos que 
+\[
+  (-5)^{2/4} = \sqrt5
+\]
+En otras palabras, aplicando la definición de raíz:
+\[
+  (-5)^2 = \left(\sqrt{5}\right)^4
+\]
+Es decir, 
+\[
+  (-5)^2 = (5)^2
+\]
+Lo cual es verdad. Sin embargo observemos un detalle sutil: los números de la base no son iguales, a pesar de que el resultado final si lo es.
+
+Pero hagamos algo que siempre debemos hacer con un exponente racional: reduzcamos primero la fracción.
+
+Como
+\[
+\frac24=\frac12,
+\]
+la expresión original es en realidad
+\[
+(-5)^{1/2}.
+\]
+
+Y eso significa
+\[
+\sqrt{-5},
+\]
+que no es un número real.
+
+Así que hemos llegado a una situación bastante grave. Por un camino logramos encontrar que:
+\[
+(-5)^{2/4}
+\stackrel{?}{=}
+\sqrt5
+\]
+mientras que por otro camino llegamos a:
+\[
+(-5)^{2/4}
+=
+(-5)^{1/2}
+\]
+que nos muestra que la expresión no representa ningún número real.
+
+¿Qué ocurrió?
+
+Al elevar primero \(-5\) al cuadrado obtuvimos
+\[
+(-5)^2=25.
+\]
+
+En ese instante desapareció el signo negativo. Después calculamos una raíz cuarta de un número positivo y todo pareció funcionar.
+
+Pero habíamos ocultado el verdadero problema.
+
+El exponente
+\[
+\frac24
+\]
+no es un número racional diferente de
+\[
+\frac12.
+\]
+
+Son exactamente el mismo número:
+\[
+\frac24=\frac12.
+\]
+
+Por lo tanto, no podemos permitir que una forma distinta de escribir el mismo exponente cambie si la potencia existe o incluso produzca un resultado diferente.
+
+Este ejemplo nos muestra por qué, con bases negativas, reducir primero el exponente racional no es solamente una comodidad:
+\[
+\boxed{\text{es necesario para interpretar correctamente la potencia.}}
+\]
+
+Así, ante una expresión como
+\[
+(-5)^{2/4},
+\]
+primero escribimos
+\[
+\frac24=\frac12.
+\]
+
+Entonces vemos inmediatamente que
+\[
+(-5)^{2/4}
+=
+(-5)^{1/2}
+\]
+no representa un número real.
+
+El valor \(\sqrt5\) que apareció antes no era una segunda respuesta posible. Fue el resultado de seguir un camino algebraico que, en este caso, no era válido.
+
+Podemos resumir la idea de esta manera:
+
+Si la base es negativa, primero reducimos el exponente
+\[
+\frac pq
+\]
+a su forma irreducible.
+
+Luego observamos su denominador:
+\[
+\boxed{
+\begin{array}{c}
+q\text{ impar} \quad\longrightarrow\quad
+\text{la potencia puede representar un número real},\\[4pt]
+q\text{ par} \quad\longrightarrow\quad
+\text{la potencia no representa un número real}.
+\end{array}
+}
+\]
+Por esta razón, cuando estudiemos las propiedades generales de los exponentes racionales utilizaremos normalmente bases positivas. Así podremos concentrarnos en las propiedades mismas sin detenernos constantemente a comprobar qué raíces existen en los números reales.

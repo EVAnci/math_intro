@@ -1,0 +1,240 @@
+\section{Propiedades generales}
+
+Las extensiones realizadas no fueron elecciones independientes. Definimos los exponentes cero, negativos y racionales para conservar, siempre que fuera posible, las relaciones descubiertas al contar factores. Podemos ahora reunirlas en un mismo marco.
+
+Sean \(a,b>0\) y \(r,s\in\mathbb Q\). Entonces:
+\begin{gather*}
+a^r\cdot a^s=a^{r+s},\\
+\frac{a^r}{a^s}=a^{r-s},\\
+(a^r)^s=a^{r\cdot s},\\
+(a\cdot b)^r=a^r\cdot b^r,\\
+\left(\frac ab\right)^r=\frac{a^r}{b^r}.
+\end{gather*}
+
+La primera propiedad reúne cantidades de factores de una misma base; la segunda expresa la cancelación mediante una resta; la tercera cuenta cuántas veces se repite una repetición; las dos últimas distribuyen una misma potencia entre los factores de un producto o de un cociente.
+
+\begin{example}[Simplificar sin aproximar]
+Considere
+\[
+2^{3/4}\cdot2^{5/4}.
+\]
+Como las bases son iguales y positivas,
+\[
+2^{3/4}\cdot2^{5/4}
+=
+2^{3/4+5/4}
+=
+2^{8/4}
+=
+2^2
+=
+4.
+\]
+No fue necesario obtener aproximaciones decimales de cada factor.
+\end{example}
+
+\begin{example}[Un exponente negativo]
+La expresión
+\[
+\frac{3^{1/2}}{3^{5/2}}
+\]
+puede simplificarse como
+\[
+3^{1/2-5/2}=3^{-2}=\frac1{3^2}=\frac19.
+\]
+Cada paso conserva el número representado y hace visible una relación diferente.
+\end{example}
+
+\subsection{Las condiciones forman parte de la propiedad}
+
+Las propiedades que hemos estudiado son herramientas muy poderosas, pero no podemos utilizarlas sin mirar las condiciones bajo las cuales son válidas.
+
+Esto es especialmente importante cuando aparecen divisiones, raíces o bases negativas.
+
+Por ejemplo, consideremos
+\[
+\left((-8)^{2/3}\right)^{3/2}.
+\]
+
+Podemos calcular la expresión tal como está escrita, comenzando por la potencia interior:
+\[
+(-8)^{2/3}
+=
+\left(\sqrt[3]{-8}\right)^2
+=
+(-2)^2
+=
+4.
+\]
+
+Ahora calculamos la potencia exterior:
+\[
+4^{3/2}
+=
+\left(\sqrt{4}\right)^3
+=
+2^3
+=
+8.
+\]
+
+Por lo tanto,
+\[
+\boxed{
+\left((-8)^{2/3}\right)^{3/2}=8
+}.
+\]
+
+Pero aquí aparece una tentación.
+
+Conocemos la propiedad
+\[
+(a^r)^s=a^{rs},
+\]
+así que podríamos intentar escribir
+\[
+\left((-8)^{2/3}\right)^{3/2}
+\stackrel{?}{=}
+(-8)^{(2/3)(3/2)}
+=
+(-8)^1
+=
+-8.
+\]
+
+Ahora tenemos
+\[
+8\neq -8.
+\]
+
+¿Significa esto que la expresión puede tener dos resultados?
+
+No.
+
+La expresión original tiene un único resultado:
+\[
+8.
+\]
+
+Lo que falló fue nuestra transformación.
+
+La propiedad
+\[
+(a^r)^s=a^{rs}
+\]
+no puede utilizarse sin cuidado cuando la base es negativa y aparecen exponentes racionales. En este libro la enunciaremos para
+\[
+a>0,
+\]
+precisamente para evitar estas situaciones.
+
+Como en nuestro ejemplo la base original es
+\[
+-8<0,
+\]
+no teníamos permiso para multiplicar directamente los exponentes.
+
+Cuando una propiedad no puede aplicarse, simplemente conservamos la expresión original y realizamos las operaciones en el orden indicado:
+\[
+\left((-8)^{2/3}\right)^{3/2}.
+\]
+
+Primero:
+\[
+(-8)^{2/3}=4.
+\]
+
+Después:
+\[
+4^{3/2}=8.
+\]
+
+Este ejemplo nos deja una regla práctica importante:
+\begin{center}
+  \textit{Antes de aplicar una propiedad, debemos comprobar que sus condiciones se cumplen.}
+\end{center}
+
+Si las condiciones no se cumplen, eso no significa necesariamente que la expresión original esté mal definida. Significa solamente que esa propiedad no puede utilizarse para transformarla.
+
+Lo mismo ocurre con otras propiedades.
+
+Por ejemplo, en
+\[
+\frac{a^r}{a^s},
+\]
+debemos exigir
+\[
+a\neq0,
+\]
+porque estamos dividiendo entre \(a^s\).
+
+Y con exponentes racionales debemos vigilar las bases negativas, porque algunas raíces no existen dentro de los números reales.
+
+Por eso las condiciones no son pequeños avisos añadidos después de aprender una propiedad. Forman parte de ella.
+
+Si recordamos una propiedad, por ejemplo:
+\[
+(a^r)^s=a^{rs}.
+\]
+debemos tener presente sus restricciones. Que surgen directamente de no poder generalizar su comportamiento en ciertos rangos de valores.
+
+\begin{note}
+No piense en las propiedades matemáticas como reglas que hay que memorizar junto con una lista de restricciones.
+
+Una propiedad aparece cuando descubrimos que cierto comportamiento se cumple de manera general.
+
+Por ejemplo, puede ocurrir que una igualdad sea válida para todos los números positivos. En ese caso hemos encontrado una propiedad, pero su alcance llega solamente hasta allí: no tenemos derecho a suponer que también funciona con números negativos, con cero o con cualquier otro número fuera de las condiciones bajo las cuales fue demostrada.
+
+Las restricciones simplemente nos indican hasta dónde llega la generalización.
+
+Por eso, ante la duda, una buena estrategia es intentar reconstruir la propiedad.
+
+Pregúntese:
+\[
+\text{¿por qué debería cumplirse esta igualdad?}
+\]
+
+Si puede demostrarla de manera general para los números que está utilizando, entonces puede aplicarla con seguridad. Si la demostración solamente funciona bajo ciertas condiciones, esas condiciones forman parte de la propiedad.
+
+Así, en lugar de memorizar
+\[
+\text{propiedad}+\text{restricciones},
+\]
+intente comprender de dónde surge la propiedad.
+
+Las restricciones no son excepciones molestas que debemos recordar después. Son precisamente las fronteras que nos indican dónde nuestro razonamiento sigue siendo válido.
+\end{note}
+
+En los enunciados generales de este capítulo utilizaremos normalmente bases positivas. Esto nos permitirá aplicar las propiedades con seguridad y concentrarnos en las ideas que queremos estudiar.
+
+\subsection{Radicales y potencias}
+
+Para \(a\ge0\) y \(n>1\),
+\[
+\sqrt[n]{a}=a^{1/n}.
+\]
+Esta equivalencia permite pasar de una escritura radical a una potencia racional y viceversa. Por ejemplo,
+\[
+\sqrt[5]{x^3}=x^{3/5}
+\]
+si \(x>0\).
+
+También permite comprender propiedades de los radicales a partir de las potencias. Si \(a,b\ge0\),
+\[
+\sqrt[n]{a\cdot b}
+=(a\cdot b)^{1/n}
+=a^{1/n}b^{1/n}
+=\sqrt[n]{a}\cdot\sqrt[n]{b}.
+\]
+Cuando el índice es par, las condiciones \(a,b\ge0\) garantizan que todas las raíces sean reales. Para índices impares pueden admitirse radicandos negativos, pero deben revisarse las condiciones de cada expresión.
+
+No existe, en cambio, una distribución de la raíz sobre la suma:
+\[
+\sqrt{a+b}\ne\sqrt a+\sqrt b
+\]
+en general. Por ejemplo,
+\[
+\sqrt{9+16}=5,
+\qquad
+\sqrt9+\sqrt{16}=3+4=7.
+\]

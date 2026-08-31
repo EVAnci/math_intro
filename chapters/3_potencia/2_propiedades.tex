@@ -1,0 +1,353 @@
+\section[Propiedades de potencias naturales]{Propiedades de las potencias con exponentes naturales}
+
+Algunas de estas propiedades ya fueron presentadas para introducir definiciones como \(a^0\). Sin embargo aquí se presentarán las propiedades generales.
+
+Las propiedades de esta sección no son reglas aisladas. Todas pueden comprenderse escribiendo las potencias como productos y observando qué ocurre con sus factores.
+
+\subsection{Producto de potencias de igual base}
+
+Considere
+\[
+2^3\cdot2^4.
+\]
+Al desarrollar ambas potencias obtenemos
+\[
+(2\cdot2\cdot2)\cdot(2\cdot2\cdot2\cdot2).
+\]
+En total aparecen siete factores iguales a \(2\). Por lo tanto,
+\[
+2^3\cdot2^4=2^7=2^{3+4}.
+\]
+De manera general, si \(m,n\in\mathbb N\),
+\[
+a^m\cdot a^n=a^{m+n}.
+\]
+Si alguno de los exponentes es cero, se requiere \(a\ne0\), pues hemos definido \(a^0\) solamente para bases no nulas.
+
+Observe qué cambia y qué se conserva: la base común permanece; los exponentes se suman porque estamos reuniendo dos grupos de factores iguales.
+
+\subsection{Cociente de potencias de igual base}
+
+Consideremos ahora el cociente
+\[
+\frac{3^5}{3^2}.
+\]
+Si desarrollamos las potencias como productos, obtenemos
+\[
+\frac{3^5}{3^2}
+=
+\frac{3\cdot3\cdot3\cdot3\cdot3}{3\cdot3}.
+\]
+
+Para comprender qué ocurre, podemos utilizar la regla de multiplicación de fracciones estudiada anteriormente y escribir el cociente como un producto:
+\[
+\frac{3\cdot3\cdot3\cdot3\cdot3}{3\cdot3}
+=
+\frac33\cdot
+\frac33\cdot
+\frac31\cdot
+\frac31\cdot
+\frac31.
+\]
+
+Los denominadores iguales a \(1\) no modifican el valor de los últimos factores. En cambio, los dos primeros cocientes valen \(1\):
+\[
+\frac33=1.
+\]
+Por lo tanto,
+\[
+\frac{3^5}{3^2}
+=
+1\cdot1\cdot3\cdot3\cdot3.
+\]
+
+Como \(1\) es el elemento neutro de la multiplicación,
+\[
+1\cdot1\cdot3\cdot3\cdot3
+=
+3\cdot3\cdot3
+=
+3^3.
+\]
+Así,
+\[
+\frac{3^5}{3^2}
+=
+3^3
+=
+3^{5-2}.
+\]
+
+Observe qué ha ocurrido. En el numerador había cinco factores iguales a \(3\), mientras que en el denominador había dos. Cada factor del denominador formó un cociente
+\[
+\frac33=1
+\]
+con uno de los factores del numerador. Como esos cocientes iguales a \(1\) no modifican el producto, permanecieron solamente tres factores iguales a \(3\).
+
+Esta es la razón por la que aparece la resta de los exponentes.
+
+El mismo razonamiento puede hacerse con cualquier base no nula. Si \(m>n\), podemos representar
+\[
+\frac{a^m}{a^n}
+\]
+como un producto que contiene \(n\) cocientes iguales a
+\[
+\frac aa=1
+\]
+y, además, \(m-n\) factores iguales a
+\[
+\frac a1=a.
+\]
+Por lo tanto, después de reemplazar los primeros por \(1\), permanecen \(m-n\) factores iguales a \(a\):
+\[
+\frac{a^m}{a^n}=a^{m-n}.
+\]
+
+Si los exponentes son iguales, no queda ningún factor de \(a\). En ese caso,
+\[
+\frac{a^n}{a^n}=1,
+\]
+y como ya hemos definido
+\[
+a^0=1
+\qquad(a\ne0),
+\]
+también podemos escribir
+\[
+\frac{a^n}{a^n}=a^0=a^{n-n}.
+\]
+
+En consecuencia, para \(a\ne0\) y \(m,n\in\mathbb N\) con \(m\ge n\),
+\[
+\boxed{\frac{a^m}{a^n}=a^{m-n}}.
+\]
+
+La condición \(a\ne0\) es necesaria. El razonamiento utiliza cocientes de la forma
+\[
+\frac aa,
+\]
+que solamente valen \(1\) cuando \(a\ne0\). Además, necesitamos que el denominador de la expresión original sea distinto de cero.
+
+También pedimos por ahora que
+\[
+m\ge n,
+\]
+de modo que \(m-n\) sea un exponente natural. Más adelante, cuando introduzcamos los exponentes negativos, podremos estudiar qué ocurre cuando \(m<n\).
+
+\subsection{Potencia de una potencia}
+
+En la expresión
+\[
+(2^3)^4,
+\]
+la base de la potencia exterior es la expresión completa \(2^3\). Desarrollarla significa repetirla como factor cuatro veces:
+\[
+(2^3)^4=2^3\cdot2^3\cdot2^3\cdot2^3.
+\]
+Cada grupo aporta tres factores iguales a \(2\), y hay cuatro grupos. En total aparecen \(3\cdot4=12\) factores:
+\[
+(2^3)^4=2^{12}=2^{3\cdot4}.
+\]
+Así, para exponentes naturales,
+\[
+(a^m)^n=a^{m\cdot n},
+\]
+siempre que las potencias que aparecen estén definidas.
+
+\subsection{Potencia de un producto}
+
+Considere
+\[
+(2\cdot3)^4.
+\]
+Al desarrollar la potencia,
+\[
+(2\cdot3)(2\cdot3)(2\cdot3)(2\cdot3).
+\]
+Por las propiedades asociativa y conmutativa del producto, podemos reunir los factores iguales:
+\[
+(2\cdot2\cdot2\cdot2)(3\cdot3\cdot3\cdot3)=2^4\cdot3^4.
+\]
+De manera general,
+\[
+(a\cdot b)^n=a^n\cdot b^n.
+\]
+
+También, si \(b\ne0\),
+\[
+\left(\frac ab\right)^n=\frac{a^n}{b^n}.
+\]
+Esta última igualdad se obtiene multiplicando \(n\) veces la fracción \(a/b\) y aplicando la regla del producto de fracciones como se demostró en la sección anterior.
+
+\subsection{Poner a prueba las propiedades}
+
+Hasta ahora hemos encontrado varias propiedades de las potencias observando cómo se comportan sus factores. Pero es razonable preguntarse hasta dónde llegan esas propiedades.
+
+Por ejemplo, sabemos que
+\[
+2^3\cdot2^4=2^{3+4}.
+\]
+La explicación fue sencilla: al desarrollar ambas potencias aparecen tres factores iguales a \(2\) y otros cuatro factores iguales a \(2\). Al juntarlos obtenemos siete factores iguales:
+\[
+(2\cdot2\cdot2)(2\cdot2\cdot2\cdot2)
+=
+2^7.
+\]
+
+Pero entonces surge una pregunta natural:
+
+\[
+\text{¿qué ocurre si las bases son distintas?}
+\]
+
+Podríamos preguntarnos, por ejemplo, si es posible hacer algo semejante con
+\[
+2^3\cdot3^4.
+\]
+
+Cuando no estamos seguros de que una operación sea válida, no necesitamos memorizar una prohibición. Podemos formular lo que creemos que podría ocurrir y ponerlo a prueba.
+
+Supongamos, por ejemplo, que intentáramos multiplicar las bases y sumar los exponentes:
+\[
+2^3\cdot3^4
+\stackrel{?}{=}
+(2\cdot3)^{3+4}.
+\]
+
+El símbolo \(\stackrel{?}{=}\) expresa precisamente nuestra duda: queremos averiguar si ambos lados son realmente iguales.
+
+Calculemos cada uno por separado.
+
+Por un lado,
+\[
+2^3\cdot3^4
+=
+8\cdot81
+=
+648.
+\]
+
+Por el otro,
+\[
+(2\cdot3)^{3+4}
+=
+6^7
+=
+279936.
+\]
+
+Como
+\[
+648\ne279936,
+\]
+la igualdad propuesta es falsa.
+
+Esto nos permite comprender algo más importante que una regla: la propiedad
+\[
+a^m\cdot a^n=a^{m+n}
+\]
+funciona porque todos los factores tienen la misma base. Si las bases son diferentes, el razonamiento que dio origen a la propiedad ya no puede hacerse de la misma manera.
+
+Podemos investigar otras dudas siguiendo el mismo procedimiento.
+
+Por ejemplo, alguien podría preguntarse si una potencia puede distribuirse sobre una suma:
+\[
+(a+b)^n
+\stackrel{?}{=}
+a^n+b^n.
+\]
+
+No necesitamos aceptar ni rechazar la idea sin examinarla. Probemos con valores sencillos:
+\[
+a=2,\qquad b=3,\qquad n=2.
+\]
+
+Entonces, el lado izquierdo es
+\[
+(2+3)^2
+=
+5^2
+=
+25,
+\]
+mientras que el lado derecho es
+\[
+2^2+3^2
+=
+4+9
+=
+13.
+\]
+
+Obtuvimos
+\[
+25\ne13.
+\]
+
+Por lo tanto,
+\[
+(a+b)^n=a^n+b^n
+\]
+no puede ser una propiedad válida para todos los números.
+
+Este tipo de ejemplo recibe el nombre de \emph{contraejemplo}. Cuando alguien afirma que una igualdad se cumple siempre, encontrar un solo caso en el que falle es suficiente para demostrar que la afirmación general es falsa.
+
+Hay que tener cuidado con la situación inversa. Encontrar uno, diez o incluso cien ejemplos en los que una igualdad funciona no demuestra que funcionará siempre. Los ejemplos pueden ayudarnos a descubrir un patrón o a sospechar que una propiedad es cierta, pero una propiedad general necesita además una razón que explique por qué se cumple en todos los casos.
+
+Esta distinción será útil durante todo el libro:
+
+\begin{itemize}
+    \item si sospechamos que una afirmación es falsa, podemos intentar encontrar un contraejemplo;
+    \item si sospechamos que es verdadera, podemos probar algunos casos para comprenderla, pero después necesitaremos justificar por qué funciona siempre.
+\end{itemize}
+
+Las propiedades de las potencias no son instrucciones arbitrarias sobre qué símbolos pueden moverse. Cada una expresa algo que ocurre con los números y sus productos. Por eso, cuando aparezca una duda, siempre podemos volver a los significados que ya conocemos, desarrollar las operaciones y dejar que los propios números nos indiquen si nuestra idea puede ser correcta.
+
+\begin{note}[title=\textbf{\color{teal}{Una pequeña pausa filosófica}}]
+
+Hay algo curioso en lo que acabamos de hacer. Planteamos una pregunta matemática y, en cierto sentido, dejamos que las propias matemáticas respondieran.
+
+Preguntamos si
+\[
+(a+b)^n=a^n+b^n
+\]
+podía ser siempre cierto. Después elegimos unos valores, seguimos las reglas que ya conocíamos y llegamos a una respuesta que no dependía de nuestra opinión: ambos lados dieron números distintos.
+
+Esta es una de las características más fascinantes de las matemáticas. Nosotros formulamos las preguntas, inventamos símbolos, definiciones y formas de representar las ideas; pero, una vez que aceptamos ciertas reglas, no podemos decidir libremente cuáles serán sus consecuencias. Tenemos que descubrirlas.
+
+Por eso existe una antigua discusión filosófica: ¿las matemáticas se inventan o se descubren?
+
+En este libro adoptaremos una postura sencilla: un poco de ambas.
+
+Podemos crear definiciones, elegir axiomas y construir nuevos sistemas matemáticos. Pero una vez establecidos esos puntos de partida, aparecen relaciones y consecuencias que ya no podemos escoger a nuestro gusto. Podemos explorarlas, intentar comprenderlas y descubrir hasta dónde nos llevan.
+
+En ese sentido, aprender matemáticas no consiste solamente en aprender a manipular símbolos. También consiste en aprender a hacer preguntas y en escuchar las respuestas que surgen al seguir cuidadosamente la lógica.
+
+A veces esas respuestas son inmediatas. Otras veces han requerido años, siglos o todavía no las conocemos.
+
+Y quizá esa sea una de las razones por las que las matemáticas resultan tan profundas: comenzamos jugando con unas pocas ideas y, al seguir sus consecuencias, podemos terminar descubriendo estructuras y patrones que cambian nuestra manera de entender el mundo.
+\end{note}
+
+\subsection{Potencias y jerarquía de operaciones}
+
+Al incorporar la potenciación necesitamos ampliar la convención de precedencia. Las potencias se consideran agrupadas antes que los productos, y los productos antes que las sumas. Así,
+\[
+3+2\cdot5^2
+\]
+se interpreta como
+\[
+3+\bigl(2\cdot(5^2)\bigr).
+\]
+Primero se evalúa \(5^2=25\), luego \(2\cdot25=50\) y finalmente \(3+50=53\).
+
+Esta convención explica la diferencia entre
+\[
+-2^2=-(2^2)=-4
+\]
+y
+\[
+(-2)^2=4.
+\]
+En la primera expresión, el signo menos no pertenece a la base; en la segunda, los paréntesis indican que la base completa es \(-2\).
+
+Como antes, la precedencia es una convención de escritura que evita paréntesis. No afirma que una operación sea más importante que otra.

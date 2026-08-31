@@ -1,0 +1,2 @@
+- Agregar el concepto de fracciones irreducibles al capítulo 2
+- Me gustaría agregar en el capítulo 2 (producto) una nueva sección sobre fracciones de fracciones. Para que el lector vea que también existe el concepto de división de números racionales.
